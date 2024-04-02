@@ -1,9 +1,14 @@
 // Font Import
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
 
-// Resets
+// File Import
+@import './home';
+@import './navigation';
+
+// Setup
 *{
     box-sizing: border-box;
+    text-rendering: geometricPrecision;
 }
 
 html{
@@ -11,8 +16,13 @@ html{
 }
 
 body{
-    background-color: rgba(11,13,16,1);
-    background-image: radial-gradient(circle farthest-side at center top, rgba(52, 75, 82, 0.95) 0%, rgba(11,13,16,.95) 100%), url(../../public/noise.svg);
+    // background-color: rgba(11,13,16,1);
+    // background-image: radial-gradient(circle farthest-side at center top, rgba(52, 75, 82, 0.95) 0%, rgba(11,13,16,.95) 100%), url(/noise.svg);
+    background: url(/background.png) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     height: 100vh;
@@ -37,4 +47,109 @@ span{
 
 .scroll-stopper{
     overflow-x: hidden;
+}
+
+// Text Color
+.text-light{
+    color: rgba(255,255,255,1);
+}
+
+.text-light-gray{
+    color: rgba(255,255,255,0.5);
+}
+
+.text-dark-gray{
+    color: rgba(44,46,58,1);
+}
+
+.text-dark{
+    color: rgba(11,13,16,1);
+}
+
+// Fill Color
+.fill-light{
+    color: rgba(255,255,255,1);
+}
+
+.fill-light-gray{
+    color: rgba(255,255,255,0.5);
+}
+
+.fill-dark-gray{
+    color: rgba(44,46,58,1);
+}
+
+.fill-dark{
+    color: rgba(11,13,16,1);
+}
+
+// Typography
+.hero{
+    font-weight: 900;
+    font-size: 13rem;
+    line-height: 120%;
+}
+
+.large-text{
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 120%;
+}
+
+.call-to-action{
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 120%;
+}
+
+.paragraph-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 120%;
+}
+
+.title-bold{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+}
+
+.title-light{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+}
+
+.body-light{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.caption-bold{
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 120%;
+}
+
+.caption-light{
+    font-weight: 500;
+    font-size: .8rem;
+    line-height: 120%;
+}
+
+.caption-wide{
+    font-weight: 500;
+    font-size: .8rem;
+    line-height: 120%;
+    letter-spacing: .5rem;
+}
+
+// Utilities
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: row;
 }
