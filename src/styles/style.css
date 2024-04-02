@@ -3,7 +3,7 @@ nav {
   padding: 40px 60px 40px 60px;
   position: fixed;
   top: 0%;
-  z-index: 9999;
+  z-index: 9998;
   width: 100%;
 }
 
@@ -33,10 +33,13 @@ nav {
   transform: scaleX(0);
 }
 
+footer {
+  padding: 48px 60px 48px 60px;
+  width: 100%;
+}
+
 .flex {
   display: flex;
-  justify-content: start;
-  align-items: start;
 }
 
 .flex-column {
@@ -45,6 +48,14 @@ nav {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.gap-200 {
+  gap: 200px;
 }
 
 .gap-100 {
@@ -57,6 +68,10 @@ nav {
 
 .gap-16 {
   gap: 16px;
+}
+
+.gap-4 {
+  gap: 4px;
 }
 
 .hero {
@@ -74,7 +89,7 @@ nav {
 .call-to-action {
   font-weight: 900;
   font-size: 5rem;
-  line-height: 120%;
+  line-height: 100%;
 }
 
 .paragraph-title {
@@ -97,7 +112,13 @@ nav {
 
 .body-light {
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 120%;
+}
+
+.body-bold {
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 120%;
 }
 
@@ -148,6 +169,7 @@ button {
   font: inherit;
   outline: inherit;
   cursor: pointer;
+  text-align: left;
 }
 
 a {
@@ -162,11 +184,44 @@ span {
   overflow-x: hidden;
 }
 
+/*width*/
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/*track*/
+::-webkit-scrollbar-track {
+  background: rgb(15, 27, 18);
+}
+
+/*thumb*/
+::-webkit-scrollbar-thumb {
+  background: rgb(19, 21, 22);
+  border-radius: 100px;
+}
+
+body .transition {
+  display: block;
+}
+
+.w-editor .transition {
+  display: none;
+}
+
+.no-scroll-transition {
+  overflow: hidden;
+  position: relative;
+}
+
+.placeholder-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .placeholder-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .temp-link {
@@ -193,17 +248,17 @@ span {
 }
 
 .fill-light {
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .fill-light-gray {
-  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .fill-dark-gray {
-  color: rgb(44, 46, 58);
+  background-color: rgb(44, 46, 58);
 }
 
 .fill-dark {
-  color: rgb(11, 13, 16);
+  background-color: rgb(11, 13, 16);
 }/*# sourceMappingURL=style.css.map */

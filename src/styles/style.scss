@@ -38,6 +38,7 @@ button{
 	font: inherit;
     outline: inherit;
     cursor: pointer;
+    text-align: left;
 }
 
 a{
@@ -52,12 +53,38 @@ span{
     overflow-x: hidden;
 }
 
+// Scrollbar
+/*width*/
+::-webkit-scrollbar {
+    width:0px;
+  }
+  
+  /*track*/
+  ::-webkit-scrollbar-track {
+    background:rgb(15, 27, 18);
+  }
+  
+  /*thumb*/
+  ::-webkit-scrollbar-thumb {
+    background:rgb(19, 21, 22);
+    border-radius:100px;
+  }
+    
+   body .transition {display: block}
+  .w-editor .transition {display: none;}
+  .no-scroll-transition {overflow: hidden; position: relative;}
+
 // PLACEHOLDER --------------------------------
+
+.placeholder-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .placeholder-title{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .temp-link{
@@ -66,6 +93,8 @@ span{
     top: 50%;
     transform: translate(0%, -50%);
 }
+
+// PLACEHOLDER --------------------------------
 
 // Text Color
 .text-light{
@@ -86,17 +115,17 @@ span{
 
 // Fill Color
 .fill-light{
-    color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,1);
 }
 
 .fill-light-gray{
-    color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
 }
 
 .fill-dark-gray{
-    color: rgba(44,46,58,1);
+    background-color: rgba(44,46,58,1);
 }
 
 .fill-dark{
-    color: rgba(11,13,16,1);
+    background-color: rgba(11,13,16,1);
 }

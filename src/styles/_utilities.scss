@@ -1,8 +1,6 @@
 // Utilities
 .flex{
     display: flex;
-    justify-content: start;
-    align-items: start;
 }
 
 .flex-column{
@@ -15,8 +13,15 @@
 }
 
 // Alight Items
+.align-end{
+    align-items: end;
+}
 
 // Gap
+.gap-200{
+    gap: 200px;
+}
+
 .gap-100{
     gap: 100px;
 }
@@ -27,4 +32,8 @@
 
 .gap-16{
     gap: 16px;
+}
+
+.gap-4{
+    gap: 4px;
 }

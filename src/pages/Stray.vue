@@ -1,5 +1,13 @@
 <template>
     <div>
-        <h1 class="hero text-light placeholder-title">STRAY.</h1>
+        <div class="placeholder-container">
+            <h1 class="hero text-light placeholder-title">STRAY</h1>
+        </div>
+
+        <ProjectFooter />
     </div>
 </template>
+
+<script setup>
+import ProjectFooter from '../components/ProjectFooter.vue';
+</script>

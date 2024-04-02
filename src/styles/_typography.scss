@@ -14,7 +14,7 @@
 .call-to-action{
     font-weight: 900;
     font-size: 5rem;
-    line-height: 120%;
+    line-height: 100%;
 }
 
 .paragraph-title{
@@ -37,7 +37,13 @@
 
 .body-light{
     font-weight: 300;
-    font-size: .8rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.body-bold{
+    font-weight: 700;
+    font-size: 1rem;
     line-height: 120%;
 }
 
