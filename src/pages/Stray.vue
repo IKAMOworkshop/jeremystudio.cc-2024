@@ -10,4 +10,5 @@
 
 <script setup>
 import ProjectFooter from '../components/ProjectFooter.vue';
+
 </script>
