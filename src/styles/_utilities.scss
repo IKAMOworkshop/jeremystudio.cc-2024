@@ -1,0 +1,30 @@
+// Utilities
+.flex{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.flex-column{
+    flex-direction: row;
+}
+
+// Justify Content
+.justify-between{
+    justify-content: space-between;
+}
+
+// Alight Items
+
+// Gap
+.gap-100{
+    gap: 100px;
+}
+
+.gap-60{
+    gap: 60px;
+}
+
+.gap-16{
+    gap: 16px;
+}

@@ -1,9 +1,11 @@
 // Font Import
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
 
 // File Import
-@import './home';
 @import './navigation';
+@import './utilities';
+@import './typography';
+@import './home';
 
 // Setup
 *{
@@ -35,6 +37,7 @@ button{
 	padding: 0;
 	font: inherit;
     outline: inherit;
+    cursor: pointer;
 }
 
 a{
@@ -47,6 +50,14 @@ span{
 
 .scroll-stopper{
     overflow-x: hidden;
+}
+
+// PLACEHOLDER --------------------------------
+.placeholder-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 // Text Color
@@ -81,75 +92,4 @@ span{
 
 .fill-dark{
     color: rgba(11,13,16,1);
-}
-
-// Typography
-.hero{
-    font-weight: 900;
-    font-size: 13rem;
-    line-height: 120%;
-}
-
-.large-text{
-    font-weight: 900;
-    font-size: 8rem;
-    line-height: 120%;
-}
-
-.call-to-action{
-    font-weight: 900;
-    font-size: 5rem;
-    line-height: 120%;
-}
-
-.paragraph-title{
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 120%;
-}
-
-.title-bold{
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 120%;
-}
-
-.title-light{
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 120%;
-}
-
-.body-light{
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 120%;
-}
-
-.caption-bold{
-    font-weight: 700;
-    font-size: .8rem;
-    line-height: 120%;
-}
-
-.caption-light{
-    font-weight: 500;
-    font-size: .8rem;
-    line-height: 120%;
-}
-
-.caption-wide{
-    font-weight: 500;
-    font-size: .8rem;
-    line-height: 120%;
-    letter-spacing: .5rem;
-}
-
-// Utilities
-.flex{
-    display: flex;
-}
-
-.flex-column{
-    flex-direction: row;
 }

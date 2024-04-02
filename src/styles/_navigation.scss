@@ -2,5 +2,37 @@ nav{
     padding: 40px 60px 40px 60px;
     position: fixed;
     top: 0%;
-    bottom: 0%;
+    z-index: 9999;
+    width: 100%;
 }
+
+.bottom-nav{
+    padding: 40px 60px 40px 60px;
+    position: fixed;
+    bottom: 0%;
+    z-index: 9999;
+    width: 100%;
+}
+
+.intro-copy{
+    max-width: 280px;
+}
+
+.progress-bar{
+    width: 80px;
+    height: 1px;
+    background-color: rgba(255,255,255,.2);
+}
+
+.progress{
+    width: 80px;
+    height: 1px;
+    background-color: rgba(255,255,255,.5);
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+// .router-link-active{
+//     color: rgba(11,13,16,1);
+//     background-color: rgba(255,255,255,1);
+// }
