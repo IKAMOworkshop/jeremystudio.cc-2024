@@ -220,8 +220,8 @@
             <ProjectVideo video-source="/project-video/transit/installation.mp4"/>
         </div>
 
-                <!-- Next Project -->
-                <div class="section-container flex flex-column gap-24">
+        <!-- Next Project -->
+        <div class="section-container flex flex-column gap-24">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
@@ -245,7 +245,6 @@ import ProjectData from '@/components/projects/ProjectData.vue'
 import TextBlock from '@/components/projects/TextBlock.vue'
 import TableContent from '@/components/projects/TableContent.vue'
 import ProjectVideo from '@/components/projects/ProjectVideo.vue'
-import ImageContainer from '../components/projects/ImageContainer.vue'
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
