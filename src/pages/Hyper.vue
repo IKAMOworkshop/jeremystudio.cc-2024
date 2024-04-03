@@ -6,6 +6,7 @@
 
         <ProjectData
             title-color="#A8EFFF"
+            project-type="TECH-CENTER"
             project-description="CONDUCTING A COLLECTION OF EXPERIMENTS EXPLORING EMMERGING TECHNOLOGIES."
 
             project-timing="FALL 2022"

@@ -217,6 +217,7 @@ footer {
   position: fixed;
   left: 50%;
   top: 40px;
+  transform: translate(-50%, 0%);
 }
 
 .hero-video-container {
@@ -398,7 +399,7 @@ body .transition {
 .temp-link {
   position: fixed;
   right: 1%;
-  top: 15%;
+  top: 20%;
   transform: translate(0%, -50%);
 }
 

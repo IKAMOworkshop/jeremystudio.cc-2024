@@ -3,7 +3,7 @@
         <div class="data-container flex justify-between align-center">
 
             <div class="project-descriptions flex flex-column gap-24">
-                <h3 :style="{color: titleColor}" class="caption-wide">TECH-CENTER</h3>
+                <h3 :style="{color: titleColor}" class="caption-wide">{{ projectType }}</h3>
                 <p class="text-light body-light">{{ projectDescription }}</p>
             </div>
 
@@ -55,6 +55,10 @@
 
 defineProps({
     titleColor: {
+        type: String,
+        required: true
+    },
+    projectType:{
         type: String,
         required: true
     },
