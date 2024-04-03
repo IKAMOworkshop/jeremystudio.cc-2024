@@ -1,3 +1,9 @@
+// Containers
+.section-container{
+    padding: 0px 240px 0px 240px;
+    margin-bottom: 160px;
+}
+
 // Utilities
 .flex{
     display: flex;
@@ -8,11 +14,27 @@
 }
 
 // Justify Content
+.justify-center{
+    justify-content: center;
+}
+
 .justify-between{
     justify-content: space-between;
 }
 
+.justify-end{
+    justify-content: end;
+}
+
 // Alight Items
+.align-start{
+    align-items: start;
+}
+
+.align-center{
+    align-items: center;
+}
+
 .align-end{
     align-items: end;
 }
@@ -20,6 +42,10 @@
 // Gap
 .gap-200{
     gap: 200px;
+}
+
+.gap-164{
+    gap: 164px;
 }
 
 .gap-100{
@@ -30,10 +56,44 @@
     gap: 60px;
 }
 
+.gap-54{
+    gap: 54px;
+}
+
+.gap-48{
+    gap: 48px;
+}
+
+.gap-36{
+    gap: 36px;
+}
+
+.gap-24{
+    gap: 24px;
+}
+
 .gap-16{
     gap: 16px;
 }
 
 .gap-4{
     gap: 4px;
+}
+
+// Visual
+.divider{
+    width: 16%;
+    height: 1px;
+    border-radius: 100%;
+}
+
+.spacer-text{
+    opacity: 0;
+    user-select: none;
+}
+
+.primary-button{
+    padding: 24px 36px;
+    border-radius: 100px;
+    color: rgba(11,13,16,1);
 }

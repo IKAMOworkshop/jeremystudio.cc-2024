@@ -1,11 +1,14 @@
 // Font Import
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;900&display=swap');
 
 // File Import
 @import './navigation';
 @import './utilities';
 @import './typography';
+
+// Page Import
 @import './home';
+@import './projects';
 
 // Setup
 *{
@@ -57,22 +60,22 @@ span{
 /*width*/
 ::-webkit-scrollbar {
     width:0px;
-  }
-  
-  /*track*/
-  ::-webkit-scrollbar-track {
+}
+
+/*track*/
+::-webkit-scrollbar-track {
     background:rgb(15, 27, 18);
-  }
-  
-  /*thumb*/
-  ::-webkit-scrollbar-thumb {
+}
+
+/*thumb*/
+::-webkit-scrollbar-thumb {
     background:rgb(19, 21, 22);
     border-radius:100px;
-  }
+}
     
-   body .transition {display: block}
-  .w-editor .transition {display: none;}
-  .no-scroll-transition {overflow: hidden; position: relative;}
+body .transition {display: block}
+.w-editor .transition {display: none;}
+.no-scroll-transition {overflow: hidden; position: relative;}
 
 // PLACEHOLDER --------------------------------
 
@@ -88,9 +91,9 @@ span{
 }
 
 .temp-link{
-    position: absolute;
+    position: fixed;
     right: 1%;
-    top: 50%;
+    top: 15%;
     transform: translate(0%, -50%);
 }
 
@@ -122,8 +125,12 @@ span{
     background-color: rgba(255,255,255,0.5);
 }
 
+.fill-gray{
+    background-color: rgba(91,105,116,1);
+}
+
 .fill-dark-gray{
-    background-color: rgba(44,46,58,1);
+    background-color: rgba(31,35,38,1);
 }
 
 .fill-dark{

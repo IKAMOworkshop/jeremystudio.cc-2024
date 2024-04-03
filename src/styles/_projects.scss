@@ -1,0 +1,96 @@
+.project-title{
+    position: fixed;
+    left: 50%;
+    top: 40px;
+}
+
+.hero-video-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 0px 240px 0px 240px;
+    z-index: -1;
+}
+
+.hero-video{
+    width: 100%;
+    aspect-ratio: 16/8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 24px;
+}
+
+.hero-video-asset{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+}
+
+.data-container{
+    height: 100vh;
+    padding: 0px 60px 0px 60px;
+    margin-bottom: 60px;
+}
+
+.project-descriptions{
+    max-width: 320px;
+}
+
+.data-props{
+    text-align: right;
+}
+
+.main-content{
+    width: 520px;
+}
+
+.image-container{
+    padding: 100px;
+    border-radius: 24px;
+}
+
+.project-image{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.contained-image{
+    width: 100%;
+}
+
+.project-video{
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 24px;
+}
+
+.project-video-asset{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.next-project-container{
+    width: 100%;
+    height: 600px;
+    border-radius: 24px;
+    background-position: center;
+}
+
+.next-project-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11,13,16,.2);
+}
+
+.next-project-link{
+    position: absolute;
+    margin-bottom: -36px;
+}

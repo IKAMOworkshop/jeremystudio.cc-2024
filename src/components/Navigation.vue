@@ -1,25 +1,25 @@
 <template>
     <div>
 
-        <nav class="flex justify-between">
+        <nav class="flex justify-between align-start">
 
-            <div class="flex gap-60">
+            <div class="flex gap-54">
                 <router-link class="text-light caption-bold" to="/">{{ navigationTitle }}</router-link>
                 <p class="text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
             </div>
 
-            <div class="flex gap-100">
+            <div class="flex gap-164">
                 <ul class="flex gap-16">
-                    <li><router-link class="text-light caption-light" to="/about">ABOUT</router-link></li>
-                    <li><router-link class="text-light caption-light" to="/insights">INSIGHTS</router-link></li>
-                    <li><router-link class="text-light caption-light" to="/archives">ARCHIVES</router-link></li>
+                    <li><router-link class="text-light-gray caption-light" to="/about">ABOUT</router-link></li>
+                    <li><router-link class="text-light-gray caption-light" to="/insights">INSIGHTS</router-link></li>
+                    <li><router-link class="text-light-gray caption-light" to="/archives">ARCHIVES</router-link></li>
                 </ul>
                 <button class="text-light-gray caption-light">JP</button>
             </div>
 
         </nav>
 
-        <div class="bottom-nav flex justify-between">
+        <div class="bottom-nav flex justify-between align-center">
             <ul class="flex gap-16">
                 <button id="email-button" class="text-light-gray caption-light">M.</button>
                 <li><a class="text-light-gray caption-light" href="https://github.com/IKAMOworkshop" target="_blank" rel="noopener noreferrer">GH.</a></li>

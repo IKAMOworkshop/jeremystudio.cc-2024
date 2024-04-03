@@ -48,20 +48,32 @@
 }
 
 .caption-bold{
-    font-weight: 700;
+    font-weight: 600;
     font-size: .8rem;
-    line-height: 120%;
+    line-height: 150%;
 }
 
 .caption-light{
     font-weight: 300;
     font-size: .8rem;
-    line-height: 120%;
+    line-height: 150%;
 }
 
 .caption-wide{
     font-weight: 300;
-    font-size: .8rem;
-    line-height: 120%;
+    font-size: .7rem;
+    line-height: 150%;
     letter-spacing: .5rem;
+}
+
+.caption-small-bold{
+    font-weight: 600;
+    font-size: .7rem;
+    line-height: 150%;
+}
+
+.caption-small-light{
+    font-weight: 300;
+    font-size: .7rem;
+    line-height: 150%;
 }
