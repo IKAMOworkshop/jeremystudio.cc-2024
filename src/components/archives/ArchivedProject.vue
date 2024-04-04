@@ -18,7 +18,17 @@
                 </div>
             </div>
             
-            <img src="/project-thumbnail/nubula.png" alt="" class="archives-image">
+            <img v-if="assetType === 'image'" src="/project-thumbnail/nubula.png" alt="" class="archives-image">
+            
+            <div v-if="assetType === 'video'" class="archives-video-container flex justify-center align-center">
+                <div class="archives-video">
+                    <!-- Video -->
+                    <video class="archives-video-asset" autoplay muted loop>
+                        <source src="/project-video/transit/header_video.mp4"  type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
 
             <PrimaryButton 
                 button-link="/"
@@ -38,4 +48,5 @@ import PrimaryButton from '@/components/PrimaryButton.vue'
 import Tag from '@/components/Tag.vue'
 
 let openTag = ref("<")
+let assetType ='video'
 </script>
