@@ -3,11 +3,6 @@
         <div class="flex flex-column gap-164">
             <ArchivedProject />
             <ArchivedProject />
-            <ArchivedProject />
-            <ArchivedProject />
-            <ArchivedProject />
-            <ArchivedProject />
-            <ArchivedProject />
         </div>
     </div>
 </template>

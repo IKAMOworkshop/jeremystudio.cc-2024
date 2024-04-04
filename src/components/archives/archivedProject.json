@@ -1,0 +1,135 @@
+[
+    {
+        "title": "IKAMO.ME",
+        "tag": "WEB DESIGN",
+        "date": "FALL 2023",
+        "type": "video",
+        "asset": "/archives/ikamome.mp4"
+    },
+    {
+        "title": "JEREMYSTUDIO.CC",
+        "tag": "WEB DESIGN",
+        "date": "SUMMER 2023",
+        "type": "video",
+        "asset": "/archives/jeremystudiocc.mp4"
+    },
+    {
+        "title": "FRACTURE",
+        "tag": "PRINT DESIGN",
+        "date": "SPRING 2020",
+        "type": "image",
+        "asset": "/archives/fracture.png"
+    },
+    {
+        "title": "V",
+        "tag": "2D MOTION",
+        "date": "SPRING 2020",
+        "type": "video",
+        "asset": "/archives/v.mp4"
+    },
+    {
+        "title": "WEB SIMPLIFIED",
+        "tag": "3D MOTION",
+        "date": "SPRING 2023",
+        "type": "video",
+        "asset": "/archives/web.mp4"
+    },
+    {
+        "title": "MODZ",
+        "tag": "UIUX DESIGN",
+        "date": "SPRING 2020",
+        "type": "video",
+        "asset": "/archives/modz.mp4"
+    },
+    {
+        "title": "PIXIVFANBOX",
+        "tag": "WEB REDESIGN",
+        "date": "FALL 2020",
+        "type": "video",
+        "asset": "/archives/fanbox.mp4"
+    },
+    {
+        "title": "PROJECT ICONS",
+        "tag": "ICON DESIGN",
+        "date": "2020",
+        "type": "image",
+        "asset": "/archives/icons.png"
+    },
+    {
+        "title": "AIDA C103",
+        "tag": "PRINT DESIGN",
+        "date": "WINTER 2023",
+        "type": "image",
+        "asset": "/archives/c103_aida.png"
+    },
+    {
+        "title": "KYARORU C103",
+        "tag": "PRINT DESIGN",
+        "date": "WINTER 2023",
+        "type": "image",
+        "asset": "/archives/c103_kyaroru.png"
+    },
+    {
+        "title": "LIFT FF42",
+        "tag": "PRINT DESIGN",
+        "date": "SPRINT 2024",
+        "type": "image",
+        "asset": "/archives/ff42_lift.png"
+    },
+    {
+        "title": "AIDA C102",
+        "tag": "PRINT DESIGN",
+        "date": "SUMMER 2023",
+        "type": "image",
+        "asset": "/archives/c102_aida.png"
+    },
+    {
+        "title": "KYARORU C102",
+        "tag": "PRINT DESIGN",
+        "date": "SUMMER 2023",
+        "type": "image",
+        "asset": "/archives/c103_kyaroru.png"
+    },
+    {
+        "title": "LIFE FF41",
+        "tag": "PRINT DESIGN",
+        "date": "SUMMER 2023",
+        "type": "image",
+        "asset": "/archives/ff41_lift.png"
+    },
+    {
+        "title": "KYARORU FF40",
+        "tag": "PRINT DESIGN",
+        "date": "WINTER 2022",
+        "type": "image",
+        "asset": "/archives/ff40_kyaroru.png"
+    },
+    {
+        "title": "PRISMA",
+        "tag": "PRINT DESIGN",
+        "date": "FALL 2019",
+        "type": "image",
+        "asset": "/archives/prisma.png"
+    },
+    {
+        "title": "POLYGON",
+        "tag": "PRINT DESIGN",
+        "date": "FALL 2019",
+        "type": "image",
+        "asset": "/archives/polygon.png"
+    },
+    {
+        "title": "TEACUP",
+        "tag": "3D PROTOTYPING",
+        "date": "FALL 2021",
+        "type": "image",
+        "asset": "/archives/cup.png"
+    },
+    {
+        "title": "TWITCH REBRAND",
+        "tag": "BRAND REDESIGN",
+        "date": "FALL 2022",
+        "type": "image",
+        "asset": "/archives/twitch.png"
+    }
+]
