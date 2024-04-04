@@ -63,6 +63,11 @@
     border-radius: 24px;
 }
 
+.covered-image{
+    height: 720px;
+    object-fit: cover;
+}
+
 .contained-image{
     width: 100%;
 }
@@ -108,4 +113,9 @@
 .next-project-link{
     position: absolute;
     margin-bottom: -36px;
+}
+
+.quote-number{
+    width: 100%;
+    padding: 0px 0px 0px 64px;
 }
