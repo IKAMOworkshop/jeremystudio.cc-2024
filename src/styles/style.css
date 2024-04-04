@@ -51,6 +51,15 @@ footer {
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.justify-start {
+  justify-content: start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -138,6 +147,12 @@ footer {
   color: rgb(11, 13, 16);
 }
 
+.tag {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  padding: 0px 16px;
+}
+
 .hero {
   font-weight: 900;
   font-size: 13rem;
@@ -221,6 +236,18 @@ footer {
   position: absolute;
   top: 40px;
   left: 240px;
+}
+
+.insights-top-container {
+  padding: 240px 240px 160px 120px;
+}
+
+.insights-top-description {
+  width: 200px;
+}
+
+.insights-tag-group {
+  margin-left: 52px;
 }
 
 .project-title {

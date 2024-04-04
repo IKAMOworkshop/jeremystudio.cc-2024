@@ -13,7 +13,16 @@
     flex-direction: column;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 // Justify Content
+.justify-start{
+    justify-content: start;
+}
+
 .justify-center{
     justify-content: center;
 }
@@ -101,4 +110,10 @@
     padding: 24px 36px;
     border-radius: 100px;
     color: rgba(11,13,16,1);
+}
+
+.tag{
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 100px;
+    padding: 0px 16px;
 }
