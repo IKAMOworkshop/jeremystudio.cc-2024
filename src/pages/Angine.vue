@@ -1,27 +1,415 @@
 <template>
     <div>
         <TopTitle project-title="<NEBULA"/>
-        <HeroVideo video-source="/project-video/nebula/header_video.mp4" />
+        <HeroVideo video-source="/project-video/angine/header-video.mp4" />
 
         <ProjectData 
-            title-color="#7593FF"
-            project-type="ECOSYSTEM"
-            project-description="DESIGNING AN ADAPTIVE SLEEP TRAINER TO CURATE A PERSONALIZED SLEEP ROUTINE."
+            title-color="#78FF75"
+            project-type="COMPLEX SYSTEM"
+            project-description="ORCHESTRATING A VIRTUAL AUDIO MIXER FOR A COMPLEX AUDIO SYSTEM ON DESKTOP PC."
 
-            project-timing="FALL 2021"
+            project-timing="SUMMER 2021"
             member-one="JEREMY CHANG"
-            member-two="ZIYI ZHOU"
 
             tech-one="FIGMA"
-            tech-two="RHINO"
-            tech-three="KEYSHOT"
+            tech-two="ILLUSTRATOR"
+            tech-three="AFTER EFFECTS"
 
-            skill-one="ECOSYSTEM DESIGN"
+            skill-one="PRODUCT DESIGN"
             skill-two="UIUX DESIGN"
-            skill-three="PRODUCT DESIGN"
+            skill-three="DESIGN SYSTEM"
             skill-four="BRAND DESIGN"
-            skill-five="2D MOTION"
+            skill-five="MARKET RESEARCH"
         />
+
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="1"
+            />
+
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="false"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="ANGINE SEEKS TO OPTIMIZE AUDIO SETTINGS FOR A HOME STUDIO."
+            />
+        </div>
+
+        <div class="section-container">
+            <img src="@/assets/angine/header.png" alt="" class="project-image">
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="SOLVING THE PROBLEM ON A SYSTEMATIC LEVEL."
+                description="AFTER SEVERAL TESTS AND YEARS OF DEALING WITH TERRIBLE AUDIO SYSTEMS, I IDENTIFIED SOME GLARING FLAWS. WHILE THE SHORTCOMINGS MAY NOT AFFECT ORDINARY USERS, THEY ARE DETRIMENTAL TO POWER USERS LIKE ME. ON A TRADITIONAL AUDIOSYSTEM FOR MOST PC, USERS ONLY GET ONE INPUT AND OUTPUT OPTION, WHICH CAUSES MANY CONFLICTS WITH DEVICE COMPATIBILITY, MISSING DEVICES, AND LITTLE TO NO CUSTOMIZATION."
+            />
+        </div>
+
+        <div class="section-container">
+            <ImageContainer>
+                <img src="@/assets/angine/current_system.png" alt="" class="contained-image">
+            </ImageContainer>
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="BREAKING UP THE SYSTEM INTO INDIVIDUAL TRACKS."
+                description="TO CREATE A MORE SEAMLESS SYSTEM, I TOOK INSPIRATION FROM PHYSICAL MIXERS AND DAW (DIGITAL AUDIO WORKSTATION) TO TACKLE THE LIMITATIONS. AS DAW OFFER TRACKS FOR PRODUCERS TO MIX DIFFERENT INSTRUMENTS, ANGINE MIRRORED THIS INTERACTION TO MAKE SOMETHING SIMILAR THAT CAN ROUTE DEVICES AND SOURCES."
+            />
+        </div>
+
+        <div class="section-container">
+            <ImageContainer>
+                <img src="@/assets/angine/angine_system.png" alt="" class="contained-image">
+            </ImageContainer>
+        </div>
+        
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="2"
+            />
+
+            <TextBlock
+                :open-tag-show="false"
+                :title-show="false"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                description="WITH THIS SYSTEM IMPLEMENTED, USERS CAN ROUTE AUDIO SOURCES TO INDIVIDUAL OUTPUT DEVICES AND PROGRAM THE INPUT DEVICES TO WORK ON SPECIFIC APPLICATIONS. FURTHERMORE, USERS CAN CONTROL THE SETTINGS FOR EACH DEVICE, SUCH AS VOLUME, MUTING, PANNING, ETC."
+            />
+        </div>
+
+        <div class="section-container">
+            <ProjectVideo video-source="/project-video/angine/usage.mp4"/>
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="CUSTOMIZED TO THE USER’S PREFERENCES."
+                description="ANGINE OFFERS ORGANIZATIONAL TOOLS FOR USERS TO CUSTOMIZE THEIR SYSTEMS TO SUIT THEIR PREFERENCES AND NEEDS. LIKE MANY DAWS, USERS CAN FREELY RENAME, REORDER, AND COLOR CODE THE TRACKS. USERS CAN DRAG ROUTING LINES WITH INDIVIDUAL TRACKS TO LINK AUDIO DEVICES WITH APPLICATIONS, PROVIDING USERS FREE RANGE TO ADJUST AND MAKE CHANGES."
+            />
+        </div>
+
+        <div class="section-container">
+            <ProjectVideo video-source="/project-video/angine/organization.mp4"/>
+        </div>
+
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="3"
+            />
+
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="DOCUMENTING AN EXTENSIVE DESIGN SYSTEM."
+                description="TO MAINTAIN A COMPLEX SYSTEM, BUILDING A DESIGN SYSTEM CAN ENSURE THAT CURRENT AND FUTURE DESIGNS STAY CONSISTENT. IT CHELPS AVOID PROBLEMS EARLY AND SETS A STANDARD FOR THE SYSTEM."
+            />
+        </div>
+
+        <div class="section-container">
+            <img src="@/assets/angine/design-system.png" alt="" class="project-image">
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="false"
+                :title-show="false"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                description="FOR ANGINE, IT WAS ESPECIALLY TRICKY AS IT ALLOWED THE USERS TO CUSTOMIZE COLORS FREELY. THIS LED TO KEEPING THE PRIMARY COLORS FOR THE INTERFACE IN GRAYSCALE WHILE SETTING A DYNAMIC COLOR RULE FOR TYPOGRAPHY TO ENSURE ACCESSIBILITY."
+            />
+        </div>
+
+        <div class="section-container flex gap-36">
+            <div class="flex flex-column gap-36">
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-color.png" alt="" class="contained-image">
+                </ImageContainer>
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-grid.png" alt="" class="contained-image">
+                </ImageContainer>
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-responsive.png" alt="" class="contained-image">
+                </ImageContainer>
+            </div>
+            <div class="flex flex-column gap-36">
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-typography.png" alt="" class="contained-image">
+                </ImageContainer>
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-icon.png" alt="" class="contained-image">
+                </ImageContainer>
+                <ImageContainer>
+                    <img src="@/assets/angine/design-system/ds-states.png" alt="" class="contained-image">
+                </ImageContainer>
+            </div>
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="false"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="DEVELOPING A BRAND FOR AN AUDIO POWER TOOL THAT EMPOWERS THE USERS."
+            />
+        </div>
+
+        <div class="section-container flex flex-column gap-36">
+            <img src="@/assets/angine/brand.png" alt="" class="project-image">
+            <iframe src="https://www.youtube.com/embed/A7a9F97iU0o?si=yhedpYOnY0LDugGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="4"
+            />
+
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="FRAMING AN EXTENSIVE RESEARCH PLAN FOR USER DATA AND COMPETITORS."
+                description="THE FRAMING OF ANGINE’S RESEARCH DEIFFERED FROM A TRADITIONAL PROCESS AS I TRIED TO IDENTIFY THE SOLUTIONS PEOPLE HAVE USED AND THE REASONING BEHIND THEIR DECISIONS. BY DOING SO, I COULD CONSTRUCT THE LANDSCAPE OF THE DIFFERENT COMPETITORS WHILE COLLECTING USER INSIGHTS."
+            />
+        </div>
+
+        <div class="section-container flex flex-column align-end gap-100">
+            <QuotesBlock
+                quote="SOMETIMES I PLUG MY HEADSET AND IT BOOST THE VOLUME FOR NO REASON, WHICH CAUSES A LOT OF SETTING UP."
+                small-text="<VOICEMEETER  />"
+                number-color="#78FF75"
+            />
+            <QuotesBlock
+                quote="WHEN MULTIPLE DEVICES GETS CONNECTED, MY COMPUTER BECOMES CONFUSED OF WHICH DEVICE TO USE."
+                small-text="<GOXLR  />"
+                number-color="#78FF75"
+            />
+            <QuotesBlock
+                quote="SOME SOFTWARE HAS ITS OWN AUDIO PROCESSCOR, SO IF I’M NOT AWARE, I’M PRETTY SCREWED WITH MY BUDGET MIC."
+                small-text="<WINDOWS AUDIO DRIVER  />"
+                number-color="#78FF75"
+            />
+        </div>
+
+        <div class="section-container">
+            <ImageContainer>
+                <img src="@/assets/angine/uers-choice.png" alt="" class="contained-image">
+            </ImageContainer>
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="false"
+                :title-show="false"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                description="IT WAS A VERY EFFECTIVE METHODOLOGY COMBINING EXPERT AND USER INTERVIEWS INTO ONE CONVERSATION. ON THE ONE HAND, I CAN COLLECT USER DATA TO IDENTIFY OPPORTUNITIES. ON THE OTHER HAND, I CAN SAVE SIGNIFICANT EFFORT AND TIME EXPLORING THE DIFFERENT RESOLUTIONS FROM THE INTERVIEWED USERS."
+            />
+        </div>
+
+        <div class="section-container flex flex-column gap-36">
+            <ImageContainer>
+                <img src="@/assets/angine/competitors.png" alt="" class="contained-image">
+            </ImageContainer>
+            <ImageContainer>
+                <img src="@/assets/angine/opportunity-map.png" alt="" class="contained-image">
+            </ImageContainer>
+        </div>
+
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="5"
+            />
+
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="INTERATIVE TESTING FOR DISCOVERABILITY AND USABILITY."
+                description="AS ANGINE CONTAINS MANY MOVING COMPONENTS, IT IS CRUCIAL TO ENSURE THAT I INTRODUCE THE CORRECT HIERARCHY. I DESIGNED VARIABTIONS OF SINGLE COMPONENTS TO TEST WITH VARIOUS USERS TO SEE IF THEY COULD DISCOVER AND UNDERSTAND THE FEATURES BY COMPLETING MULTIOPLE TASKS. ONCE COMPLETED, I ASKED THEM TO COMPLETE THE TASKS AGAIN VERBALLY TO DESCRIBE WHAT THEY BELIEVED AS THE MOST OPTIMAL."
+            />
+        </div>
+
+        <div class="section-container flex flex-column gap-36">
+            <ImageContainer>
+                <img src="@/assets/angine/effect-test.png" alt="" class="contained-image">
+            </ImageContainer>
+            <ImageContainer>
+                <img src="@/assets/angine/color-test.png" alt="" class="contained-image">
+            </ImageContainer>
+            <ImageContainer>
+                <img src="@/assets/angine/manage-test.png" alt="" class="contained-image">
+            </ImageContainer>
+        </div>
+
+        <div class="section-container flex justify-between">
+            <TableContent 
+                content-one="SYSTEM DESIGN"
+                content-two="THE EXPERIENCE"
+                content-three="DESIGN SYSTEM"
+                content-four="RESEARCH"
+                content-five="PROTOTYPE & TEST"
+                content-six="MARKET RESEARCH"
+
+                :active-content="6"
+            />
+
+            <TextBlock
+                :open-tag-show="true"
+                :title-show="true"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                title="BUILDING A THOUGHTFUL MARKET PLAN."
+                description="A PRODUCT CAN BE AS GOOD AS IT GETS, BUT IT WILL ONLY BE SUCCESSFUL ONCE SOMEONE IN THIS WORLD NEEDS IT. WITH THIS IN MIND, I CONDUCTED MARKET RESEARCH ALONGSIDE MY USER RESEARCH TO ENSURE MARKET FEASIBILITY AND CREATE MARKET SEGMENTS TO BETTER TARGET SPECIFIC USER."
+            />
+        </div>
+
+        <div class="section-container flex flex-column gap-36">
+            <img src="@/assets/angine/market-size.png" alt="" class="project-image">
+            <img src="@/assets/angine/market-segment.png" alt="" class="project-image">
+            <div class="flex gap-36">
+                <div>
+                    <img src="@/assets/angine/partnership.png" alt="" class="project-image">
+                </div>
+                <div>
+                    <img src="@/assets/angine/community.png" alt="" class="project-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container flex justify-end">
+            <TextBlock
+                :open-tag-show="false"
+                :title-show="false"
+                :description-show="true"
+                :caption-show="false"
+
+                open-tag="<"
+                closing-tag="/>"
+
+                description="ONCE THE BUSINESS FOUNDATION AS FORMED AND VALIDATED, I FORMULATED A BUSINESS PLAN AND IDNTIFIED CHANNELS AND MARKET STRATEGIES FOR ANGINE."
+            />
+        </div>
+
+        <div class="section-container">
+            <img src="@/assets/angine/marketing.png" alt="" class="project-image">
+        </div>
+
+        <!-- Next Project -->
+        <div class="section-container flex flex-column gap-24">
+            <SmallTitle 
+                highlight-text="NEXT"
+                secondary-text="PROJECT"
+            />
+            <NextProject 
+                background-image="/project-thumbnail/stray.png"
+                next-project-title="STRAY"
+                next-project-link="/STRAY"
+                button-text="NEXT PROJECT"
+            />
+        </div>
 
         <ProjectFooter />
     </div>
@@ -35,9 +423,7 @@ import TextBlock from '@/components/projects/TextBlock.vue'
 import QuotesBlock from '@/components/projects/QuotesBlock.vue'
 import TableContent from '@/components/projects/TableContent.vue'
 import ProjectVideo from '@/components/projects/ProjectVideo.vue'
-import ProjectVideoSmall from '@/components/projects/ProjectVideoSmall.vue'
 import ImageContainer from '../components/projects/ImageContainer.vue'
-import ImageContainerPadless from '../components/projects/ImageContainerPadless.vue'
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
