@@ -22,8 +22,7 @@
             skill-one="WEB DESIGN"
             skill-two="WEB DEVELOPMENT"
             skill-three="3D DESIGN"
-            skill-four="3D DEVELOPMENT"
-            skill-five="3D&2D MOTION"
+            skill-four="3D&2D MOTION"
         />
 
         <div class="section-container flex justify-between">
