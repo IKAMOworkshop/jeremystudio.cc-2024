@@ -23,7 +23,7 @@
                     <p class="text-light-gray caption-small-light">IT’S VERY HARD.</p>
                 </div>
 
-                <div class="flex gap-4">
+                <div class="flex gap-8">
 
                     <Tag tag-text="DESIGN"/>
                     <Tag tag-text="DEV"/>

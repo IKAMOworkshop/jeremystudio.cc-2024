@@ -120,6 +120,10 @@ footer {
   gap: 16px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
 .gap-4 {
   gap: 4px;
 }
@@ -250,11 +254,31 @@ footer {
   margin-left: 52px;
 }
 
+.archives-container {
+  padding: 200px 60px;
+}
+
+.archives-image {
+  height: 600px;
+  border-radius: 24px;
+  transform: rotate(3deg);
+}
+
+.archives-line {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68%;
+  height: 1px;
+}
+
 .project-title {
   position: fixed;
   left: 50%;
   top: 40px;
   transform: translate(-50%, 0%);
+  z-index: 9999;
 }
 
 .hero-video-container {

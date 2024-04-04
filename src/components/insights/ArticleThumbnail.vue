@@ -8,7 +8,7 @@
 
                 <div class="flex flex-column gap-16">
 
-                    <div class="flex gap-36 w-164">
+                    <div class="flex gap-36 w-100">
                         <h2 class="text-light title-bold">{{ openTag }}</h2>
                         <div class="flex gap-164 align-end justify-between w-100">
                             <h2 class="text-light title-bold">{{ title }}</h2>
