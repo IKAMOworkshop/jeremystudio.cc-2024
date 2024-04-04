@@ -217,6 +217,12 @@ footer {
   line-height: 150%;
 }
 
+.home-intro {
+  position: absolute;
+  top: 40px;
+  left: 240px;
+}
+
 .project-title {
   position: fixed;
   left: 50%;

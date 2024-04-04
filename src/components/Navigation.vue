@@ -5,7 +5,6 @@
 
             <div class="flex gap-54">
                 <router-link class="text-light caption-bold" to="/">{{ navigationTitle }}</router-link>
-                <p class="text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
             </div>
 
             <div class="flex gap-164">
