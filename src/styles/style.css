@@ -265,10 +265,11 @@ footer {
 }
 
 .archives-line {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 68%;
   height: 1px;
 }

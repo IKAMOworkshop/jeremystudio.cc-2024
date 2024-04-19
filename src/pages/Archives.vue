@@ -3,6 +3,7 @@
         <div class="flex flex-column gap-164">
             <ArchivedProject />
             <ArchivedProject />
+            <div class="archives-line fill-light-gray"></div>
         </div>
     </div>
 </template>

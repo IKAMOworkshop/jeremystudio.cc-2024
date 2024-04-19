@@ -34,8 +34,6 @@
                     <h2 class="text-light-gray caption-small-bold">DATE</h2>
                     <p class="text-light body-bold data-props">{{ project.date }}</p>
             </div>
-
-            <div class="archives-line fill-light-gray"></div>
         </div>
 
     </div>
