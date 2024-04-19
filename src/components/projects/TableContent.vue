@@ -18,6 +18,9 @@
 
             <p v-if="activeContent === 6" :style="{color: activeText}" class="caption-small-light">{{ contentSix }}</p>
             <p v-else :style="{color: inactiveText}" class="caption-small-light">{{ contentSix }}</p>
+
+            <p v-if="activeContent === 7" :style="{color: activeText}" class="caption-small-light">{{ contentSeven }}</p>
+            <p v-else :style="{color: inactiveText}" class="caption-small-light">{{ contentSeven }}</p>
         </div>
     </div>
 </template>
@@ -45,6 +48,9 @@ defineProps({
         type: String,
     },
     contentSix:{
+        type: String,
+    },
+    contentSeven:{
         type: String,
     },
     activeContent:{
