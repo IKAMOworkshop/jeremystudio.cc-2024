@@ -240,6 +240,19 @@ footer {
   line-height: 150%;
 }
 
+.caption-container {
+  max-height: 1.2rem;
+  overflow: hidden;
+}
+
+.caption-move {
+  transition: all 0.5s ease;
+}
+
+.caption-container:hover > .caption-move {
+  transform: translateY(-1.2rem);
+}
+
 .home-intro {
   position: absolute;
   top: 40px;

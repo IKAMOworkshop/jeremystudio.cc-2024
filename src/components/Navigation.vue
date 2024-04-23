@@ -9,22 +9,77 @@
 
             <div class="flex gap-164">
                 <ul class="flex gap-16">
+
                     <li><router-link class="text-light-gray caption-light" to="/about">
-                        <p>ABOUT</p>
+                        <div class="caption-container">
+                            <div class="caption-move">
+                                <p>ABOUT</p>
+                                <p>ABOUT</p>
+                            </div>
+                        </div>
                     </router-link></li>
-                    <li><router-link class="text-light-gray caption-light" to="/insights">INSIGHTS</router-link></li>
-                    <li><router-link class="text-light-gray caption-light" to="/archives">ARCHIVES</router-link></li>
+
+                    <li><router-link class="text-light-gray caption-light" to="/insights">
+                        <div class="caption-container">
+                            <div class="caption-move">
+                                <p>INSIGHTS</p>
+                                <p>INSIGHTS</p>
+                            </div>
+                        </div>
+                    </router-link></li>
+
+                    <li><router-link class="text-light-gray caption-light" to="/archives">
+                        <div class="caption-container">
+                            <div class="caption-move">
+                                <p>ARCHIVES</p>
+                                <p>ARCHIVES</p>
+                            </div>
+                        </div>
+                    </router-link></li>
                 </ul>
-                <button class="text-light-gray caption-light">JP</button>
+
+                <button class="text-light-gray caption-light">
+                    <div class="caption-container">
+                            <div class="caption-move flex align-end flex-column">
+                                <p>JP</p>
+                                <p>SWITCH</p>
+                            </div>
+                        </div>
+                </button>
             </div>
 
         </nav>
 
         <div class="bottom-nav flex justify-between align-center">
             <ul class="flex gap-16">
-                <button id="email-button" class="text-light-gray caption-light">M.</button>
-                <li><a class="text-light-gray caption-light" href="https://github.com/IKAMOworkshop" target="_blank" rel="noopener noreferrer">GH.</a></li>
-                <li><a class="text-light-gray caption-light" href="https://www.linkedin.com/in/jeremystudio/" target="_blank" rel="noopener noreferrer">LI.</a></li>
+
+                <button id="email-button" class="text-light-gray caption-light">
+                    <div class="caption-container">
+                        <div class="caption-move">
+                            <p>M.</p>
+                            <p>M.</p>
+                        </div>
+                    </div>
+                </button>
+                
+                <li><a class="text-light-gray caption-light" href="https://github.com/IKAMOworkshop" target="_blank" rel="noopener noreferrer">
+                    <div class="caption-container">
+                        <div class="caption-move">
+                            <p>GH.</p>
+                            <p>GH.</p>
+                        </div>
+                    </div>
+                </a></li>
+
+                <li><a class="text-light-gray caption-light" href="https://www.linkedin.com/in/jeremystudio/" target="_blank" rel="noopener noreferrer">
+                    <div class="caption-container">
+                        <div class="caption-move">
+                            <p>LI.</p>
+                            <p>LI.</p>
+                        </div>
+                    </div>
+                </a></li>
+
             </ul>
             <div class="progress-bar">
                 <div class="progress"></div>
