@@ -6,15 +6,65 @@
             
                 <div class="flex gap-200">
                     <ul class="flex flex-column gap-4">
-                        <li><router-link class="text-dark body-bold" to="/about">ABOUT</router-link></li>
-                        <li><router-link class="text-dark body-bold" to="/insights">INSIGHTS</router-link></li>
-                        <li><router-link class="text-dark body-bold" to="/archives">ARCHIVES</router-link></li>
+
+                        <li><router-link class="text-dark body-bold" to="/about">
+                            <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>ABOUT</p>
+                                    <p>ABOUT</p>
+                                </div>
+                            </div>
+                        </router-link></li>
+
+                        <li><router-link class="text-dark body-bold" to="/insights">
+                            <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>INSIGHTS</p>
+                                    <p>INSIGHTS</p>
+                                </div>
+                            </div>
+                        </router-link></li>
+
+                        <li><router-link class="text-dark body-bold" to="/archives">
+                            <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>ARCHIVES</p>
+                                    <p>ARCHIVES</p>
+                                </div>
+                            </div>
+                        </router-link></li>
                     </ul>
+
+
                     <ul class="flex flex-column gap-4">
-                        <button id="footer-email" class="text-dark body-bold">MAIL</button>
-                    <li><a class="text-dark body-bold" href="https://github.com/IKAMOworkshop" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-                    <li><a class="text-dark body-bold" href="https://www.linkedin.com/in/jeremystudio/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+                        <button id="footer-email" class="text-dark body-bold">
+                            <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>MAIL</p>
+                                    <p>MAIL</p>
+                                </div>
+                            </div>
+                        </button>
+
+                    <li><a class="text-dark body-bold" href="https://github.com/IKAMOworkshop" target="_blank" rel="noopener noreferrer">
+                        <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>GITHUB</p>
+                                    <p>GITHUB</p>
+                                </div>
+                            </div>
+                    </a></li>
+
+                    <li><a class="text-dark body-bold" href="https://www.linkedin.com/in/jeremystudio/" target="_blank" rel="noopener noreferrer">
+                        <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>LINKEDIN</p>
+                                    <p>LINKEDIN</p>
+                                </div>
+                            </div>
+                    </a></li>
                     </ul>
+
                 </div>
 
                 <p class="text-dark body-bold">©2023</p>

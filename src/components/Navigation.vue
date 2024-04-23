@@ -4,7 +4,14 @@
         <nav class="flex justify-between align-start">
 
             <div class="flex gap-54">
-                <router-link class="text-light caption-bold" to="/">{{ navigationTitle }}</router-link>
+                <router-link class="text-light caption-bold" to="/">
+                    <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>{{navigationTitle}}</p>
+                                    <p>RETURN HOME</p>
+                                </div>
+                            </div>
+                </router-link>
             </div>
 
             <div class="flex gap-164">
