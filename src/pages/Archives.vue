@@ -1,6 +1,6 @@
 <template>
     <div class="archives-container w-100">
-        <div class="flex flex-column gap-164">
+        <div class="flex flex-column gap-280">
             <ArchivedProject />
             <ArchivedProject />
             <div class="archives-line fill-light-gray"></div>

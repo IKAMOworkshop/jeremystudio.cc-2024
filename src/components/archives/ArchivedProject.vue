@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-column gap-164">
+    <div class="flex flex-column gap-280">
         
         <div v-for="project in projects" class="flex justify-between align-center">
 

@@ -84,6 +84,10 @@ footer {
   align-items: end;
 }
 
+.gap-280 {
+  gap: 280px;
+}
+
 .gap-200 {
   gap: 200px;
 }

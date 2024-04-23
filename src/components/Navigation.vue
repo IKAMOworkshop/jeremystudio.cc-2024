@@ -9,7 +9,9 @@
 
             <div class="flex gap-164">
                 <ul class="flex gap-16">
-                    <li><router-link class="text-light-gray caption-light" to="/about">ABOUT</router-link></li>
+                    <li><router-link class="text-light-gray caption-light" to="/about">
+                        <p>ABOUT</p>
+                    </router-link></li>
                     <li><router-link class="text-light-gray caption-light" to="/insights">INSIGHTS</router-link></li>
                     <li><router-link class="text-light-gray caption-light" to="/archives">ARCHIVES</router-link></li>
                 </ul>
