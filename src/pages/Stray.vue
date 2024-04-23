@@ -426,15 +426,34 @@ import TopTitle from '@/components/projects/TopTitle.vue'
 import HeroVideo from '@/components/projects/HeroVideo.vue'
 import ProjectData from '@/components/projects/ProjectData.vue'
 import TextBlock from '@/components/projects/TextBlock.vue'
-import QuotesBlock from '@/components/projects/QuotesBlock.vue'
 import TableContent from '@/components/projects/TableContent.vue'
 import ProjectVideo from '@/components/projects/ProjectVideo.vue'
-import ProjectVideoSmall from '@/components/projects/ProjectVideoSmall.vue'
 import ImageContainer from '../components/projects/ImageContainer.vue'
-import ImageContainerPadless from '../components/projects/ImageContainerPadless.vue'
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
 import ProjectFooter from '../components/ProjectFooter.vue';
+
+import { onMounted, onUnmounted } from 'vue'
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis({
+    smooth: true,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+onUnmounted(() => {
+    function destroy(){
+        lenis.destroy()
+    }
+    
+    destroy()
+})
 
 </script>

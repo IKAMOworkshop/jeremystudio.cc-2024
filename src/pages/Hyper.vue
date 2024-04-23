@@ -300,8 +300,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
 import TopTitle from '@/components/projects/TopTitle.vue'
 import HeroVideo from '@/components/projects/HeroVideo.vue'
 import ProjectData from '@/components/projects/ProjectData.vue'
@@ -315,5 +313,26 @@ import NextProject from '../components/projects/NextProject.vue'
 
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
+import { onMounted, onUnmounted } from 'vue'
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis({
+    smooth: true,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+onUnmounted(() => {
+    function destroy(){
+        lenis.destroy()
+    }
+    
+    destroy()
+})
 
 </script>

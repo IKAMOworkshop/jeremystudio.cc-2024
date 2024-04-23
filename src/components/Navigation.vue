@@ -8,7 +8,7 @@
                     <div class="caption-container">
                                 <div class="caption-move">
                                     <p>{{navigationTitle}}</p>
-                                    <p>RETURN HOME</p>
+                                    <p>{{ navigationHome }}</p>
                                 </div>
                             </div>
                 </router-link>
@@ -101,6 +101,7 @@
 import { ref, onMounted } from 'vue'
 
 let navigationTitle = ref('<JEREMYSTUDIO />')
+let navigationHome = ref('<RETURN HOME />')
 
 onMounted(() => {
     const emailButton = document.getElementById('email-button')
