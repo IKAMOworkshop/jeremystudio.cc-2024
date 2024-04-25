@@ -4,7 +4,7 @@
             <div class="flex flex-column align-end gap-4">
                 <h2 class="text-light-gray caption-small-light">TIMELINE</h2>
                 <div class="archive-date-box">
-                    <div id="date-list" class="flex flex-column gap-4">
+                    <div id="date-list" class="flex flex-column">
                         <p class="archive-date text-light body-bold data-props" v-for="project in projects">{{ project.date }}</p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ onMounted(() => {
     const scrollEffect = () => {
 
         scroll.scroll -= (scroll.scroll - scroll.scrollTarget) * .1
-        scroll.scrollPosition += scroll.scroll * .16
+        scroll.scrollPosition += scroll.scroll * .012
         scroll.scrollTarget = 0
 
         if(scroll.scrollPosition <= 1 - dateContainer.getBoundingClientRect().height){

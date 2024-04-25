@@ -4,6 +4,7 @@
             
             <ArchivedTitle />
             <ArchivedDate />
+            <ArchivedProject />
 
             <div class="archives-line fill-light-gray"></div>
         </div>
@@ -11,12 +12,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
 import ArchivedTitle from '../components/archives/ArchivedTitle.vue'
 import ArchivedDate from '../components/archives/ArchivedDate.vue'
-
-
+import ArchivedProject from '../components/archives/ArchivedProject.vue'
 
 </script>
 

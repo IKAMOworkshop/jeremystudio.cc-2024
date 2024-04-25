@@ -1,6 +1,6 @@
 <template>
-    <div class="archives-title-container flex flex-column gap-24">
-        <div id="title-list" class="flex flex-column gap-24">
+    <div class="archives-title-container flex flex-column gap-16">
+        <div id="title-list" class="flex flex-column gap-8">
             <div class="archieve-title flex flex-column gap-8" v-for="project in projects">
                 <div class="flex gap-4">
                     <h2 class="text-light body-bold">{{ openTag }}</h2>
@@ -40,7 +40,7 @@ onMounted(() => {
     const scrollEffect = () => {
 
         scroll.scroll -= (scroll.scroll - scroll.scrollTarget) * .1
-        scroll.scrollPosition += scroll.scroll * .6
+        scroll.scrollPosition += scroll.scroll * .04
         scroll.scrollTarget = 0
 
         if(scroll.scrollPosition <= 1 - container.getBoundingClientRect().height){
