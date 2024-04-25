@@ -1,12 +1,24 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="32" height="32" rx="16" fill="#0B0D10"/>
-<rect width="32" height="32" rx="16" fill="url(#paint0_radial_694_3)"/>
-<path d="M23.2957 17.2032L16.3892 19.9695V17.6302L20.7893 16.1078L20.715 16.2192V15.9593L20.7893 16.0707L16.3892 14.5483V12.209L23.2957 14.9753V17.2032Z" fill="white"/>
-<path d="M15.2356 10L12.1722 21.3809H10L13.0634 10H15.2356Z" fill="white"/>
+<g clip-path="url(#clip0_694_3)">
+<rect width="32" height="32" rx="16" fill="#161B20"/>
+<circle cx="16" cy="-17" r="44" fill="#243439"/>
+<ellipse cx="30.5" cy="34.5" rx="17.5" ry="16.5" fill="#2D7186"/>
+<ellipse cx="-5.5" cy="9.5" rx="17.5" ry="16.5" fill="#282046"/>
+<ellipse cx="40.5" cy="3.5" rx="17.5" ry="16.5" fill="#185744"/>
+<g filter="url(#filter0_b_694_3)">
+<rect width="32" height="32" fill="#161B20" fill-opacity="0.5"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.1722 21.3809L15.2356 10H13.0634L10 21.3809H12.1722ZM16.3892 19.9695L23.2957 17.2032V14.9753L16.3892 12.209V14.5483L20.715 16.045V16.1335L16.3892 17.6302V19.9695Z" fill="white"/>
+</g>
 <defs>
-<radialGradient id="paint0_radial_694_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16 1.56688e-06) rotate(90) scale(32 17.4593)">
-<stop stop-color="#243439"/>
-<stop offset="1" stop-color="#0B0D10"/>
-</radialGradient>
+<filter id="filter0_b_694_3" x="-8" y="-8" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="4"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_694_3"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_694_3" result="shape"/>
+</filter>
+<clipPath id="clip0_694_3">
+<rect width="32" height="32" rx="16" fill="white"/>
+</clipPath>
 </defs>
 </svg>
