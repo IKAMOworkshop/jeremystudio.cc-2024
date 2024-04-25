@@ -1,6 +1,6 @@
 <template>
     <div class="archives-title-container flex flex-column gap-24">
-        <div id="full-list" class="flex flex-column gap-24">
+        <div id="title-list" class="flex flex-column gap-24">
             <div class="archieve-title flex flex-column gap-8" v-for="project in projects">
                 <div class="flex gap-4">
                     <h2 class="text-light body-bold">{{ openTag }}</h2>
@@ -20,14 +20,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import Tag from '@/components/Tag.vue'
 
 let openTag = ref("<")
 
 onMounted(() => {
     const titleList = document.getElementsByClassName('archieve-title')
-    const container = document.getElementById('full-list')
+    const container = document.getElementById('title-list')
     const scroll = {}
     scroll.scroll = 0
     scroll.scrollTarget = 0
@@ -40,11 +40,15 @@ onMounted(() => {
     const scrollEffect = () => {
 
         scroll.scroll -= (scroll.scroll - scroll.scrollTarget) * .1
-        scroll.scrollPosition += scroll.scroll * .5
+        scroll.scrollPosition += scroll.scroll * .6
         scroll.scrollTarget = 0
 
         if(scroll.scrollPosition <= 1 - container.getBoundingClientRect().height){
             scroll.scrollPosition = 0
+        }
+
+        if(scroll.scrollPosition >= 60){
+            scroll.scrollPosition = -60
         }
 
         for(let i = 0; i < titleList.length; i++) {
