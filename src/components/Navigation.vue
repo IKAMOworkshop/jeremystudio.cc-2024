@@ -89,7 +89,7 @@
 
             </ul>
             <div class="progress-bar">
-                <div class="progress"></div>
+                <div id="scroll-progress" class="progress"></div>
             </div>
         </div>
 
@@ -105,6 +105,28 @@ let navigationHome = ref('<RETURN HOME />')
 
 onMounted(() => {
     const emailButton = document.getElementById('email-button')
+    const scrollProgress = document.getElementById('scroll-progress')
+
+    // document.addEventListener('scroll', () => {
+    //     const totalHeight = document.body.scrollHeight
+    //     const currentDistance = document.documentElement.scrollTop
+    //     const windowHeight = document.documentElement.clientHeight
+
+    //     const scrollPercentage = (currentDistance / (totalHeight - windowHeight)) * 100
+
+    //     scrollProgress.style.transform = `translateX(${scrollPercentage * .6}px)`
+    // })
+    
+    let totalScroll = 0
+
+    document.addEventListener('mousewheel', (e) => {
+        totalScroll += e.wheelDelta
+
+        let finalScroll = totalScroll / e.wheelDelta
+        console.log()
+        scrollProgress.style.transform = `translateX(${Math.abs(finalScroll % 100) - 20}px)`
+        
+    })
 
     const copyEmail = () => {
         navigator.clipboard.writeText("changjeremy0226@gmail.com").then(() => {
