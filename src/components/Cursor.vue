@@ -3,6 +3,9 @@
         <div class="cursor-container">
             <div id="cursor" class="cursor"></div>
         </div>
+        <div class="blob-container">
+            <div id="blob" class="blob"></div>
+        </div>
     </div>
 </template>
 
@@ -11,6 +14,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
     const cursor = document.getElementById('cursor')
+    const blob = document.getElementById('blob')
 
     const anchorTags = document.getElementsByTagName('a')
     const buttonTags = document.getElementsByTagName('button')
@@ -28,6 +32,10 @@ onMounted(() => {
             left: `${mousePos.x}px`,
             top: `${mousePos.y}px`
         }, {duration: 800, fill: 'forwards'})
+        blob.animate({
+            left: `${mousePos.x}px`,
+            top: `${mousePos.y}px`
+        }, {duration: 10000, fill: 'forwards'})
 
     })
 
