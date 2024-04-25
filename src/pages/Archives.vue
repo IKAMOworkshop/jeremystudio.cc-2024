@@ -5,6 +5,7 @@
             <ArchivedTitle />
             <ArchivedDate />
             <ArchivedProject />
+            <InfiniteScrollProgress />
 
             <div class="archives-line fill-light-gray"></div>
         </div>
@@ -15,6 +16,7 @@
 import ArchivedTitle from '../components/archives/ArchivedTitle.vue'
 import ArchivedDate from '../components/archives/ArchivedDate.vue'
 import ArchivedProject from '../components/archives/ArchivedProject.vue'
+import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
 
 </script>
 
