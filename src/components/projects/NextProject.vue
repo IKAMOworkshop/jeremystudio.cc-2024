@@ -16,12 +16,12 @@
             </div>
         </div>
 
-        <PrimaryButton
-        :button-link="nextProjectLink"
-        :button-text="buttonText"
-        
-        class="next-project-link"
-        />
+        <div class="next-project-link">
+            <PrimaryButton
+                :button-link="nextProjectLink"
+                :button-text="buttonText"
+            />
+        </div>
 
     </div>
 </template>
