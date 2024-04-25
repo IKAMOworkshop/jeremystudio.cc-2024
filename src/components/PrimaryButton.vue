@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="button-wrapper">
         <router-link id="button" class="primary-button caption-bold flex justify-center align-center gap-4" :to="buttonLink">
             {{ buttonText }}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

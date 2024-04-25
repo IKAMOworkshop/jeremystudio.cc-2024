@@ -123,11 +123,21 @@
 }
 
 // Button
+.button-wrapper{
+    border-radius: 100px;
+    overflow: hidden;
+    border: solid 1px;
+    border-color: rgba(255, 255, 255, 1);
+    transition: all .4s ease-in-out;
+}
+
+.button-wrapper:hover{
+    border-color: rgba(11,13,16,1);
+}
+
 .primary-button{
     position: relative;
     padding: 24px 48px;
-    border-radius: 100px;
-    overflow: hidden;
     color: rgba(11,13,16,1);
     transition: all .4s ease-in-out;
 }

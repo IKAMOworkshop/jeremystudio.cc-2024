@@ -157,11 +157,21 @@ footer {
           user-select: none;
 }
 
+.button-wrapper {
+  border-radius: 100px;
+  overflow: hidden;
+  border: solid 1px;
+  border-color: rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+}
+
+.button-wrapper:hover {
+  border-color: rgb(11, 13, 16);
+}
+
 .primary-button {
   position: relative;
   padding: 24px 48px;
-  border-radius: 100px;
-  overflow: hidden;
   color: rgb(11, 13, 16);
   transition: all 0.4s ease-in-out;
 }
