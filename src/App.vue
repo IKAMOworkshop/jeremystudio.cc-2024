@@ -1,5 +1,6 @@
 <template>
     <Navigation />
+    <Cursor />
     <!-- TEMP LINK -->
     <div class="temp-link flex flex-column">
         <router-link class="text-light-gray caption-light" to="/stray">STRAY</router-link>
@@ -14,7 +15,7 @@
 </template>
 
 <script setup>
-
 import Navigation from './components/Navigation.vue';
+import Cursor from '@/components/Cursor.vue';
 
 </script>

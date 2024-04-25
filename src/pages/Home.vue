@@ -10,5 +10,4 @@
 
 <script setup>
 import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
-
 </script>

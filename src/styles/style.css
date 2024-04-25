@@ -227,6 +227,32 @@ footer {
   padding: 0px 16px;
 }
 
+.cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: rgb(255, 255, 255);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
 .hero {
   font-weight: 900;
   font-size: 13rem;
