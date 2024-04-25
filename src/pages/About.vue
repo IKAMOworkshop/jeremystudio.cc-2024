@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ScrollProgress />
         <div class="placeholder-container">
             <h1 class="hero text-light placeholder-title">ABOUT</h1>
         </div>
@@ -7,5 +8,5 @@
 </template>
 
 <script setup>
-
+import ScrollProgress from '../components/ScrollProgress.vue'
 </script>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ScrollProgress />
 
         <TopTitle project-title="<TRANSIT"/>
         <HeroVideo video-source="/project-video/transit/header_video.mp4" />
@@ -248,6 +249,7 @@ import ProjectVideo from '@/components/projects/ProjectVideo.vue'
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
+import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ScrollProgress />
 
         <TopTitle project-title="<NEBULA"/>
         <HeroVideo video-source="/project-video/nebula/header_video.mp4" />
@@ -319,6 +320,7 @@ import ImageContainerPadless from '../components/projects/ImageContainerPadless.
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
+import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'

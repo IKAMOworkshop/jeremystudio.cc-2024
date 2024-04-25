@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ScrollProgress />
         
         <!-- Header -->
         <div class="insights-top-container flex justify-between">
@@ -80,6 +81,7 @@ import { ref } from 'vue'
 
 import Tag from '@/components/Tag.vue'
 import ArticleThumbnail from '@/components/insights/ArticleThumbnail.vue'
+import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 let openTag = ref('<')

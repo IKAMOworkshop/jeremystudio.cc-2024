@@ -1,5 +1,7 @@
 <template>
     <div>
+        <ScrollProgress />
+
         <TopTitle project-title="<HYPER" />
 
         <HeroVideo video-source="/project-video/hyper/hyper.mp4" />
@@ -310,7 +312,7 @@ import ImageContainer from '../components/projects/ImageContainer.vue'
 import SmallTitle from '../components/projects/SmallTitle.vue'
 import NextProject from '../components/projects/NextProject.vue'
 
-
+import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'
