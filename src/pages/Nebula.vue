@@ -50,7 +50,7 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/nebula/header.png" alt="" class="project-image">
+            <img src="@/assets/nebula/header.png" alt="A hero shot of the projector and the final app interface side-by-side" class="project-image">
         </div>
 
         <div class="section-container flex justify-end">
@@ -99,14 +99,14 @@
 
         <div class="section-container flex flex-column gap-36">
             <ImageContainer>
-                <img src="@/assets/nebula/sleep_routine.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/sleep_routine.png" alt="A diagram showing the three section that our team decide to focus on, which is before, during, and after sleep" class="contained-image">
             </ImageContainer>
             <div class="flex gap-36">
                 <ImageContainerPadless>
-                    <img src="@/assets/nebula/product_highlight.png" alt="" class="contained-image">
+                    <img src="@/assets/nebula/product_highlight.png" alt="A detailed rendered of the projector" class="contained-image">
                 </ImageContainerPadless>
                 <ImageContainerPadless>
-                    <img src="@/assets/nebula/ui_highlight.png" alt="" class="contained-image">
+                    <img src="@/assets/nebula/ui_highlight.png" alt="A close up screenshot of the landing page for the app" class="contained-image">
                 </ImageContainerPadless>
             </div>
         </div>
@@ -127,8 +127,8 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/nebula/bed_side.png" alt="" class="project-image">
-            <img src="@/assets/nebula/three_scenes.png" alt="" class="project-image">
+            <img src="@/assets/nebula/bed_side.png" alt="A demostration image showing a person sleeping next to the projector, while it's controlling the environmental lighting and mood" class="project-image">
+            <img src="@/assets/nebula/three_scenes.png" alt="A room render showing the different types of lighting and mood that the project and app can create" class="project-image">
         </div>
 
         <div class="section-container flex justify-end">
@@ -149,10 +149,10 @@
         <div class="section-container flex flex-column gap-36">
             <ProjectVideo video-source="/project-video/nebula/integration.mp4"/>
             <ImageContainer>
-                <img src="@/assets/nebula/product_view.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/product_view.png" alt="A three way render of the front, side, and back of the projector" class="contained-image">
             </ImageContainer>
             <ImageContainerPadless>
-                <img src="@/assets/nebula/ui_collage.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/ui_collage.png" alt="A collage of the final app interface design" class="contained-image">
             </ImageContainerPadless>
         </div>
 
@@ -183,7 +183,7 @@
 
         <div class="section-container flex gap-36">
             <div class="flex flex-column gap-36 w-100">
-                <img src="@/assets/nebula/brand_showcase.png" alt="" class="project-image covered-image">
+                <img src="@/assets/nebula/brand_showcase.png" alt="A image showcasing the brand logo and color of the project" class="project-image covered-image">
             </div>
             <div class="flex flex-column gap-36 w-100">
                 <ProjectVideoSmall video-source="/project-video/nebula/brand_motion.mp4"/>
@@ -217,7 +217,7 @@
 
         <div class="section-container">
             <ImageContainerPadless>
-                <img src="@/assets/nebula/survey.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/survey.png" alt="A glance at the questions for the created survey for user research" class="contained-image">
             </ImageContainerPadless>
         </div>
 
@@ -241,10 +241,10 @@
 
         <div class="section-container flex flex-column gap-36">
             <ImageContainer>
-                <img src="@/assets/nebula/journey_map.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/journey_map.png" alt="A user journey diagram of the experience" class="contained-image">
             </ImageContainer>
             <ImageContainer>
-                <img src="@/assets/nebula/scenario.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/scenario.png" alt="A sketched version of the entire user journey with Nebula" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -275,16 +275,16 @@
 
         <div class="section-container flex flex-column gap-36">
             <ImageContainer>
-                <img src="@/assets/nebula/ceiling_mount.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/ceiling_mount.png" alt="A side-by-side image showing the paper prototype and digital mock up for the ceiling mounting method" class="contained-image">
                 <div class="divider fill-gray"></div>
-                <img src="@/assets/nebula/gilder_mount.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/gilder_mount.png" alt="A side-by-side image showing the paper prototype and digital mock up for the ceiling glider method" class="contained-image">
                 <div class="divider fill-gray"></div>
-                <img src="@/assets/nebula/multi_device.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/multi_device.png" alt="A side-by-side image showing the paper prototype and digital mock up for the multi-devices method" class="contained-image">
             </ImageContainer>
-            <img src="@/assets/nebula/light_testing.png" alt="" class="project-image">
-            <img src="@/assets/nebula/form_explore.png" alt="" class="project-image">
+            <img src="@/assets/nebula/light_testing.png" alt="A photo showing the light-testing process to make sure projectors clarity under certain lighting condition" class="project-image">
+            <img src="@/assets/nebula/form_explore.png" alt="Iterations of differnet models exploring the look and feels of the final product" class="project-image">
             <ImageContainer>
-                <img src="@/assets/nebula/wireframe.png" alt="" class="contained-image">
+                <img src="@/assets/nebula/wireframe.png" alt="A information architecture diagram mappping the wireframe and their corrisponding flow" class="contained-image">
             </ImageContainer>
         </div>
 
