@@ -631,8 +631,14 @@ span {
   display: inline-block;
 }
 
-.scroll-stopper {
-  overflow-x: hidden;
+::-moz-selection {
+  background: rgb(255, 255, 255);
+  color: rgb(11, 13, 16);
+}
+
+::selection {
+  background: rgb(255, 255, 255);
+  color: rgb(11, 13, 16);
 }
 
 /*width*/
