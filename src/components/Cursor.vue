@@ -27,6 +27,8 @@ onMounted(() => {
     window.addEventListener('mousemove', (e) => {
         mousePos.x = e.clientX
         mousePos.y = e.clientY
+
+        cursor.style.opacity = 1
         
         cursor.animate({
             left: `${mousePos.x}px`,

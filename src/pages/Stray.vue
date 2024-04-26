@@ -42,7 +42,7 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/stray/header.png" alt="" class="project-image">
+            <img src="@/assets/stray/header.png" alt="GLSL code and the results of the rendered wobbly model" class="project-image">
         </div>
 
         <div class="section-container flex justify-between">
@@ -93,15 +93,15 @@
         <div class="section-container flex flex-column gap-36">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/wobble_1.png" alt="" class="project-image">
-                    <img src="@/assets/stray/wobble_2.png" alt="" class="project-image">
+                    <img src="@/assets/stray/wobble_1.png" alt="A violet and yellow colored wobbling sphere with a matte material" class="project-image">
+                    <img src="@/assets/stray/wobble_2.png" alt="A red and blue colored wobbling sphere with a metal-like material" class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/wobble_3.png" alt="" class="project-image">
-                    <img src="@/assets/stray/wobble_4.png" alt="" class="project-image">
+                    <img src="@/assets/stray/wobble_3.png" alt="A green and cyan colored wobbling sphere with a matted metal material" class="project-image">
+                    <img src="@/assets/stray/wobble_4.png" alt="A violet and turqoise colored wobbling sphere with a reflective metal material" class="project-image">
                 </div>
             </div>
-            <img src="@/assets/stray/wobble_5.png" alt="" class="project-image">
+            <img src="@/assets/stray/wobble_5.png" alt="A green and blue colored wobbling monkey model with a matted metal material" class="project-image">
         </div>
 
         <div class="section-container flex justify-between">
@@ -152,7 +152,7 @@
 
         <div class="section-container flex flex-column">
             <ImageContainer>
-                <img src="@/assets/stray/deconstruct_problem.png" alt="" class="contained-image">
+                <img src="@/assets/stray/deconstruct_problem.png" alt="A step-by-step image demostration on how I broke down the project into smaller pieces to resolve" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -204,10 +204,10 @@
 
         <div class="section-container project-columns flex gap-36">
             <div class="flex flex-column gap-36">
-                <img src="@/assets/stray/reference_mesh_code.png" alt="" class="project-image">
+                <img src="@/assets/stray/reference_mesh_code.png" alt="A code snippet showing the process of adding a referencing mesh for the cursor and robot movement" class="project-image">
             </div>
             <div class="flex flex-column gap-36">
-                <img src="@/assets/stray/animate_model_code.png" alt="" class="project-image">
+                <img src="@/assets/stray/animate_model_code.png" alt="A code snippet showing how I animated the robot model using the cursor position as the base value" class="project-image">
             </div>
         </div>
 
@@ -258,8 +258,8 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/stray/glass_1.png" alt="" class="project-image">
-            <img src="@/assets/stray/glass_2.png" alt="" class="project-image">
+            <img src="@/assets/stray/glass_1.png" alt="Iterations of the same window-glass effect with a robot head model" class="project-image">
+            <img src="@/assets/stray/glass_2.png" alt="Iterations of the same window-glass effect with a game controller model" class="project-image">
         </div>
 
         <div class="section-container flex justify-between">
@@ -307,8 +307,8 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/stray/flow_1.png" alt="" class="project-image">
-            <img src="@/assets/stray/flow_2.png" alt="" class="project-image">
+            <img src="@/assets/stray/flow_1.png" alt="A boat model using the same flow field engine to show a more colorful results" class="project-image">
+            <img src="@/assets/stray/flow_2.png" alt="A game controller model distorted using the flow field engine to showcase a contrasting color, which is yellow and cyan" class="project-image">
         </div>
 
         <div class="section-container flex justify-between">
@@ -342,10 +342,10 @@
             <ProjectVideo video-source="/project-video/stray/distort.mp4"/>
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/distort_1.png" alt="" class="project-image">
+                    <img src="@/assets/stray/distort_1.png" alt="Iteration of the distorted UV pattern with different images gnerating different patter and colors. In the case, is yellow and blue." class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/distort_2.png" alt="" class="project-image">
+                    <img src="@/assets/stray/distort_2.png" alt="Iteration of the distorted UV pattern with different images gnerating different patter and colors. In the case, I've tried a highly saturated and colored blend of images" class="project-image">
                 </div>
             </div>
         </div>
@@ -397,10 +397,10 @@
         <div class="section-container flex flex-column">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/ray_1.png" alt="" class="project-image">
+                    <img src="@/assets/stray/ray_1.png" alt="Exploring a more matte metal matcap texture." class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/ray_2.png" alt="" class="project-image">
+                    <img src="@/assets/stray/ray_2.png" alt="Exploring a highly reflective metal matcap texture" class="project-image">
                 </div>
             </div>
         </div>
