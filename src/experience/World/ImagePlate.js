@@ -24,9 +24,14 @@ export default class ImagePlate {
     setTexture() {
         this.thumbnailTextures = []
 
-        this.imageOne = this.resources.items.stray
+        this.strayImage = this.resources.items.stray
+        this.hyperImage = this.resources.items.hyper
+        this.transitImage = this.resources.items.transit
+        this.arcaneImage = this.resources.items.arcane
+        this.nebulaImage = this.resources.items.nebula
+        this.angineImage = this.resources.items.angine
 
-        this.thumbnailTextures.push(this.imageOne, this.imageTwo, this.imageThree, this.imageFour, this.imageFive, this.imageSix, this.imageSeven, this.imageEight, this.imageNine)
+        this.thumbnailTextures.push(this.strayImage, this.hyperImage, this.transitImage, this,this.arcaneImage, this.nebulaImage, this.angineImage)
     }
 
     setModel(){
@@ -51,8 +56,6 @@ export default class ImagePlate {
     }
 
     update(){
-        this.group.rotation.y = this.group.rotation.y + ((this.cursor.cursorX / this.sizes.width - .5) - this.group.rotation.y) * .01
         
-        this.material.uniforms.uTime.value = this.time.elapsed * .01
     }
 }
