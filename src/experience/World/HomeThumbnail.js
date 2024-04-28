@@ -61,6 +61,7 @@ export default class ImagePlate {
         this.scene.add(this.group)
     }
 
+
     calcPos(scr, pos){
         let temp = ((scr + pos + (this.thumbnailMeshes.length * 7)) % (this.thumbnailMeshes.length * 7))
 
@@ -71,6 +72,20 @@ export default class ImagePlate {
         this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .01)) * .1
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
+
+            if(this.wheel.hasScroll === true){
+                let rounded = 0
+
+                if (mesh.position.y%7 < (7/2)) {
+                    rounded = Math.floor(mesh.position.y/7) * 7
+                } else if (mesh.position.y%7 > (7/2)) {
+                    rounded = Math.ceil(mesh.position.y/7) * 7
+                }
+        
+                let diff = (rounded - mesh.position.y)
+                mesh.position.y += (diff * .05)
+            }
+
         })
         this.wheel.wheelDelta = 0
     }
