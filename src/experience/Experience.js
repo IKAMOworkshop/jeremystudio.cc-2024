@@ -1,5 +1,6 @@
 import Sizes from "./Utils/Sizes.js";
 import Cursor from "./Utils/Cursor.js";
+import Wheel from "./Utils/Wheel.js";
 import Time from "./Utils/Time";
 import Camera from "./Camera.js";
 import Renderer from "./Renderer.js";
@@ -29,6 +30,7 @@ export default class Experience{
         this.debug = new Debug()
         this.sizes = new Sizes()
         this.cursor = new Cursor()
+        this.wheel = new Wheel()
         this.time = new Time()
         this.scene = new THREE.Scene()
         this.resources = new Resources(sources)

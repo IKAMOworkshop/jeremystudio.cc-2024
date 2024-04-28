@@ -1,7 +1,6 @@
 import Experience from "../Experience.js";
-import Floor from "./Floor.js"
 import Environment from "./Environment.js";
-import ImagePlate from "./ImagePlate.js";
+import HomeThumbnail from "./HomeThumbnail.js";
 
 export default class World{
     constructor(){
@@ -11,14 +10,14 @@ export default class World{
 
         this.resources.on('ready', () => {
             // Setup
-            this.imagePlate = new ImagePlate();
+            this.homeThumbnails = new HomeThumbnail();
             this.environment = new Environment();
         })
     }
 
     update(){
-        if(this.imagePlate){
-            this.imagePlate.update();
+        if(this.homeThumbnails){
+            this.homeThumbnails.update();
         }
     };
 }
