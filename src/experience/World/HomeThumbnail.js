@@ -13,7 +13,7 @@ export default class ImagePlate {
         this.time = this.experience.time
         this.debug = this.experience.debug
         this.sizes = this.experience.sizes
-        this.cursor = this.experience.cursor
+        this.wheel = this.experience.wheel
         this.index = this.experience.thumbnailIndex
 
         this.setTexture()
@@ -35,6 +35,7 @@ export default class ImagePlate {
     }
 
     setModel(){
+        this.thumbnailMeshes = []        
         this.geometry = new THREE.PlaneGeometry(10, 5, 64, 64)
         this.group = new THREE.Group()
 
@@ -50,14 +51,17 @@ export default class ImagePlate {
             })
             this.mesh = new THREE.Mesh(this.geometry, this.material)
             this.mesh.position.y = i * -6
+            this.thumbnailMeshes.push(this.mesh)
             this.group.add(this.mesh)
         })
 
-        this.group.rotation.z = Math.PI * .03
+        this.group.rotation.z = Math.PI * .02
         this.scene.add(this.group)
     }
 
     update(){
-        
+        this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .008)) * .1
+        this.group.position.y -= this.wheel.scroll
+        this.wheel.wheelDelta = 0
     }
 }
