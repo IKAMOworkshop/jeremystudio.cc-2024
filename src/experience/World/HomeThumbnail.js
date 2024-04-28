@@ -31,7 +31,7 @@ export default class ImagePlate {
         this.nebulaImage = this.resources.items.nebula
         this.angineImage = this.resources.items.angine
 
-        this.thumbnailTextures.push(this.strayImage, this.hyperImage, this.transitImage, this.arcaneImage, this.nebulaImage, this.angineImage)
+        this.thumbnailTextures.push(this.hyperImage, this.strayImage, this.angineImage, this.nebulaImage, this.arcaneImage, this.transitImage)
     }
 
     setModel(){
@@ -50,18 +50,28 @@ export default class ImagePlate {
                 transparent: true,
             })
             this.mesh = new THREE.Mesh(this.geometry, this.material)
-            this.mesh.position.y = i * -6
+            this.mesh.position.y = i * 7
             this.thumbnailMeshes.push(this.mesh)
             this.group.add(this.mesh)
         })
 
         this.group.rotation.z = Math.PI * .02
+        this.group.position.x = .5
+        this.group.position.y = -7
         this.scene.add(this.group)
     }
 
+    calcPos(scr, pos){
+        let temp = ((scr + pos + (this.thumbnailMeshes.length * 7)) % (this.thumbnailMeshes.length * 7))
+
+        return temp
+    }
+
     update(){
-        this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .008)) * .1
-        this.group.position.y -= this.wheel.scroll
+        this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .01)) * .1
+        this.thumbnailMeshes.forEach((mesh) => {
+            mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
+        })
         this.wheel.wheelDelta = 0
     }
 }
