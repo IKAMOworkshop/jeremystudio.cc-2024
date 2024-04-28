@@ -28,9 +28,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import Tag from '@/components/Tag.vue'
-
-let openTag = ref("<")
 
 onMounted(() => {
     const titleList = document.getElementsByClassName('archive-project')

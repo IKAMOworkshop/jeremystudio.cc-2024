@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 
 import Experience from "../../Experience";
-import HomePost from './HomePost.js'
 
 import plateVertex from '../../shaders/thumbnail/vertex.glsl'
 import plateFragment from '../../shaders/thumbnail/fragment.glsl'
@@ -15,10 +14,9 @@ export default class ImagePlate {
         this.time = this.experience.time
         this.debug = this.experience.debug
         this.sizes = this.experience.sizes
+        this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
         this.index = this.experience.thumbnailIndex
-        this.homePost = new HomePost()
-        this.HomePost = this.homePost
 
         this.setTexture()
         this.setModel()
@@ -35,13 +33,14 @@ export default class ImagePlate {
         this.nebulaImage = this.resources.items.nebula
         this.angineImage = this.resources.items.angine
 
-        this.thumbnailTextures.push(this.hyperImage, this.strayImage, this.angineImage, this.nebulaImage, this.arcaneImage, this.transitImage)
+        this.thumbnailTextures.push(this.transitImage, this.hyperImage, this.strayImage, this.angineImage, this.nebulaImage, this.arcaneImage)
     }
 
     setModel(){
         this.thumbnailMeshes = []        
         this.geometry = new THREE.PlaneGeometry(9.5, 5, 64, 64)
         this.group = new THREE.Group()
+        this.moveHorGroup = new THREE.Group()
         this.meshGap = 6
 
         this.thumbnailTextures.forEach((index, i) => {
@@ -63,7 +62,8 @@ export default class ImagePlate {
         this.group.rotation.z = Math.PI * .02
         this.group.position.x = 1
         this.group.position.y = -this.meshGap * 2
-        this.scene.add(this.group)
+        this.moveHorGroup.add(this.group)
+        this.scene.add(this.moveHorGroup)
     }
 
     calcPos(scr, pos){
@@ -93,5 +93,8 @@ export default class ImagePlate {
         if(this.homePost){
             this.homePost.update()
         }
+
+        this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
+        this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
     }
 }
