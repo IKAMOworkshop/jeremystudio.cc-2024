@@ -3,3 +3,29 @@
     top: 40px;
     left: 240px;
 }
+
+.home-title{
+    width: 100%;
+    padding: 0px 24px;
+    position: fixed;
+    top: 28%;
+}
+
+.open-tag-offset{
+    margin-top: -28px;
+}
+
+.close-tag-offset{
+    margin-right: -24px
+}
+
+.home-description{
+    width: 100%;
+    padding: 0px 240px;
+    position: fixed;
+    top: 66%;
+}
+
+.home-description-container{
+    width: 360px;
+}
