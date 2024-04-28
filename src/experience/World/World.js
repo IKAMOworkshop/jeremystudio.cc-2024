@@ -1,6 +1,5 @@
 import Experience from "../Experience.js";
-import Environment from "./Environment.js";
-import HomeThumbnail from "./HomeThumbnail.js";
+import HomeThumbnail from ".//home/HomeThumbnail.js";
 
 export default class World{
     constructor(){
@@ -11,7 +10,6 @@ export default class World{
         this.resources.on('ready', () => {
             // Setup
             this.homeThumbnails = new HomeThumbnail();
-            this.environment = new Environment();
         })
     }
 

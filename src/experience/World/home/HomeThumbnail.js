@@ -1,8 +1,10 @@
-import Experience from "../Experience";
 import * as THREE from 'three'
 
-import plateVertex from '../shaders/thumbnail/vertex.glsl'
-import plateFragment from '../shaders/thumbnail/fragment.glsl'
+import Experience from "../../Experience";
+import HomePost from './HomePost.js'
+
+import plateVertex from '../../shaders/thumbnail/vertex.glsl'
+import plateFragment from '../../shaders/thumbnail/fragment.glsl'
 
 
 export default class ImagePlate {
@@ -15,6 +17,8 @@ export default class ImagePlate {
         this.sizes = this.experience.sizes
         this.wheel = this.experience.wheel
         this.index = this.experience.thumbnailIndex
+        this.homePost = new HomePost()
+        this.HomePost = this.homePost
 
         this.setTexture()
         this.setModel()
@@ -61,7 +65,6 @@ export default class ImagePlate {
         this.scene.add(this.group)
     }
 
-
     calcPos(scr, pos){
         let temp = ((scr + pos + (this.thumbnailMeshes.length * 7)) % (this.thumbnailMeshes.length * 7))
 
@@ -73,20 +76,21 @@ export default class ImagePlate {
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
 
-            if(this.wheel.hasScroll === true){
-                let rounded = 0
+            let rounded = 0
 
-                if (mesh.position.y%7 < (7/2)) {
-                    rounded = Math.floor(mesh.position.y/7) * 7
-                } else if (mesh.position.y%7 > (7/2)) {
-                    rounded = Math.ceil(mesh.position.y/7) * 7
-                }
-        
-                let diff = (rounded - mesh.position.y)
-                mesh.position.y += (diff * .05)
+            if (mesh.position.y%7 < (7/2)) {
+                rounded = Math.floor(mesh.position.y/7) * 7
+            } else if (mesh.position.y%7 > (7/2)) {
+                rounded = Math.ceil(mesh.position.y/7) * 7
             }
+    
+            let diff = (rounded - mesh.position.y)
+            mesh.position.y += (diff * .05) * 1.5
 
         })
         this.wheel.wheelDelta = 0
+        if(this.homePost){
+            this.homePost.update()
+        }
     }
 }
