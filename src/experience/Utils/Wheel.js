@@ -10,7 +10,7 @@ export default class Whell extends EventEmitter{
         this.hasScroll = false
 
         // Cursor Movement
-        window.addEventListener('wheel', (e) => {
+        window.addEventListener('mousewheel', (e) => {
             console.log
             this.wheelDelta = e.wheelDelta
         })
