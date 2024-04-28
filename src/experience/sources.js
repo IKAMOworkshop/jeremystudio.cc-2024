@@ -20,9 +20,9 @@ export default [
         path: '/project-thumbnail/arcane.png'
     },
     {
-        name: 'nubula',
+        name: 'nebula',
         type: 'texture',
-        path: '/project-thumbnail/nubula.png'
+        path: '/project-thumbnail/nebula.png'
     },
     {
         name: 'angine',
