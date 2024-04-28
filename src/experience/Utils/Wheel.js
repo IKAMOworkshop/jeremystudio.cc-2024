@@ -13,9 +13,6 @@ export default class Whell extends EventEmitter{
         window.addEventListener('wheel', (e) => {
             console.log
             this.wheelDelta = e.wheelDelta
-            setTimeout(() => {
-                this.hasScroll = true
-            }, 1000)
         })
     }
 }
