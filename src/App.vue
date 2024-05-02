@@ -1,5 +1,6 @@
 <template>
     <Navigation />
+    <canvas id="webgl"></canvas>
     <!-- <Cursor /> -->
 
     <!-- TEMP LINK -->
@@ -13,8 +14,6 @@
     </div>
     
     <router-view></router-view>
-
-    <canvas id="webgl"></canvas>
 </template>
 
 <script setup>

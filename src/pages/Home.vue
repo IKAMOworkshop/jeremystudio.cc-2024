@@ -1,5 +1,7 @@
 <template>
     <div>
+        <div id="home-experience" class="home-experience"></div>
+
         <p class="home-intro text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
 
         <div class="home-title flex justify-between">

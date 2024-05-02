@@ -9,7 +9,7 @@ import plateFragment from '../../shaders/thumbnail/fragment.glsl'
 export default class ImagePlate {
     constructor(){
         this.experience = new Experience()
-        this.scene = this.experience.scene
+        this.scene = this.experience.homeScene
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
