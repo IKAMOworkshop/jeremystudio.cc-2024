@@ -14,7 +14,7 @@ import * as THREE from 'three';
 let instance = null;
 
 export default class Experience{
-    constructor(canvas){
+    constructor(){
         if(instance){
             return instance;
         }
@@ -24,7 +24,7 @@ export default class Experience{
         window.experience = this
 
         // Options
-        this.canvas = document.getElementById('webgl');
+        this.canvas = document.getElementById('webgl')
 
         // Setup
         this.debug = new Debug()
@@ -32,8 +32,8 @@ export default class Experience{
         this.cursor = new Cursor()
         this.wheel = new Wheel()
         this.time = new Time()
-        this.scene = new THREE.Scene()
         this.resources = new Resources(sources)
+        this.homeScene = new THREE.Scene()
         this.camera = new Camera()
         this.renderer = new Renderer()
         this.world = new World()
@@ -48,7 +48,7 @@ export default class Experience{
             this.update();
         })
 
-    };
+    }
 
     resize(){
         this.camera.resize();
