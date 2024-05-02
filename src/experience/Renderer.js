@@ -3,11 +3,12 @@ import * as THREE from 'three';
 
 export default class Renderer{
     constructor(){
-        this.experience = new Experience();
-        this.canvas = this.experience.canvas;
-        this.sizes = this.experience.sizes;
-        this.homeScene = this.experience.homeScene;
-        this.camera = this.experience.camera;
+        this.experience = new Experience()
+        this.canvas = this.experience.canvas
+        this.sizes = this.experience.sizes
+        this.homeScene = this.experience.homeScene
+        this.aboutScene = this.experience.aboutScene
+        this.camera = this.experience.camera
 
         this.setInstance()
         this.resize()
@@ -51,21 +52,60 @@ export default class Renderer{
     
             }
     
-            this.camera.instance.aspect = width / height;
-            this.camera.instance.updateProjectionMatrix()
+            this.camera.homeInstance.aspect = width / height;
+            this.camera.homeInstance.updateProjectionMatrix()
     
             const positiveYUpBottom = this.instance.domElement.clientHeight - bottom
             this.instance.setScissor( left, positiveYUpBottom, width, height )
             this.instance.setViewport( left, positiveYUpBottom, width, height )
     
-            this.instance.render( this.homeScene, this.camera.instance )
+            this.instance.render( this.homeScene, this.camera.homeInstance )
         }else{
             this.homeElement = document.getElementById('home-experience')
         }
     }
 
+    renderAboutScene(){
+        this.aboutElement = document.getElementById('about-experience')
+
+        if(this.aboutElement){
+            const { left, right, top, bottom, width, height } = this.aboutElement.getBoundingClientRect()
+    
+            const isOffscreen =
+            bottom < 0 ||
+            top > this.instance.domElement.clientHeight ||
+            right < 0 ||
+            left > this.instance.domElement.clientWidth
+    
+            if ( isOffscreen ) {
+    
+                return
+    
+            }
+    
+            this.camera.aboutInstance.aspect = width / height;
+            this.camera.aboutInstance.updateProjectionMatrix()
+    
+            const positiveYUpBottom = this.instance.domElement.clientHeight - bottom
+            this.instance.setScissor( left, positiveYUpBottom, width, height )
+            this.instance.setViewport( left, positiveYUpBottom, width, height )
+    
+            this.instance.render( this.aboutScene, this.camera.aboutInstance )
+        }else{
+            this.aboutElement = document.getElementById('about-experience')
+        }
+    }
+
     update(){
-        this.renderHomeScene()
+        this.homeCheck = document.getElementById('home-experience')
+        this.aboutCheck = document.getElementById('about-experience')
+        if(this.homeCheck){
+            this.renderHomeScene()
+        }
+
+        if(this.aboutCheck){
+            this.renderAboutScene()
+        }
         // this.instance.render( this.homeScene, this.camera.instance )
     }
 }
