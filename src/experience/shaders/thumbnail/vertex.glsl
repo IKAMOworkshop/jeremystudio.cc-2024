@@ -1,6 +1,8 @@
 uniform float uTime;
+uniform float uOffsetY;
 
 varying vec2 vUv;
+varying float vOffsetY;
 
 float PI = 3.14159265359;
 
@@ -9,17 +11,19 @@ void main(){
 
     vec4 modelPosition = modelMatrix * vec4(position, 1.0);
 
-    // modelPosition.z += sin(PI*uv.x)*1.5;
+    // Bend the plane
+    modelPosition.z -= sin(PI*uv.x)*1.5;
 
     vec4 viewPosition = viewMatrix * modelPosition;
     vec4 projectionPosition = projectionMatrix * viewPosition;
-
     gl_Position = projectionPosition;
 
-    // newUV *= vec2(.4, .9);
-    // newUV += vec2(0.3, .05);
-
-    // newUV.x += modelPosition.x * .06;
+    // Parallax on the thumbnails
+    newUV *= vec2(.5, .5);
+    newUV += vec2(0.05, .3);
+    newUV.x += modelPosition.x * .09;
+    newUV.y += modelPosition.y * .09;
 
     vUv = newUV;
+    vOffsetY = uOffsetY;
 }

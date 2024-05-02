@@ -105,16 +105,20 @@ export default class ImagePlate {
             this.descriptionOneText = new THREE.Mesh(this.descriptionOneTextGeometry, this.textMaterial)
             this.descriptionTwoText = new THREE.Mesh(this.descriptionTwoTextGeometry, this.textMaterial)
 
-            this.titleText.position.set(-4.5, .3 , 4)
+            this.titleText.position.set(-4.5, .5 , 4)
+            this.titleText.rotation.z = -.05
             this.descriptionOneText.position.set(-3.5, -1 , 4)
+            this.descriptionOneText.rotation.z = -.05
             this.descriptionTwoText.position.set(-3.5, -1.1 , 4)
+            this.descriptionTwoText.rotation.z = -.05
 
             this.material = new THREE.ShaderMaterial({
                 vertexShader: plateVertex,
                 fragmentShader: plateFragment,
                 uniforms: {
                     uTime: new THREE.Uniform(0),
-                    uTexture: new THREE.Uniform(index.texture)
+                    uTexture: new THREE.Uniform(index.texture),
+                    uOffsetY: new THREE.Uniform(0)
                 },
                 transparent: true,
             })
@@ -147,6 +151,7 @@ export default class ImagePlate {
 
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
+        
 
             this.rounded = 0
 
@@ -155,15 +160,17 @@ export default class ImagePlate {
             } else if (mesh.position.y%this.meshGap > (this.meshGap/2)) {
                 this.rounded = Math.ceil(mesh.position.y/this.meshGap) * this.meshGap
             }
-    
-            this.diff = (this.rounded - mesh.position.y)
-            mesh.position.y += (this.diff * .05) * 1.5
+        
 
+            this.diff = (this.rounded - mesh.position.y)
+            mesh.children[3].material.uniforms.uOffsetY.value = -(this.diff) * .005
+
+            mesh.position.y += (this.diff * .05) * 1.5
         })
         this.wheel.wheelDelta = 0
 
-        this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02) * .97
+        this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
 
-        this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02) *.97
+        this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
     }
 }
