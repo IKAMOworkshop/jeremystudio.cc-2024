@@ -88,7 +88,7 @@ onMounted(() => {
 
 </script>
 
-<script>
+<!-- <script>
 import mainProject from '@/dataset/mainProjects.json'
 
 export default {
@@ -98,4 +98,4 @@ data() {
     };
 },
 };
-</script>
+</script> -->
