@@ -13,6 +13,8 @@ void main(){
 
     // Bend the plane
     modelPosition.z -= sin(PI*uv.x)*1.5;
+    modelPosition.y += sin(PI*uv.x)*(uOffsetY * 50.0);
+
 
     vec4 viewPosition = viewMatrix * modelPosition;
     vec4 projectionPosition = projectionMatrix * viewPosition;
