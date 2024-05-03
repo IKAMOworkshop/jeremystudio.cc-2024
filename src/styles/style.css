@@ -483,6 +483,23 @@ footer {
   width: 100%;
 }
 
+.about-contact-email {
+  max-height: 9.5rem;
+  overflow: hidden;
+}
+
+.about-contact-move {
+  transition: transform 0.6s ease;
+}
+
+.about-contact:hover > .layer-1 > .layer-2 > .layer-3 > .layer-4 > .about-contact-email > .about-contact-move {
+  transform: translateY(-9rem);
+}
+
+.about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move {
+  transform: translateY(-9rem);
+}
+
 .insights-top-container {
   padding: 240px 240px 160px 120px;
 }
