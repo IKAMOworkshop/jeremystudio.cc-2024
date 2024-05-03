@@ -22,7 +22,7 @@ export default class AboutScroll{
 
     setModel(){
         this.mesh = new THREE.Mesh(
-            new THREE.BoxGeometry(1, 1, 1),
+            new THREE.BoxGeometry(2, 2, 2),
             new THREE.MeshBasicMaterial()
         )
         this.scene.add(this.mesh)
@@ -30,5 +30,7 @@ export default class AboutScroll{
 
     update(){
         this.mesh.rotation.y += .01
+        this.mesh.rotation.x += .01
+        this.mesh.rotation.z += .01
     }
 }
