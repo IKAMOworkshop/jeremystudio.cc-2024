@@ -1,6 +1,8 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="transit-experience" class="transit-experience"></div>
+
 
         <TopTitle project-title="<TRANSIT"/>
         <HeroVideo video-source="/project-video/transit/header_video.mp4" />

@@ -33,8 +33,18 @@ export default class Experience{
         this.wheel = new Wheel()
         this.time = new Time()
         this.resources = new Resources(sources)
+
+        // Scene Setup
         this.homeScene = new THREE.Scene()
         this.aboutScene = new THREE.Scene()
+        this.archivesScene = new THREE.Scene()
+        this.strayScene = new THREE.Scene()
+        this.hyperScene = new THREE.Scene()
+        this.transitScene = new THREE.Scene()
+        this.arcaneScene = new THREE.Scene()
+        this.nebulaScene = new THREE.Scene()
+        this.angineScene = new THREE.Scene()
+
         this.camera = new Camera()
         this.renderer = new Renderer()
         this.world = new World()

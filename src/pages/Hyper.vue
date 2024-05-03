@@ -1,6 +1,7 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="hyper-experience" class="hyper-experience"></div>
 
         <TopTitle project-title="<HYPER" />
 

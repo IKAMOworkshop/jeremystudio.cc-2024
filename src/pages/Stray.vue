@@ -1,6 +1,7 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="stray-experience" class="stray-experience"></div>
 
         <TopTitle project-title="<STRAY"/>
         <HeroVideo video-source="/project-video/stray/header.mp4" />

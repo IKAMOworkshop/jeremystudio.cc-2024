@@ -1,6 +1,8 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="arcane-experience" class="arcane-experience"></div>
+
 
         <TopTitle project-title="<ARCANE"/>
         <HeroVideo video-source="/project-video/arcane/header.mp4" />

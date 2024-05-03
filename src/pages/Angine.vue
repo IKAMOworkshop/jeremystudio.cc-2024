@@ -1,6 +1,7 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="nebula-experience" class="nebula-experience"></div>
 
         <TopTitle project-title="<NEBULA"/>
         <HeroVideo video-source="/project-video/angine/header-video.mp4" />
