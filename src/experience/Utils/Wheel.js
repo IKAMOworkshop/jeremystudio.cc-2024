@@ -1,6 +1,6 @@
 import EventEmitter from "./EventEmitter.js";
 
-export default class Whell extends EventEmitter{
+export default class Wheel extends EventEmitter{
     constructor(){
         super()
 
@@ -9,7 +9,13 @@ export default class Whell extends EventEmitter{
         this.scroll = 0
         this.hasScroll = false
 
-        // Cursor Movement
+        // Wheel Movement
+        window.addEventListener('mousewheel', (e) => {
+            console.log
+            this.wheelDelta = e.wheelDelta
+        })
+    }
+    update(){
         window.addEventListener('mousewheel', (e) => {
             console.log
             this.wheelDelta = e.wheelDelta

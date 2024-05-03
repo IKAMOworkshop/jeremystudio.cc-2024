@@ -42,7 +42,7 @@ footer {
 }
 
 .section-container {
-  padding: 0px 240px 0px 240px;
+  padding: 0px 280px 0px 280px;
   margin-bottom: 160px;
 }
 
@@ -143,8 +143,20 @@ footer {
   gap: 4px;
 }
 
+.m-600 {
+  margin-bottom: 600px;
+}
+
+.m-200 {
+  margin-bottom: 240px;
+}
+
 .w-100 {
   width: 100%;
+}
+
+.w-40 {
+  width: 40%;
 }
 
 .divider {
@@ -259,10 +271,10 @@ footer {
 }
 
 .cursor {
-  width: 100px;
-  height: 100px;
-  max-width: 100px;
-  max-height: 100px;
+  width: 140px;
+  height: 140px;
+  max-width: 140px;
+  max-height: 140px;
   border-radius: 100%;
   position: absolute;
   top: 50%;
@@ -286,8 +298,8 @@ footer {
 }
 
 .blob {
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 50%;
@@ -440,6 +452,63 @@ footer {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.about-hero {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 0px 280px;
+  margin-bottom: 400px;
+}
+
+.about-skills {
+  width: 516px;
+  padding: 0px 0px 24px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-photo {
+  height: 500dvh;
+}
+
+.about-photo-title {
+  width: 50%;
+  position: sticky;
+  top: 360px;
+  margin: auto;
+}
+
+.about-photo-interest {
+  max-height: 5rem;
+  overflow: hidden;
+}
+
+.trigger-1 {
+  margin-top: 50%;
+  height: 240dvh;
+  width: 60px;
+}
+
+.about-contact {
+  width: 100%;
+}
+
+.about-contact-email {
+  max-height: 9.5rem;
+  overflow: hidden;
+}
+
+.about-contact-move {
+  transition: transform 0.6s ease;
+}
+
+.about-contact:hover > .layer-1 > .layer-2 > .layer-3 > .layer-4 > .about-contact-email > .about-contact-move {
+  transform: translateY(-9rem);
+}
+
+.about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move {
+  transform: translateY(-9rem);
 }
 
 .insights-top-container {

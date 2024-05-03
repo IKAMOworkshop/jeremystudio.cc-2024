@@ -1,6 +1,6 @@
 // Containers
 .section-container{
-    padding: 0px 240px 0px 240px;
+    padding: 0px 280px 0px 280px;
     margin-bottom: 160px;
 }
 
@@ -106,8 +106,22 @@
     gap: 4px;
 }
 
+// Margin
+.m-600{
+    margin-bottom: 600px;
+}
+
+.m-200{
+    margin-bottom: 240px;
+}
+
+// Width
 .w-100{
     width: 100%;
+}
+
+.w-40{
+    width: 40%;
 }
 
 // Visual
@@ -225,10 +239,10 @@
 }
 
 .cursor{
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
+    width: 140px;
+    height: 140px;
+    max-width: 140px;
+    max-height: 140px;
     border-radius: 100%;
     position: absolute;
     top: 50%;
@@ -252,8 +266,8 @@
 }
 
 .blob{
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     background-color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 50%;

@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+
 import Experience from "../../Experience";
 
 export default class AboutScroll{
@@ -14,23 +15,33 @@ export default class AboutScroll{
 
         // Setup
         this.roomModelRef = this.resources.items.roomModel
-        this.roomBakedRef = this.resources.items.roomBaked
+        this.roomBakedTexture = this.resources.items.roomBaked
+        this.roomBakedTexture.flipY = false
+        this.roomBakedTexture.colorSpace = THREE.SRGBColorSpace
 
         this.setModel()
         this.update()
     }
 
     setModel(){
-        this.mesh = new THREE.Mesh(
-            new THREE.BoxGeometry(2, 2, 2),
-            new THREE.MeshBasicMaterial()
-        )
-        this.scene.add(this.mesh)
+        this.roomModel = this.roomModelRef.scene
+        this.roomBaked = new THREE.MeshBasicMaterial({
+            map: this.roomBakedTexture,
+        })
+
+        this.modelScale = .32
+
+        this.roomModel.scale.set(this.modelScale, this.modelScale, this.modelScale)
+        this.roomModel.position.y = -1.7
+        this.roomModel.rotation.y = -Math.PI * .25
+        this.roomModel.rotation.x = Math.PI * .1
+
+        this.roomModel.children[0].material = this.roomBaked
+
+        this.scene.add(this.roomModel)
     }
 
     update(){
-        this.mesh.rotation.y += .01
-        this.mesh.rotation.x += .01
-        this.mesh.rotation.z += .01
+        this.roomModel.position.y = Math.sin(this.time.elapsed * .001) * .15 - 1.7
     }
 }
