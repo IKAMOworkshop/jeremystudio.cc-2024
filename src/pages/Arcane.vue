@@ -26,7 +26,7 @@
             skill-four="3D&2D MOTION"
         />
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="THE EXPERIENCE"
@@ -49,7 +49,7 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <img src="@/assets/arcane/screen_showcase.png" alt="A hero shot of a collage of different screens from the developed website" class="project-image">
         </div>
 
@@ -77,13 +77,13 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/arcane/model_collage.png" alt="A collage of models used for this website, which include the hero robot head, a cat, and a simplified keyboard" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -98,11 +98,11 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/arcane/main_model.mp4"/>
-            <ProjectVideo video-source="/project-video/arcane/not_found.mp4"/>
+            <ProjectVideo class="content-hidden" video-source="/project-video/arcane/main_model.mp4"/>
+            <ProjectVideo class="content-hidden" video-source="/project-video/arcane/not_found.mp4"/>
         </div>
         
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -117,7 +117,7 @@
             />
         </div>
 
-        <div class="section-container flex gap-36">
+        <div class="section-container flex gap-36 content-hidden">
             <div class="flex flex-column gap-36 w-100">
                 <ProjectVideoSmall video-source="/project-video/arcane/hover.mp4"/>
             </div>
@@ -126,7 +126,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="THE EXPERIENCE"
@@ -150,13 +150,13 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/arcane/design_pillar.png" alt="A diagram showing the base pillars that I consider when designing a website, especially a portfolio" class="contained-image">
             </ImageContainer>
         </div>
         
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -171,13 +171,13 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/arcane/visual_research.png" alt="A collage of all the referenced screenshots from other people's websites" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="THE EXPERIENCE"
@@ -201,13 +201,13 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/arcane/vue_three.png" alt="A image showing the Vue.js and Three.js logo" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -222,8 +222,8 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/arcane/blender.png" alt="A screenshot from Blender showing the modeling process of the robot head" class="project-image">
-            <div class="project-columns flex gap-36">
+            <img src="@/assets/arcane/blender.png" alt="A screenshot from Blender showing the modeling process of the robot head" class="project-image content-hidden">
+            <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/arcane/import_model_code.png" alt="A code snippet showing the importing and loading of models" class="project-image">
                 </div>
@@ -233,7 +233,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -247,11 +247,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/arcane/model_sections.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -265,7 +265,7 @@
             />
         </div>
 
-        <div class="section-container project-columns flex gap-36">
+        <div class="section-container project-columns flex gap-36 content-hidden">
             <div class="flex flex-column gap-36">
                 <img src="@/assets/arcane/setting_scene_code.png" alt="A code snippet showing the function that sets up the various scenes for the multi-render" class="project-image">
             </div>
@@ -274,7 +274,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -290,9 +290,9 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/arcane/transition_scroll.mp4" />
+            <ProjectVideo class="content-hidden" video-source="/project-video/arcane/transition_scroll.mp4" />
 
-            <div class="project-columns flex gap-36">
+            <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/arcane/transition_code.png" alt="A code snippet showing the GSAP animation code for page transitions" class="project-image">
                 </div>
@@ -302,7 +302,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -316,18 +316,18 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/arcane/infinite_scroll.mp4"/>
         </div>
 
         <!-- Next Project -->
-        <div class="section-container flex flex-column gap-24">
+        <div class="section-container flex flex-column gap-24 content-hidden">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
             />
             <NextProject 
-                background-image="/project-thumbnail/nubula.png"
+                background-image="/project-thumbnail/nebula.png"
                 next-project-title="NEBULA"
                 next-project-link="/nebula"
                 button-text="NEXT PROJECT"
@@ -365,7 +365,26 @@ function raf(time) {
     requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf);
+requestAnimationFrame(raf)
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('content-reveal')
+        }
+        // } else {
+		// 	entry.target.classList.remove('content-reveal');
+		// }
+    })
+},
+{
+    threshold: .2,
+})
+
+const hiddenElement = document.querySelectorAll(".content-hidden")
+hiddenElement.forEach((el) => observer.observe(el))
+})
 
 onUnmounted(() => {
     function destroy(){

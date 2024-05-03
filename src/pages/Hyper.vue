@@ -26,7 +26,7 @@
             skill-five="3D DESIGN"
         />
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock 
                 :open-tag-show="true"
                 :title-show="true"
@@ -40,11 +40,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <img src="@/assets/hyper/header_render.png" alt="A hero render of the final design for the environment, avatar, and other assets for the scene" class="project-image">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="SKETCHING IDEAS"
@@ -68,11 +68,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/hyper/unreal.mp4" />
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="SKETCHING IDEAS"
@@ -98,23 +98,23 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/hyper/gravity_sketch.mp4" />
+            <ProjectVideo class="content-hidden" video-source="/project-video/hyper/gravity_sketch.mp4" />
 
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/gravity_option_1.png" alt="The first iteration of my 3D sketch showing a mountain range with tree" class="project-image">
-                    <img src="@/assets/hyper/gravity_option_2.png" alt="A collage of all the inital sketches and reference image in 3D" class="project-image">
+                    <img src="@/assets/hyper/gravity_option_1.png" alt="The first iteration of my 3D sketch showing a mountain range with tree" class="project-image content-hidden">
+                    <img src="@/assets/hyper/gravity_option_2.png" alt="A collage of all the inital sketches and reference image in 3D" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/gravity_option_3.png" alt="A sketch idea showing exploring how we can create bridges connecting different biome" class="project-image">
-                    <img src="@/assets/hyper/gravity_option_4.png" alt="A detailed shots showing importing models and reusing assets in gravity sketch" class="project-image">
+                    <img src="@/assets/hyper/gravity_option_3.png" alt="A sketch idea showing exploring how we can create bridges connecting different biome" class="project-image content-hidden">
+                    <img src="@/assets/hyper/gravity_option_4.png" alt="A detailed shots showing importing models and reusing assets in gravity sketch" class="project-image content-hidden">
                 </div>
             </div>
 
-            <img src="@/assets/hyper/final_sketch.png" alt="The finalized idea sketch utilizing the grid system in gravity sketch" class="project-image">
+            <img src="@/assets/hyper/final_sketch.png" alt="The finalized idea sketch utilizing the grid system in gravity sketch" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="SKETCHING IDEAS"
@@ -138,11 +138,11 @@
             />
         </div>
 
-        <div class="section-container flex flex-column gap-36">
+        <div class="section-container flex flex-column gap-36 content-hidden">
             <ProjectVideo video-source="/project-video/hyper/substance.mp4" />
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -159,19 +159,19 @@
         <div class="section-container flex flex-column gap-36">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/substance_option_1.png" alt="The first iteration of the finalized mesh, material, and colors extracted from Discord" class="project-image">
-                    <img src="@/assets/hyper/substance_option_2.png" alt="The thired iterative render testing a more saturated color and brighter lighting" class="project-image">
+                    <img src="@/assets/hyper/substance_option_1.png" alt="The first iteration of the finalized mesh, material, and colors extracted from Discord" class="project-image content-hidden">
+                    <img src="@/assets/hyper/substance_option_2.png" alt="The thired iterative render testing a more saturated color and brighter lighting" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/substance_option_3.png" alt="The second iteration render exploring different forms for the mesh and new models" class="project-image">
-                    <img src="@/assets/hyper/substance_option_4.png" alt="The fourth iteration of render unifying colors and merging the look and feel from Apple" class="project-image">
+                    <img src="@/assets/hyper/substance_option_3.png" alt="The second iteration render exploring different forms for the mesh and new models" class="project-image content-hidden">
+                    <img src="@/assets/hyper/substance_option_4.png" alt="The fourth iteration of render unifying colors and merging the look and feel from Apple" class="project-image content-hidden">
                 </div>
             </div>
 
-            <img src="@/assets/hyper/substance_final.png" alt="The finalized mesh, color, and material rendered as a hero shot" class="project-image">
+            <img src="@/assets/hyper/substance_final.png" alt="The finalized mesh, color, and material rendered as a hero shot" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="SKETCHING IDEAS"
@@ -196,13 +196,13 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/hyper/ai_frameworks.png" alt="A image showing the Generative AI platform that I've used, which include DALL-E, Stable Diffusion, and Midjourney" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -216,7 +216,7 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainer>
                 <img src="@/assets/hyper/ai_scene_model.png" alt="A side-by-side comparison of the generated images and how it inspired some the of form and design of the scene and model" class="contained-image">
                 <div class="divider fill-gray"></div>
@@ -224,7 +224,7 @@
             </ImageContainer>
         </div>
         
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="SKETCHING IDEAS"
@@ -251,9 +251,9 @@
 
         <div class="section-container flex flex-column gap-36">
 
-            <img src="@/assets/hyper/unreal_main.png" alt="The Unreal Engine project interface for setting up the entire scene" class="project-image">
+            <img src="@/assets/hyper/unreal_main.png" alt="The Unreal Engine project interface for setting up the entire scene" class="project-image content-hidden">
 
-            <div class="project-columns flex gap-36">
+            <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/hyper/unreal_material.png" alt="The Unreal Engine material node editor to add additional textures due to compatibility issues" class="project-image">
                 </div>
@@ -263,7 +263,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -278,13 +278,13 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/hyper/unreal.mp4" />
-            <img src="@/assets/hyper/unreal_1.png" alt="A screenshot from the experience showing two avatars watching a screensharing concept for the overall experience" class="project-image">
-            <img src="@/assets/hyper/unreal_2.png" alt="A screenshot showing an avatar in front of a room, which is a concept for private voice channel" class="project-image">
+            <ProjectVideo class="content-hidden" video-source="/project-video/hyper/unreal.mp4" />
+            <img src="@/assets/hyper/unreal_1.png" alt="A screenshot from the experience showing two avatars watching a screensharing concept for the overall experience" class="project-image content-hidden">
+            <img src="@/assets/hyper/unreal_2.png" alt="A screenshot showing an avatar in front of a room, which is a concept for private voice channel" class="project-image content-hidden">
         </div>
 
         <!-- Next Project -->
-        <div class="section-container flex flex-column gap-24">
+        <div class="section-container flex flex-column gap-24 content-hidden">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
@@ -315,7 +315,7 @@ import NextProject from '../components/projects/NextProject.vue'
 import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
-import { onUnmounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import Lenis from '@studio-freight/lenis'
 
 const lenis = new Lenis({
@@ -328,6 +328,25 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('content-reveal')
+        }
+        // } else {
+		// 	entry.target.classList.remove('content-reveal');
+		// }
+    })
+},
+{
+    threshold: .2,
+})
+
+const hiddenElement = document.querySelectorAll(".content-hidden")
+hiddenElement.forEach((el) => observer.observe(el))
+})
 
 onUnmounted(() => {
     function destroy(){

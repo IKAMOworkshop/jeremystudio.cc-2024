@@ -45,25 +45,25 @@ const openTag = ref('<')
 const ctx = gsap.context(() => {})
 
 onMounted(() => {
-    ctx.add(() => {
-        const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.trigger-1',
-            start: 'top center',
-            end: 'bottom center',
-            markers: true,
-            scrub: 1
-        }
-    })
+    // ctx.add(() => {
+    //     const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.trigger-1',
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         markers: true,
+    //         scrub: 1
+    //     }
+    // })
 
-    tl  .to('#move-track', {
-            y: -80,
-        })
-        .to('#move-track', {
-            y: -160,
-            delay: 1
-        })
-    })
+    // tl  .to('#move-track', {
+    //         y: -80,
+    //     })
+    //     .to('#move-track', {
+    //         y: -160,
+    //         delay: 1
+    //     })
+    // })
 
 })
 

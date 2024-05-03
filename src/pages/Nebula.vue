@@ -25,7 +25,7 @@
             skill-five="2D MOTION"
         />
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DESIGN PROBLEM"
                 content-two="THE EXPERIENCE"
@@ -50,10 +50,10 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/nebula/header.png" alt="A hero shot of the projector and the final app interface side-by-side" class="project-image">
+            <img src="@/assets/nebula/header.png" alt="A hero shot of the projector and the final app interface side-by-side" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -68,11 +68,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/nebula/sleep_cycle.mp4"/>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DESIGN PROBLEM"
                 content-two="THE EXPERIENCE"
@@ -98,10 +98,10 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ImageContainer>
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/sleep_routine.png" alt="A diagram showing the three section that our team decide to focus on, which is before, during, and after sleep" class="contained-image">
             </ImageContainer>
-            <div class="flex gap-36">
+            <div class="flex gap-36 content-hidden">
                 <ImageContainerPadless>
                     <img src="@/assets/nebula/product_highlight.png" alt="A detailed rendered of the projector" class="contained-image">
                 </ImageContainerPadless>
@@ -111,7 +111,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -127,11 +127,11 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/nebula/bed_side.png" alt="A demostration image showing a person sleeping next to the projector, while it's controlling the environmental lighting and mood" class="project-image">
-            <img src="@/assets/nebula/three_scenes.png" alt="A room render showing the different types of lighting and mood that the project and app can create" class="project-image">
+            <img src="@/assets/nebula/bed_side.png" alt="A demostration image showing a person sleeping next to the projector, while it's controlling the environmental lighting and mood" class="project-image content-hidden">
+            <img src="@/assets/nebula/three_scenes.png" alt="A room render showing the different types of lighting and mood that the project and app can create" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -147,16 +147,16 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/nebula/integration.mp4"/>
-            <ImageContainer>
+            <ProjectVideo class="content-hidden" video-source="/project-video/nebula/integration.mp4"/>
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/product_view.png" alt="A three way render of the front, side, and back of the projector" class="contained-image">
             </ImageContainer>
-            <ImageContainerPadless>
+            <ImageContainerPadless class="content-hidden">
                 <img src="@/assets/nebula/ui_collage.png" alt="A collage of the final app interface design" class="contained-image">
             </ImageContainerPadless>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DESIGN PROBLEM"
                 content-two="THE EXPERIENCE"
@@ -181,7 +181,7 @@
             />
         </div>
 
-        <div class="section-container flex gap-36">
+        <div class="section-container flex gap-36 content-hidden">
             <div class="flex flex-column gap-36 w-100">
                 <img src="@/assets/nebula/brand_showcase.png" alt="A image showcasing the brand logo and color of the project" class="project-image covered-image">
             </div>
@@ -190,7 +190,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DESIGN PROBLEM"
                 content-two="THE EXPERIENCE"
@@ -215,7 +215,7 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ImageContainerPadless>
                 <img src="@/assets/nebula/survey.png" alt="A glance at the questions for the created survey for user research" class="contained-image">
             </ImageContainerPadless>
@@ -223,16 +223,19 @@
 
         <div class="section-container flex flex-column align-end gap-100">
             <QuotesBlock
+                class="content-hidden"
                 quote="OTHER THAN SCHOOL, I’VE ALSO HAVE PERSONAL PROJECTS, WHICH MAKES IT TO ACHIVE THE EIGHT HOURS OF SLEEP."
                 small-text="<01  />"
                 number-color="#7593FF"
             />
             <QuotesBlock
+                class="content-hidden"
                 quote="SOMETIMES I NEED TO SLEEP LATE AT NIGHT, WHICH IS FINE FOR A DAY, BUT IT CREATES A BAD CYCLE OF TERRIBLE ROUTINE."
                 small-text="<02  />"
                 number-color="#7593FF"
             />
             <QuotesBlock
+                class="content-hidden"
                 quote="I THINK MANY ACTIONS DURING THE DAY EVENTUALLY LEAD UP TO AFFECT MY SLEEP, THINGS JUST GETS DELAYED A LOT."
                 small-text="<03  />"
                 number-color="#7593FF"
@@ -240,15 +243,15 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ImageContainer>
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/journey_map.png" alt="A user journey diagram of the experience" class="contained-image">
             </ImageContainer>
-            <ImageContainer>
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/scenario.png" alt="A sketched version of the entire user journey with Nebula" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DESIGN PROBLEM"
                 content-two="THE EXPERIENCE"
@@ -274,22 +277,22 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <ImageContainer>
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/ceiling_mount.png" alt="A side-by-side image showing the paper prototype and digital mock up for the ceiling mounting method" class="contained-image">
                 <div class="divider fill-gray"></div>
                 <img src="@/assets/nebula/gilder_mount.png" alt="A side-by-side image showing the paper prototype and digital mock up for the ceiling glider method" class="contained-image">
                 <div class="divider fill-gray"></div>
                 <img src="@/assets/nebula/multi_device.png" alt="A side-by-side image showing the paper prototype and digital mock up for the multi-devices method" class="contained-image">
             </ImageContainer>
-            <img src="@/assets/nebula/light_testing.png" alt="A photo showing the light-testing process to make sure projectors clarity under certain lighting condition" class="project-image">
-            <img src="@/assets/nebula/form_explore.png" alt="Iterations of differnet models exploring the look and feels of the final product" class="project-image">
-            <ImageContainer>
+            <img src="@/assets/nebula/light_testing.png" alt="A photo showing the light-testing process to make sure projectors clarity under certain lighting condition" class="project-image content-hidden">
+            <img src="@/assets/nebula/form_explore.png" alt="Iterations of differnet models exploring the look and feels of the final product" class="project-image content-hidden">
+            <ImageContainer class="content-hidden">
                 <img src="@/assets/nebula/wireframe.png" alt="A information architecture diagram mappping the wireframe and their corrisponding flow" class="contained-image">
             </ImageContainer>
         </div>
 
         <!-- Next Project -->
-        <div class="section-container flex flex-column gap-24">
+        <div class="section-container flex flex-column gap-24 content-hidden">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
@@ -332,10 +335,29 @@ const lenis = new Lenis({
 
 function raf(time) {
     lenis.raf(time);
-    requestAnimationFrame(raf);
+    requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf);
+requestAnimationFrame(raf)
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('content-reveal')
+        }
+        // } else {
+		// 	entry.target.classList.remove('content-reveal');
+		// }
+    })
+    },
+    {
+        threshold: .2,
+    })
+
+    const hiddenElement = document.querySelectorAll(".content-hidden")
+    hiddenElement.forEach((el) => observer.observe(el))
+})
 
 onUnmounted(() => {
     function destroy(){

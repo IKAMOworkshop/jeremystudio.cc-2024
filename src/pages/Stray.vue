@@ -2,7 +2,7 @@
     <div>
         <ScrollProgress />
 
-        <TopTitle project-title="<NEBULA"/>
+        <TopTitle project-title="<STRAY"/>
         <HeroVideo video-source="/project-video/stray/header.mp4" />
 
         <ProjectData 
@@ -24,7 +24,7 @@
             skill-four="WEB DEVELOPMENT"
         />
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
 
             <TextBlock
                 :open-tag-show="true"
@@ -41,11 +41,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container flex justify-center content-hidden">
             <img src="@/assets/stray/header.png" alt="GLSL code and the results of the rendered wobbly model" class="project-image">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -72,11 +72,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/wobbly.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -93,18 +93,18 @@
         <div class="section-container flex flex-column gap-36">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/wobble_1.png" alt="A violet and yellow colored wobbling sphere with a matte material" class="project-image">
-                    <img src="@/assets/stray/wobble_2.png" alt="A red and blue colored wobbling sphere with a metal-like material" class="project-image">
+                    <img src="@/assets/stray/wobble_1.png" alt="A violet and yellow colored wobbling sphere with a matte material" class="project-image content-hidden">
+                    <img src="@/assets/stray/wobble_2.png" alt="A red and blue colored wobbling sphere with a metal-like material" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/stray/wobble_3.png" alt="A green and cyan colored wobbling sphere with a matted metal material" class="project-image">
-                    <img src="@/assets/stray/wobble_4.png" alt="A violet and turqoise colored wobbling sphere with a reflective metal material" class="project-image">
+                    <img src="@/assets/stray/wobble_3.png" alt="A green and cyan colored wobbling sphere with a matted metal material" class="project-image content-hidden">
+                    <img src="@/assets/stray/wobble_4.png" alt="A violet and turqoise colored wobbling sphere with a reflective metal material" class="project-image content-hidden">
                 </div>
             </div>
-            <img src="@/assets/stray/wobble_5.png" alt="A green and blue colored wobbling monkey model with a matted metal material" class="project-image">
+            <img src="@/assets/stray/wobble_5.png" alt="A green and blue colored wobbling monkey model with a matted metal material" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -131,11 +131,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/dynamic_thumbnail.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -150,13 +150,13 @@
             />
         </div>
 
-        <div class="section-container flex flex-column">
+        <div class="section-container flex flex-column content-hidden">
             <ImageContainer>
                 <img src="@/assets/stray/deconstruct_problem.png" alt="A step-by-step image demostration on how I broke down the project into smaller pieces to resolve" class="contained-image">
             </ImageContainer>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -183,11 +183,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/cursor.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -202,7 +202,7 @@
             />
         </div>
 
-        <div class="section-container project-columns flex gap-36">
+        <div class="section-container project-columns flex gap-36 content-hidden">
             <div class="flex flex-column gap-36">
                 <img src="@/assets/stray/reference_mesh_code.png" alt="A code snippet showing the process of adding a referencing mesh for the cursor and robot movement" class="project-image">
             </div>
@@ -211,7 +211,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -238,11 +238,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/glass.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -258,11 +258,11 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/stray/glass_1.png" alt="Iterations of the same window-glass effect with a robot head model" class="project-image">
-            <img src="@/assets/stray/glass_2.png" alt="Iterations of the same window-glass effect with a game controller model" class="project-image">
+            <img src="@/assets/stray/glass_1.png" alt="Iterations of the same window-glass effect with a robot head model" class="project-image content-hidden">
+            <img src="@/assets/stray/glass_2.png" alt="Iterations of the same window-glass effect with a game controller model" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -288,11 +288,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/flow.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -307,11 +307,11 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/stray/flow_1.png" alt="A boat model using the same flow field engine to show a more colorful results" class="project-image">
-            <img src="@/assets/stray/flow_2.png" alt="A game controller model distorted using the flow field engine to showcase a contrasting color, which is yellow and cyan" class="project-image">
+            <img src="@/assets/stray/flow_1.png" alt="A boat model using the same flow field engine to show a more colorful results" class="project-image content-hidden">
+            <img src="@/assets/stray/flow_2.png" alt="A game controller model distorted using the flow field engine to showcase a contrasting color, which is yellow and cyan" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -339,8 +339,8 @@
         </div>
         
         <div class="section-container flex flex-column gap-36">
-            <ProjectVideo video-source="/project-video/stray/distort.mp4"/>
-            <div class="project-columns flex gap-36">
+            <ProjectVideo class="content-hidden" video-source="/project-video/stray/distort.mp4"/>
+            <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/stray/distort_1.png" alt="Iteration of the distorted UV pattern with different images gnerating different patter and colors. In the case, is yellow and blue." class="project-image">
                 </div>
@@ -350,7 +350,7 @@
             </div>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="DANCING VERTEX"
                 content-two="DYNAMIC THUMBNAILS"
@@ -376,11 +376,11 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/stray/raymarching.mp4"/>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -394,7 +394,7 @@
             />
         </div>
 
-        <div class="section-container flex flex-column">
+        <div class="section-container flex flex-column content-hidden">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/stray/ray_1.png" alt="Exploring a more matte metal matcap texture." class="project-image">
@@ -406,7 +406,7 @@
         </div>
 
         <!-- Next Project -->
-        <div class="section-container flex flex-column gap-24">
+        <div class="section-container flex flex-column gap-24 content-hidden">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
@@ -450,6 +450,25 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('content-reveal')
+        }
+        // } else {
+		// 	entry.target.classList.remove('content-reveal');
+		// }
+    })
+},
+{
+    threshold: .2,
+})
+
+const hiddenElement = document.querySelectorAll(".content-hidden")
+hiddenElement.forEach((el) => observer.observe(el))
+})
 
 onUnmounted(() => {
     function destroy(){
