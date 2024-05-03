@@ -52,15 +52,16 @@ export default class Experience{
     }
 
     resize(){
-        this.camera.resize();
-        this.renderer.resize();
-    };
+        this.camera.resize()
+        this.renderer.resize()
+    }
 
     update(){
-        this.camera.update();
-        this.world.update();
-        this.renderer.update();
-    };
+        this.camera.update()
+        this.world.update()
+        this.renderer.update()
+        this.wheel.update()
+    }
 
     destroy(){
         // Traverse the whole scene

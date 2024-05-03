@@ -34,24 +34,27 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const openTag = ref('<')
 
+const ctx = gsap.context(() => {})
+
 onMounted(() => {
-    const tl = gsap.timeline({
+    ctx.add(() => {
+        const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '.trigger-1',
             start: 'top center',
             end: 'bottom center',
+            markers: true,
             scrub: 1
         }
     })
-
 
     tl  .to('#move-track', {
             y: -80,
@@ -60,6 +63,12 @@ onMounted(() => {
             y: -160,
             delay: 1
         })
+    })
+
+})
+
+onUnmounted(() => {
+    ctx.revert()
 })
 
 </script>
