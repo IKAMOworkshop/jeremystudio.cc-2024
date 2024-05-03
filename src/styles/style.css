@@ -42,7 +42,7 @@ footer {
 }
 
 .section-container {
-  padding: 0px 240px 0px 240px;
+  padding: 0px 280px 0px 280px;
   margin-bottom: 160px;
 }
 
@@ -143,8 +143,20 @@ footer {
   gap: 4px;
 }
 
+.m-600 {
+  margin-bottom: 600px;
+}
+
+.m-200 {
+  margin-bottom: 240px;
+}
+
 .w-100 {
   width: 100%;
+}
+
+.w-40 {
+  width: 40%;
 }
 
 .divider {
@@ -440,6 +452,35 @@ footer {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.about-hero {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 0px 280px;
+  margin-bottom: 400px;
+}
+
+.about-skills {
+  width: 516px;
+  padding: 0px 0px 24px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-photo {
+  height: 300dvh;
+}
+
+.about-photo-title {
+  width: 50%;
+  position: sticky;
+  top: 360px;
+  margin: auto;
+}
+
+.about-contact {
+  width: 100%;
 }
 
 .insights-top-container {

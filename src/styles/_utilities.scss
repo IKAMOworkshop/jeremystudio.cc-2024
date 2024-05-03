@@ -1,6 +1,6 @@
 // Containers
 .section-container{
-    padding: 0px 240px 0px 240px;
+    padding: 0px 280px 0px 280px;
     margin-bottom: 160px;
 }
 
@@ -106,8 +106,22 @@
     gap: 4px;
 }
 
+// Margin
+.m-600{
+    margin-bottom: 600px;
+}
+
+.m-200{
+    margin-bottom: 240px;
+}
+
+// Width
 .w-100{
     width: 100%;
+}
+
+.w-40{
+    width: 40%;
 }
 
 // Visual

@@ -6,3 +6,32 @@
     left: 0;
     z-index: -1;
 }
+
+.about-hero{
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 0px 280px;
+    margin-bottom: 400px;
+}
+
+.about-skills{
+    width: 516px;
+    padding: 0px 0px 24px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.about-photo{
+    height: 300dvh;
+}
+
+.about-photo-title{
+    width: 50%;
+    position: sticky;
+    top: 360px;
+    margin: auto;
+}
+
+.about-contact{
+    width: 100%;
+}

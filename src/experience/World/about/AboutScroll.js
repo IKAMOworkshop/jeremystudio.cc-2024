@@ -28,10 +28,10 @@ export default class AboutScroll{
             map: this.roomBakedTexture,
         })
 
-        this.modelScale = .3
+        this.modelScale = .32
 
         this.roomModel.scale.set(this.modelScale, this.modelScale, this.modelScale)
-        this.roomModel.position.y = -1.6
+        this.roomModel.position.y = -1.7
         this.roomModel.rotation.y = -Math.PI * .25
         this.roomModel.rotation.x = Math.PI * .1
 
@@ -41,6 +41,6 @@ export default class AboutScroll{
     }
 
     update(){
-        
+        this.roomModel.position.y = Math.sin(this.time.elapsed * .001) * .15 - 1.7
     }
 }
