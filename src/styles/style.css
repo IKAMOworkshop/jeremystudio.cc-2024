@@ -36,6 +36,12 @@ nav {
   transform-origin: left center;
 }
 
+.construction-strike {
+  text-decoration: line-through;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 footer {
   padding: 48px 60px 48px 60px;
   width: 100%;
@@ -521,6 +527,15 @@ footer {
 
 .insights-tag-group {
   margin-left: 52px;
+}
+
+.insights-placeholder-container {
+  height: 100dvh;
+  padding: 0px 280px;
+}
+
+.insights-placeholder {
+  width: 100%;
 }
 
 .archives-container {

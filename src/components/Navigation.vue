@@ -26,15 +26,6 @@
                         </div>
                     </router-link></li>
 
-                    <li><router-link class="text-light-gray caption-light" to="/insights">
-                        <div class="caption-container">
-                            <div class="caption-move">
-                                <p>INSIGHTS</p>
-                                <p>INSIGHTS</p>
-                            </div>
-                        </div>
-                    </router-link></li>
-
                     <li><router-link class="text-light-gray caption-light" to="/archives">
                         <div class="caption-container">
                             <div class="caption-move">
@@ -43,16 +34,27 @@
                             </div>
                         </div>
                     </router-link></li>
-                </ul>
 
-                <button class="text-light-gray caption-light">
+                    <!-- Insight Link -->
+                    <li><div class="text-light-gray caption-light construction-strike" to="/insights">
+                        <div class="caption-container">
+                            <div class="caption-stop">
+                                <p>INSIGHTS</p>
+                                <p>INSIGHTS</p>
+                            </div>
+                        </div>
+                    </div></li>
+                </ul>
+                
+                <!-- JP Link -->
+                <div class="text-light-gray caption-light construction-strike">
                     <div class="caption-container">
-                            <div class="caption-move flex align-end flex-column">
+                            <div class="caption-stop flex align-end flex-column">
                                 <p>JP</p>
                                 <p>SWITCH</p>
                             </div>
                         </div>
-                </button>
+                </div>
             </div>
 
         </nav>

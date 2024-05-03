@@ -41,6 +41,12 @@ nav{
 //     background-color: rgba(255,255,255,1);
 // }
 
+.construction-strike{
+    text-decoration: line-through;
+    opacity: .5;
+    cursor: pointer;
+}
+
 // Footer
 footer{
     padding: 48px 60px 48px 60px;
