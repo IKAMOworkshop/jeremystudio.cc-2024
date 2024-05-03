@@ -22,7 +22,7 @@
 }
 
 .about-photo{
-    height: 300dvh;
+    height: 500dvh;
 }
 
 .about-photo-title{
@@ -30,6 +30,17 @@
     position: sticky;
     top: 360px;
     margin: auto;
+}
+
+.about-photo-interest{
+    max-height: 5rem;
+    overflow: hidden;
+}
+
+.trigger-1{
+    margin-top: 50%;
+    height: 240dvh;
+    width: 60px;
 }
 
 .about-contact{

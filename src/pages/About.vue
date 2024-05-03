@@ -81,8 +81,6 @@ import ProjectFooter from '@/components/ProjectFooter.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 import Lenis from '@studio-freight/lenis'
 
-const openTag = ref('<')
-
 const lenis = new Lenis({
     smooth: true,
 });

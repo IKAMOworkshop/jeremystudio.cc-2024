@@ -18,13 +18,48 @@
             </div>
             <div class="flex flex-column align-end">
                 <div class="flex align-end gap-60">
-                    <div class="flex flex-column align-end">
-                        <h1 class="call-to-action text-light">GAMING</h1>
+                    <div class="about-photo-interest flex flex-column align-end">
+                        <div id="move-track" class="about-photo-interest-move flex flex-column align-end">
+                            <h1 class="call-to-action text-light interest">GAMES</h1>
+                            <h1 class="call-to-action text-light interest">CATS</h1>
+                            <h1 class="call-to-action text-light interest">DRAWING</h1>
+                        </div>
                     </div>
                     <h1 class="call-to-action text-light">/></h1>
                 </div>
             </div>
         </div>
-
+        <div class="trigger-1"></div>
     </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const openTag = ref('<')
+
+onMounted(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.trigger-1',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 1
+        }
+    })
+
+
+    tl  .to('#move-track', {
+            y: -80,
+        })
+        .to('#move-track', {
+            y: -160,
+            delay: 1
+        })
+})
+
+</script>
