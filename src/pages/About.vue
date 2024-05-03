@@ -10,4 +10,6 @@
 
 <script setup>
 import ScrollProgress from '../components/ScrollProgress.vue'
+
+
 </script>

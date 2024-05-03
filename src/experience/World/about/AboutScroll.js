@@ -12,6 +12,10 @@ export default class AboutScroll{
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
 
+        // Setup
+        this.roomModelRef = this.resources.items.roomModel
+        this.roomBakedRef = this.resources.items.roomBaked
+
         this.setModel()
         this.update()
     }
