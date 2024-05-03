@@ -25,7 +25,7 @@
             skill-five="3D DESIGN"
         />
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="INTEGRATION"
@@ -49,7 +49,7 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <div class="project-columns flex gap-36">
+            <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
                     <img src="@/assets/transit/physical_controller.png" alt="A hero shot of the prototype controller with the digital experience playing in the background" class="project-image">
                 </div>
@@ -57,10 +57,10 @@
                     <img src="@/assets/transit/virtual_world.png" alt="A top-down shot of the simulated traffic in the experience" class="project-image">
                 </div>
             </div>
-            <img src="@/assets/transit/installation_header.png" alt="A person interacting with the experience in VR" class="project-image">
+            <img src="@/assets/transit/installation_header.png" alt="A person interacting with the experience in VR" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -76,10 +76,10 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/transit/modes_of_transportation.png" alt="A four quadrum image showing the different mode of transportation that we've tried to recreate in the experience" class="project-image">
+            <img src="@/assets/transit/modes_of_transportation.png" alt="A four quadrum image showing the different mode of transportation that we've tried to recreate in the experience" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="INTEGRATION"
@@ -104,10 +104,10 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/transit/syncing_process.png" alt="A image showing the process of syncing the physical prototype to the digital version" class="project-image">
+            <img src="@/assets/transit/syncing_process.png" alt="A image showing the process of syncing the physical prototype to the digital version" class="project-image content-hidden">
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="INTEGRATION"
@@ -136,36 +136,37 @@
                 secondary-text="PROTOTYPES"
             />
             <div class="flex flex-column gap-36">
-                <img src="@/assets/transit/paper_prototype.png" alt="A image showing the making of the first version prototype" class="project-image">
+                <img src="@/assets/transit/paper_prototype.png" alt="A image showing the making of the first version prototype" class="project-image content-hidden">
                 <div class="project-columns flex gap-36">
                     <div class="flex flex-column gap-36">
-                        <img src="@/assets/transit/prototype_1.png" alt="A image showing the syncing process of the VR controller to Unity" class="project-image">
-                        <img src="@/assets/transit/prototype_2.png" alt="A image showing the testing of the second verison prototype" class="project-image">
-                        <img src="@/assets/transit/prototype_3.png" alt="A image showing a person test-driving the finalized prototype with wood" class="project-image">
+                        <img src="@/assets/transit/prototype_1.png" alt="A image showing the syncing process of the VR controller to Unity" class="project-image content-hidden">
+                        <img src="@/assets/transit/prototype_2.png" alt="A image showing the testing of the second verison prototype" class="project-image content-hidden">
+                        <img src="@/assets/transit/prototype_3.png" alt="A image showing a person test-driving the finalized prototype with wood" class="project-image content-hidden">
                     </div>
                     <div class="flex flex-column gap-36">
                         <img src="@/assets/transit/prototype_4.png" alt="A hero shot of the second version prototype" class="project-image">
-                        <img src="@/assets/transit/prototype_5.png" alt="A image showing a person testing the scooter controller for the finalized prototype" class="project-image">
+                        <img src="@/assets/transit/prototype_5.png" alt="A image showing a person testing the scooter controller for the finalized prototype" class="project-image content-hidden">
                     </div>
                 </div>
-                <img src="@/assets/transit/final_prototype.png" alt="A hero shot of the finalized prototype" class="project-image">
+                <img src="@/assets/transit/final_prototype.png" alt="A hero shot of the finalized prototype" class="project-image content-hidden">
             </div>
         </div>
 
         <div class="section-container flex flex-column gap-24">
             <SmallTitle
+                class="content-hidden"
                 highlight-text="VIRTUAL"
                 secondary-text="SETUP"
             />
             <div class="flex flex-column gap-36">
-                <ProjectVideo video-source="/project-video/transit/car_turning.mp4"/>
-                <ProjectVideo video-source="/project-video/transit/walking.mp4"/>
-                <ProjectVideo video-source="/project-video/transit/scrooter_turning.mp4"/>
-                <img src="@/assets/transit/unity.png" alt="A screenshot of the Unity environment when setting up the scene and lighting" class="project-image">
+                <ProjectVideo class="content-hidden" video-source="/project-video/transit/car_turning.mp4"/>
+                <ProjectVideo class="content-hidden" video-source="/project-video/transit/walking.mp4"/>
+                <ProjectVideo class="content-hidden" video-source="/project-video/transit/scrooter_turning.mp4"/>
+                <img src="@/assets/transit/unity.png" alt="A screenshot of the Unity environment when setting up the scene and lighting" class="project-image content-hidden">
             </div>
         </div>
 
-        <div class="section-container flex justify-between">
+        <div class="section-container flex justify-between content-hidden">
             <TableContent 
                 content-one="INTRODUCTION"
                 content-two="INTEGRATION"
@@ -190,20 +191,20 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/transit/installation_main.png" alt="A hero shot showing the full experience with a projector" class="project-image">
+            <img src="@/assets/transit/installation_main.png" alt="A hero shot showing the full experience with a projector" class="project-image content-hidden">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/transit/installation_1.png" alt="A photo showing a person interacting with the walking level for the experience" class="project-image">
-                    <img src="@/assets/transit/installation_2.png" alt="A photo showing a person interacting with the driving level for the experience" class="project-image">
+                    <img src="@/assets/transit/installation_1.png" alt="A photo showing a person interacting with the walking level for the experience" class="project-image content-hidden">
+                    <img src="@/assets/transit/installation_2.png" alt="A photo showing a person interacting with the driving level for the experience" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/transit/installation_3.png" alt="A photo showing a person interacting with the scooter level for the experience" class="project-image">
-                    <img src="@/assets/transit/installation_4.png" alt="A photo showing a person interacting with the bus level for the experience" class="project-image">
+                    <img src="@/assets/transit/installation_3.png" alt="A photo showing a person interacting with the scooter level for the experience" class="project-image content-hidden">
+                    <img src="@/assets/transit/installation_4.png" alt="A photo showing a person interacting with the bus level for the experience" class="project-image content-hidden">
                 </div>
             </div>
         </div>
 
-        <div class="section-container flex justify-end">
+        <div class="section-container flex justify-end content-hidden">
             <TextBlock
                 :open-tag-show="false"
                 :title-show="false"
@@ -217,12 +218,12 @@
             />
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <ProjectVideo video-source="/project-video/transit/installation.mp4"/>
         </div>
 
         <!-- Next Project -->
-        <div class="section-container flex flex-column gap-24">
+        <div class="section-container flex flex-column gap-24 content-hidden">
             <SmallTitle 
                 highlight-text="NEXT"
                 secondary-text="PROJECT"
@@ -235,7 +236,7 @@
             />
         </div>
 
-        <ProjectFooter />
+        <ProjectFooter class="footer-hidden" />
     </div>
 </template>
 
@@ -265,6 +266,42 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('content-reveal')
+        }
+        // } else {
+		// 	entry.target.classList.remove('content-reveal');
+		// }
+    })
+},
+{
+    threshold: .2,
+})
+
+const hiddenElement = document.querySelectorAll(".content-hidden")
+hiddenElement.forEach((el) => observer.observe(el))
+
+const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer-reveal')
+        }
+        else {
+			entry.target.classList.remove('footer-reveal');
+		}
+    })
+    },
+    {
+        threshold: .1,
+    })
+
+    const hiddenFooter = document.querySelectorAll(".footer-hidden")
+    hiddenFooter.forEach((el) => footerObserver.observe(el))
+})
 
 onUnmounted(() => {
     function destroy(){

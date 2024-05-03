@@ -1,9 +1,39 @@
 <template>
     <div>
-        <ScrollProgress />
+        <!-- <ScrollProgress /> -->
+
+        <!-- Placeholder -->
+        <div class="insights-placeholder-container flex justify-center align center">
+            <div class="insights-placeholder flex flex-column justify-center">
+                <div class="flex justify-between w-100 layer-1">
+                    <div class="flex flex-column w-40 layer-2">
+                        <div class="flex gap-100 layer-3">
+                            <h1 class="large-text text-light">{{ openTag }}</h1>
+                            <div class="flex flex-column layer-4">
+                                <h1 class="large-text text-light">PAGE</h1>
+                                <h1 class="large-text text-light">COMING</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column">
+                        <p class="caption-light text-light-gray">ON NO!</p>
+                        <p class="caption-light text-light-gray">I'M WORKING ON IT,</p>
+                        <p class="caption-light text-light-gray">SIT TIGHT!</p>
+                    </div>
+                </div>
+                <div class="flex flex-column align-end w-100 layer-1">
+                    <div class="flex align-end gap-60 layer-2">
+                        <div class="about-contact-email flex flex-column align-end">
+                            <h1 class="large-text text-light">SOON</h1>
+                        </div>
+                        <h1 class="large-text text-light">/></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- Header -->
-        <div class="insights-top-container flex justify-between">
+        <!-- <div class="insights-top-container flex justify-between">
 
             <div class="flex gap-60">
                 <h2 class="text-light call-to-action">{{ openTag }}</h2>
@@ -33,10 +63,10 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
         <!-- Content Section -->
-        <div class="section-container flex gap-60">
+        <!-- <div class="section-container flex gap-60">
 
             <div class="grid gap-60">
                 <ArticleThumbnail 
@@ -72,7 +102,7 @@
             </div>
         </div>
         
-        <ProjectFooter />
+        <ProjectFooter /> -->
     </div>
 </template>
 
