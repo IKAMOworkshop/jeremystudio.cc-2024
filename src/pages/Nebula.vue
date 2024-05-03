@@ -305,7 +305,7 @@
             />
         </div>
 
-        <ProjectFooter />
+        <ProjectFooter class="footer-hidden" />
     </div>
 </template>
 
@@ -357,6 +357,23 @@ onMounted(() => {
 
     const hiddenElement = document.querySelectorAll(".content-hidden")
     hiddenElement.forEach((el) => observer.observe(el))
+    
+    const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer-reveal')
+        }
+        else {
+			entry.target.classList.remove('footer-reveal');
+		}
+    })
+    },
+    {
+        threshold: .1,
+    })
+
+    const hiddenFooter = document.querySelectorAll(".footer-hidden")
+    hiddenFooter.forEach((el) => footerObserver.observe(el))
 })
 
 onUnmounted(() => {
