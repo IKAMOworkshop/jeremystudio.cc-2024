@@ -45,4 +45,14 @@ export default [
         type: 'font',
         path: '/font/inter-reg.json'
     },
+    {
+        name: 'roomModel',
+        type: 'gltfModel',
+        path: '/model/room_merged.glb'
+    },
+    {
+        name: 'roomBaked',
+        type: 'texture',
+        path: '/model/baked.jpg'
+    },
 ]
