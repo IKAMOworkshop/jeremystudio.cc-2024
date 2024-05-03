@@ -42,23 +42,26 @@ onMounted(() => {
     })
 
     const hoverEffect = () => {
-        
-        for (let i = 0; i < anchorTags.length; i++) {
-            anchorTags[i].addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(.5)'
-            })
-            anchorTags[i].addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)'
-            })
+        if(anchorTags){
+            for (let i = 0; i < anchorTags.length; i++) {
+                anchorTags[i].addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(.2)'
+                })
+                anchorTags[i].addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)'
+                })
+            }
         }
 
-        for (let i = 0; i < buttonTags.length; i++) {
-            buttonTags[i].addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(.5)'
-            })
-            buttonTags[i].addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)'
-            })
+        if(buttonTags){
+            for (let i = 0; i < buttonTags.length; i++) {
+                buttonTags[i].addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(.2)'
+                })
+                buttonTags[i].addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)'
+                })
+            }
         }
 
         requestAnimationFrame(hoverEffect)

@@ -12,14 +12,33 @@ import { onMounted } from 'vue';
 onMounted(() => {
     const scrollProgress = document.getElementById('scroll-progress')
     let totalScroll = 0
+    let scrollPosition = 0
     scrollProgress.style.transform = 'translateX(-20px)'
 
     document.addEventListener('mousewheel', (e) => {
-        totalScroll += e.wheelDelta
+        let scrollTarget = e.deltaY
 
-        let finalScroll = totalScroll / e.wheelDelta
-        console.log()
-        scrollProgress.style.transform = `translateX(${Math.abs(finalScroll % 100) - 20}px)`
+        if (scrollTarget > 100){
+            scrollTarget = 100
+        }else if (scrollTarget < -100){
+            scrollTarget = -100
+        }
+
+        totalScroll += scrollTarget
+
+        let finalScroll = (totalScroll / scrollTarget) * 2
+
+        const lerp = () => {
+            finalScroll -= (finalScroll - (scrollTarget * .01)) * .1
+            scrollPosition += finalScroll * .001
+            scrollTarget = 0
+
+            scrollProgress.style.transform = `translateX(${Math.abs(scrollPosition % 100) - 20}px)`
+
+
+            requestAnimationFrame(lerp)
+        }
+        lerp()
         
     })
 })
