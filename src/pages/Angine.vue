@@ -1,7 +1,7 @@
 <template>
     <div>
         <ScrollProgress />
-        <div id="nebula-experience" class="nebula-experience"></div>
+        <div id="angine-experience" class="angine-experience"></div>
 
         <TopTitle project-title="<NEBULA"/>
         <HeroVideo video-source="/project-video/angine/header-video.mp4" />
@@ -437,7 +437,18 @@ import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | Angine',
+    meta: [
+        {
+            name: 'description',
+            content: 'Orchestrating a virtual audio mixer for a complex audio system on desktop PC.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,

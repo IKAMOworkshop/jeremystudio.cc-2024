@@ -256,7 +256,18 @@ import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | Transit',
+    meta: [
+        {
+            name: 'description',
+            content: 'Building a mixed-reality experience exploring the link between the physical and virtual.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,

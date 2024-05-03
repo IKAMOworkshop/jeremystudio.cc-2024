@@ -10,9 +10,19 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import {useHead} from '@vueuse/head'
 
 import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
 
+useHead({
+    title: 'Jeremy Chang',
+    meta: [
+        {
+            name: 'description',
+            content: 'A creative developer who build digital experiences.',
+        }
+    ]
+})
 
 onMounted(() => {
 

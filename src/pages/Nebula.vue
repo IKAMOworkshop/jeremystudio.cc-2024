@@ -328,7 +328,18 @@ import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | Nebula',
+    meta: [
+        {
+            name: 'description',
+            content: 'Designing an adaptive sleep trainer to curate a personalized sleep routine.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,

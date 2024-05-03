@@ -19,6 +19,18 @@ import ArchivedDate from '../components/archives/ArchivedDate.vue'
 import ArchivedProject from '../components/archives/ArchivedProject.vue'
 import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
 
+import {useHead} from '@vueuse/head'
+
+useHead({
+    title: 'Jeremy Chang | Archives',
+    meta: [
+        {
+            name: 'description',
+            content: 'A collection of my previous design works.',
+        }
+    ]
+})
+
 </script>
 
 <script>

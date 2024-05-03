@@ -9,7 +9,7 @@
         <ProjectData 
             title-color="#FF6581"
             project-type="WEBGL"
-            project-description="DEVELOPING A SERIES OF MINI-PROJECTS TO EXPLORE THE POSSIBILITY OF SHADER CODING."
+            project-description="DEVELOPING A SERIES OF MINI-PROJECTS TO EXPLORE THE POSSIBILITIES OF SHADER CODING."
 
             project-timing="SPRING 2024"
             member-one="JEREMY CHANG"
@@ -439,7 +439,18 @@ import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '../components/ProjectFooter.vue';
 
 import { onMounted, onUnmounted } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | Stray',
+    meta: [
+        {
+            name: 'description',
+            content: 'Developing a series of mini-projects to explore the possibilities of shader coding.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,
