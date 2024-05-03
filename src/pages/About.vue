@@ -79,7 +79,18 @@ import TextBlock from '@/components/projects/TextBlock.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted, ref } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | About',
+    meta: [
+        {
+            name: 'description',
+            content: 'A creative developer who build digital experiences.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,

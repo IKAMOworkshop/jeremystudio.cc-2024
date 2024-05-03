@@ -1,6 +1,7 @@
 <template>
     <div>
         <ScrollProgress />
+        <div id="hyper-experience" class="hyper-experience"></div>
 
         <TopTitle project-title="<HYPER" />
 
@@ -9,7 +10,7 @@
         <ProjectData
             title-color="#A8EFFF"
             project-type="TECH-CENTER"
-            project-description="CONDUCTING A COLLECTION OF EXPERIMENTS EXPLORING EMMERGING TECHNOLOGIES."
+            project-description="CONDUCTING A SERIES OF EXPERIMENTS EXPLORING EMMERGING TECHNOLOGIES."
 
             project-timing="FALL 2022"
             member-one="JEREMY CHANG"
@@ -316,7 +317,18 @@ import ScrollProgress from '../components/ScrollProgress.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
 import { onMounted, onUnmounted } from 'vue'
+import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
+
+useHead({
+    title: 'Jeremy Chang | Hyper',
+    meta: [
+        {
+            name: 'description',
+            content: 'Conducting a series of experiments exploring emmerging technologies.',
+        }
+    ]
+})
 
 const lenis = new Lenis({
     smooth: true,

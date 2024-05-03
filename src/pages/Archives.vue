@@ -1,5 +1,6 @@
 <template>
     <div class="archives-container w-100">
+        <div id="archives-experience" class="archives-experience"></div>
         <div class="flex flex-column gap-280">
             
             <ArchivedTitle />
@@ -17,6 +18,18 @@ import ArchivedTitle from '../components/archives/ArchivedTitle.vue'
 import ArchivedDate from '../components/archives/ArchivedDate.vue'
 import ArchivedProject from '../components/archives/ArchivedProject.vue'
 import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
+
+import {useHead} from '@vueuse/head'
+
+useHead({
+    title: 'Jeremy Chang | Archives',
+    meta: [
+        {
+            name: 'description',
+            content: 'A collection of my previous design works.',
+        }
+    ]
+})
 
 </script>
 
