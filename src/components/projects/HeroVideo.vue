@@ -3,7 +3,7 @@
         <div class="hero-video-container flex justify-center align-center">
             <div class="hero-video">
                 <!-- Video -->
-                <video class="hero-video-asset" autoplay muted loop>
+                <video :id="videoName" class="hero-video-asset" autoplay muted loop>
                     <source :src="videoSource"  type="video/mp4">
                 </video>
             </div>
@@ -15,6 +15,10 @@
 
 defineProps({
     videoSource: {
+        type: String,
+        required: true
+    },
+    videoName: {
         type: String,
         required: true
     }

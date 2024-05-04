@@ -2,6 +2,7 @@ import Experience from "../Experience.js"
 import HomeThumbnail from "./home/HomeThumbnail.js"
 import AboutScroll from './about/AboutScroll.js'
 import ArchivesScroll from './archives/ArchivesScroll.js'
+import Stray from './projects/Stray.js'
 
 export default class World{
     constructor(){
@@ -14,6 +15,7 @@ export default class World{
             this.homeThumbnails = new HomeThumbnail()
             this.aboutScroll = new AboutScroll()
             this.archivesScroll = new ArchivesScroll()
+            this.stray = new Stray()
         })
     }
 
@@ -32,10 +34,30 @@ export default class World{
             this.homeThumbnails.update()
         }
         if(this.aboutCheck){
-            this.aboutScroll.update();
+            this.aboutScroll.update()
+            this.homeThumbnails.currentIntersect = null
         }
         if(this.archivesCheck){
-            this.archivesScroll.update();
+            this.archivesScroll.update()
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.strayCheck){
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.hyperCheck){
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.transitCheck){
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.arcaneCheck){
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.nebulaCheck){
+            this.homeThumbnails.currentIntersect = null
+        }
+        if(this.angineCheck){
+            this.homeThumbnails.currentIntersect = null
         }
     }
 }

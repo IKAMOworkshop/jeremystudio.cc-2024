@@ -5,7 +5,7 @@
 
 
         <TopTitle project-title="<ARCANE"/>
-        <HeroVideo video-source="/project-video/arcane/header.mp4" />
+        <HeroVideo video-name="arcane" video-source="/project-video/arcane/header.mp4" />
 
         <ProjectData 
             title-color="#7DF7FF"

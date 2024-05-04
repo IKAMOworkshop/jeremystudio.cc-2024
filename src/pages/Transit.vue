@@ -5,7 +5,7 @@
 
 
         <TopTitle project-title="<TRANSIT"/>
-        <HeroVideo video-source="/project-video/transit/header_video.mp4" />
+        <HeroVideo video-name="trasit" video-source="/project-video/transit/header_video.mp4" />
         
         <ProjectData 
             title-color="#FFCC49"

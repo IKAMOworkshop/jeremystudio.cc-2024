@@ -4,7 +4,7 @@
         <div id="nebula-experience" class="nebula-experience"></div>
 
         <TopTitle project-title="<NEBULA"/>
-        <HeroVideo video-source="/project-video/nebula/header_video.mp4" />
+        <HeroVideo video-name="nebula" video-source="/project-video/nebula/header_video.mp4" />
 
         <ProjectData 
             title-color="#7593FF"

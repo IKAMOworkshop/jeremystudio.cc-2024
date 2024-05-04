@@ -5,7 +5,7 @@
 
         <TopTitle project-title="<HYPER" />
 
-        <HeroVideo video-source="/project-video/hyper/hyper.mp4" />
+        <HeroVideo video-name="hyper" video-source="/project-video/hyper/hyper.mp4" />
 
         <ProjectData
             title-color="#A8EFFF"

@@ -1,21 +1,7 @@
 <template>
     <div class="archives-container w-100">
         <div id="archives-experience" class="archives-experience"></div>
-        <div class="flex flex-column gap-280">
-
-            <video
-                id="fanbox"
-                src="/archives/fanbox.mp4"
-                loop
-                autoplay
-                muted
-                width="1920"
-                height="1080"
-                style="display: none;"
-            ></video>
-            
-            <InfiniteScrollProgress />
-        </div>
+        <InfiniteScrollProgress />
     </div>
 </template>
 

@@ -166,23 +166,28 @@ export default class HomeThumbnail {
             if(this.currentIntersect){
                 switch(this.currentIntersect.object.name){
                     case'stray':
-                        router.push('stray')
-                        
+                        this.currentIntersect = null
+                        router.push('/stray')
                         break
                     case 'hyper':
-                        router.push('hyper')
+                        this.currentIntersect = null
+                        router.push('/hyper')
                         break
                     case 'transit':
-                        router.push('transit')
+                        this.currentIntersect = null
+                        router.push('/transit')
                         break
                     case 'arcane':
-                        router.push('arcane')
+                        this.currentIntersect = null
+                        router.push('/arcane')
                         break
                     case 'nebula':
-                        router.push('nebula')
+                        this.currentIntersect = null
+                        router.push('/nebula')
                         break
                     case 'angine':
-                        router.push('angine')
+                        this.currentIntersect = null
+                        router.push('/angine')
                         break
                 }
             }
@@ -211,8 +216,6 @@ export default class HomeThumbnail {
 
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
-
-  
 
             this.rounded = 0
 
