@@ -163,9 +163,9 @@ export default class ImagePlate {
         
 
             this.diff = (this.rounded - mesh.position.y)
-            mesh.children[3].material.uniforms.uOffsetY.value = -(this.diff) * .005
+            // mesh.children[3].material.uniforms.uOffsetY.value = -(this.diff) * .005
 
-            mesh.position.y += (this.diff * .05) * 1.5
+            mesh.position.y += (this.diff * .015) * 1.5
         })
         this.wheel.wheelDelta = 0
 
