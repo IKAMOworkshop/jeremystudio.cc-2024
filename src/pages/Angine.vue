@@ -51,7 +51,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/angine/header.png" alt="A hero shot of the final Angine software on a monitor" class="project-image" loading="lazy">
+            <img src="@/assets/angine/header.webp" alt="A hero shot of the final Angine software on a monitor" class="project-image">
         </div>
 
         <div class="section-container flex justify-end content-hidden">
@@ -71,7 +71,7 @@
 
         <div class="section-container">
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/current_system.png" alt="A diagram showing the current system and the limitation" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/current_system.webp" alt="A diagram showing the current system and the limitation" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -92,7 +92,7 @@
 
         <div class="section-container">
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/angine_system.png" alt="A diagram showing the improved system on Angine to free up the flexibility to customize" class="contained-image">
+                <img src="@/assets/angine/angine_system.webp" alt="A diagram showing the improved system on Angine to free up the flexibility to customize" class="contained-image">
             </ImageContainer>
         </div>
         
@@ -171,7 +171,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/angine/design-system.png" alt="A collage of the Angine's UI component" class="project-image" loading="lazy">
+            <img src="@/assets/angine/design-system.webp" alt="A collage of the Angine's UI component" class="project-image">
         </div>
 
         <div class="section-container flex justify-end content-hidden">
@@ -191,24 +191,24 @@
         <div class="section-container flex gap-36">
             <div class="flex flex-column gap-36">
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-color.png" alt="The Angine design system rules and usage for colors" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-color.webp" alt="The Angine design system rules and usage for colors" class="contained-image">
                 </ImageContainer>
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-grid.png" alt="The Angine design system rules and usage for grids" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-grid.webp" alt="The Angine design system rules and usage for grids" class="contained-image">
                 </ImageContainer>
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-responsive.png" alt="The Angine design system rules and usage for responsive design" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-responsive.webp" alt="The Angine design system rules and usage for responsive design" class="contained-image">
                 </ImageContainer>
             </div>
             <div class="flex flex-column gap-36">
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-typography.png" alt="The Angine design system rules and usage for typography and type colors" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-typography.webp" alt="The Angine design system rules and usage for typography and type colors" class="contained-image">
                 </ImageContainer>
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-icon.png" alt="The Angine design system rules and usage for iconography" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-icon.webp" alt="The Angine design system rules and usage for iconography" class="contained-image">
                 </ImageContainer>
                 <ImageContainer class="content-hidden">
-                    <img src="@/assets/angine/design-system/ds-states.png" alt="The Angine design system rules and usage for different component states" class="contained-image" loading="lazy">
+                    <img src="@/assets/angine/design-system/ds-states.webp" alt="The Angine design system rules and usage for different component states" class="contained-image">
                 </ImageContainer>
             </div>
         </div>
@@ -228,7 +228,7 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/angine/brand.png" alt="A image showing the final brand logo and color for Angine" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/angine/brand.webp" alt="A image showing the final brand logo and color for Angine" class="project-image content-hidden">
             <iframe class="content-hidden" src="https://www.youtube.com/embed/A7a9F97iU0o?si=yhedpYOnY0LDugGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
@@ -281,7 +281,7 @@
 
         <div class="section-container">
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/uers-choice.png" alt="A collage of logos for different audio mixer platforms the currently exist. Essentially, the competitors" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/uers-choice.webp" alt="A collage of logos for different audio mixer platforms the currently exist. Essentially, the competitors" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -301,10 +301,10 @@
 
         <div class="section-container flex flex-column gap-36">
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/competitors.png" alt="A screenshot collage of the different competitor's interface, which includes Voicemeeter, Windows default, Focusrite, and OBS" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/competitors.webp" alt="A screenshot collage of the different competitor's interface, which includes Voicemeeter, Windows default, Focusrite, and OBS" class="contained-image">
             </ImageContainer>
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/opportunity-map.png" alt="A diagram mapping the opportunity for Angine's need" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/opportunity-map.webp" alt="A diagram mapping the opportunity for Angine's need" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -336,13 +336,13 @@
 
         <div class="section-container flex flex-column gap-36">
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/effect-test.png" alt="A image showing the different iterations and result of user testing for the effects toggle" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/effect-test.png" alt="A image showing the different iterations and result of user testing for the effects toggle" class="contained-image">
             </ImageContainer>
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/color-test.png" alt="A image showing the different iterations and result of user testing for the color usage on the interface" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/color-test.png" alt="A image showing the different iterations and result of user testing for the color usage on the interface" class="contained-image">
             </ImageContainer>
             <ImageContainer class="content-hidden">
-                <img src="@/assets/angine/manage-test.png" alt="A image showing the different iterations and result of user testing for the button arrangement of the organization feature for tracks" class="contained-image" loading="lazy">
+                <img src="@/assets/angine/manage-test.png" alt="A image showing the different iterations and result of user testing for the button arrangement of the organization feature for tracks" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -373,14 +373,14 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/angine/market-size.png" alt="A diagram showing the potential market size of Angine driven by market research" class="project-image content-hidden" loading="lazy">
-            <img src="@/assets/angine/market-segment.png" alt="A diagram showing the different targeted market segments, which include streamers, content creators, and music producers" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/angine/market-size.webp" alt="A diagram showing the potential market size of Angine driven by market research" class="project-image content-hidden">
+            <img src="@/assets/angine/market-segment.webp" alt="A diagram showing the different targeted market segments, which include streamers, content creators, and music producers" class="project-image content-hidden">
             <div class="flex gap-36 content-hidden">
                 <div>
-                    <img src="@/assets/angine/partnership.png" alt="A image demonstrating the partnership with streamers and content creator strategy for marketing" class="project-image" loading="lazy">
+                    <img src="@/assets/angine/partnership.webp" alt="A image demonstrating the partnership with streamers and content creator strategy for marketing" class="project-image">
                 </div>
                 <div>
-                    <img src="@/assets/angine/community.png" alt="A image that showcase the building of a community strategy for marketing" class="project-image" loading="lazy">
+                    <img src="@/assets/angine/community.webp" alt="A image that showcase the building of a community strategy for marketing" class="project-image">
                 </div>
             </div>
         </div>
@@ -400,7 +400,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/angine/marketing.png" alt="The marketing header image for Angine" class="project-image" loading="lazy">
+            <img src="@/assets/angine/marketing.webp" alt="The marketing header image for Angine" class="project-image">
         </div>
 
         <!-- Next Project -->

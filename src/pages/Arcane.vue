@@ -52,7 +52,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/arcane/screen_showcase.png" alt="A hero shot of a collage of different screens from the developed website" class="project-image" loading="lazy">
+            <img src="@/assets/arcane/screen_showcase.png" alt="A hero shot of a collage of different screens from the developed website" class="project-image" loading="lazy"/>
         </div>
 
         <div class="section-container flex justify-between">
