@@ -212,6 +212,8 @@ export default class HomeThumbnail {
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
 
+  
+
             this.rounded = 0
 
             if (mesh.position.y%this.meshGap < (this.meshGap/2)) {

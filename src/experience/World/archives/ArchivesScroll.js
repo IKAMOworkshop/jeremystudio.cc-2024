@@ -18,8 +18,6 @@ export default class ArchiveScroll {
         this.sizes = this.experience.sizes
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
-        this.index = this.experience.thumbnailIndex
-
 
         this.setData()
         this.setModel()
@@ -27,98 +25,137 @@ export default class ArchiveScroll {
     }
 
     setData() {
-        this.thumbnailTextures = []
+        this.archivesTexture = []
 
-        this.strayImage = {
-            texture: this.resources.items.stray, 
-            title: '<STRAY           />', 
-            descriptionOne: 'BULIDING A COLLECTION OF IMMERSIVE 3D WEB',
-            descriptionTwo: 'EXPERIENCES WITH THREE.JS AND MORE.',
-            name: 'stray'
+        this.image1 = {
+            texture: this.resources.items.fracture,
+            title: '<FRACTURE  />', 
+            name: 'fracture',
+            type: 'INFORMATION DESIGN',
+            time:'SPRING 2020',
         }
 
-        this.hyperImage = {
-            texture: this.resources.items.hyper,
-            title: '<HYPER           />',
-            descriptionOne: 'CONDUCTING A COLLECTION OF EXPERIMENTS',
-            descriptionTwo: 'EXPLORING EMMERGING TECHNOLOGIES.',
-            name: 'hyper'
+        this.image2 = {
+            texture: this.resources.items.icons, 
+            title: '<ICONS  />', 
+            name: 'icons',
+            type: 'ICONOGRAPHY',
+            time:'WINTER 2020',
         }
 
-        this.transitImage = {
-            texture: this.resources.items.transit,
-            title: '<TRANSIT      />',
-            descriptionOne: 'BUILDING A MIXED-REALITY EXPERIENCE EXPLORING THE',
-            descriptionTwo: 'LINK BETWEEN THE PHYSICAL AND VIRTUAL.',
-            name: 'transit'
+        this.image3 = {
+            texture: this.resources.items.c103Aida, 
+            title: '<C103 AIDA  />', 
+            name: 'c103Aida',
+            type: 'PRINT DESIGN',
+            time:'WINTER 2023',
         }
 
-        this.arcaneImage = {texture: this.resources.items.arcane,
-            title: '<ARCANE       />',
-            descriptionOne: 'BUILDING AN IMMERSIVE 3D WEB EXPERIENCE',
-            descriptionTwo: 'TO DISPLAY MY FRONT-END PROJECTS.',
-            name: 'arcane'
+        this.image4 = {
+            texture: this.resources.items.c103Kyaroru, 
+            title: '<C103 KYARORU  />', 
+            name: 'c103Kyaroru',
+            type: 'PRINT DESIGN',
+            time:'WINTER 2023',
         }
 
-        this.nebulaImage = {
-            texture: this.resources.items.nebula,
-            title: '<NEBULA      />',
-            descriptionOne: 'DESIGNING AN ADAPTIVE SLEEP TRAINER TO',
-            descriptionTwo: 'CURATE A PERSONALIZED SLEEP ROUTINE.',
-            name: 'nebula'
+        this.image5 = {
+            texture: this.resources.items.ff42Lift, 
+            title: '<FF42 LIFT  />', 
+            name: 'ff42Lift',
+            type: 'PRINT DESIGN',
+            time:'SPRING 2024',
         }
 
-        this.angineImage = {
-            texture: this.resources.items.angine,
-            title: '<ANGINE         />',
-            descriptionOne: 'ORCHESTRATING A VIRTUAL AUDIO MIXER',
-            descriptionTwo: 'FOR A COMPLEX AUDIO SYSTEM ON PC.',
-            name: 'angine'
+        this.image6 = {
+            texture: this.resources.items.c102Aida, 
+            title: '<C102 AIDA  />', 
+            name: 'c102Aida',
+            type: 'PRINT DESIGN',
+            time:'SUMMER 2023',
         }
 
-        this.thumbnailTextures.push(this.transitImage, this.hyperImage, this.strayImage, this.angineImage, this.nebulaImage, this.arcaneImage)
+        this.image7 = {
+            texture: this.resources.items.c102Kyaroru, 
+            title: '<C102 KYARORU  />', 
+            name: 'c102Kyaroru',
+            type: 'PRINT DESIGN',
+            time:'SUMMER 2023',
+        }
+
+        this.image8 = {
+            texture: this.resources.items.ff41Lift, 
+            title: '<FF41 LIFT  />', 
+            name: 'ff41Lift',
+            type: 'PRINT DESIGN',
+            time:'SUMMER 2023',
+        }
+
+        this.image9 = {
+            texture: this.resources.items.ff40Kyaroru, 
+            title: '<FF40 KYARORU  />', 
+            name: 'ff40Kyaroru',
+            type: 'PRINT DESIGN',
+            time:'SPRING 2023',
+        }
+
+        this.image10 = {
+            texture: this.resources.items.prisma, 
+            title: '<PRISMA  />', 
+            name: 'prisma',
+            type: 'POSTER DESIGN',
+            time:'FALL 2019',
+        }
+
+        this.image11 = {
+            texture: this.resources.items.polygon, 
+            title: '<POLYGON  />', 
+            name: 'polygon',
+            type: 'PRINT DESIGN',
+            time:'FALL 2018',
+        }
+
+        this.image12 = {
+            texture: this.resources.items.twitch, 
+            title: '<TWITCH REBRAND  />', 
+            name: 'twitch',
+            type: 'BRAND DESIGN',
+            time:'FALL 2022',
+        }
+
+        this.image13 = {
+            texture: this.resources.items.cup, 
+            title: '<TEACUP  />', 
+            name: 'cup',
+            type: '3D MODELING',
+            time:'SPRING 2021',
+        }
+
+        this.archivesTexture.push(this.image1, this.image2, this.image3, this.image4, this.image5, this.image6, this.image7, this.image8, this.image9, this.image10, this.image11, this.image12, this.image13)
     }
 
     setModel(){
         this.thumbnailMeshes = []        
-        this.geometry = new THREE.PlaneGeometry(9.5, 5, 64, 64)
+        this.geometry = new THREE.PlaneGeometry(7, 4, 64, 64)
         this.textMaterial = new THREE.MeshBasicMaterial()
         this.group = new THREE.Group()
         this.moveHorGroup = new THREE.Group()
-        this.meshGap = 6
+        this.meshGap = 5
 
         this.interBlack = this.resources.items.interBlack
         this.interReg = this.resources.items.interReg
 
-        this.thumbnailTextures.forEach((index, i) => {
+        this.archivesTexture.forEach((index, i) => {
             this.titleTextGeometry = new TextGeometry(index.title, {
                 font: this.interBlack,
-                size: .8,
-                depth: 0,
-                curveSegments: 12,
-            })
-            this.descriptionOneTextGeometry = new TextGeometry(index.descriptionOne, {
-                font: this.interBlack,
-                size: .05,
-                depth: 0,
-                curveSegments: 12,
-            })
-            this.descriptionTwoTextGeometry = new TextGeometry(index.descriptionTwo, {
-                font: this.interBlack,
-                size: .05,
+                size: .1,
                 depth: 0,
                 curveSegments: 12,
             })
 
             this.titleText = new THREE.Mesh(this.titleTextGeometry, this.textMaterial)
-            this.descriptionOneText = new THREE.Mesh(this.descriptionOneTextGeometry, this.textMaterial)
-            this.descriptionTwoText = new THREE.Mesh(this.descriptionTwoTextGeometry, this.textMaterial)
-            this.titleText.position.set(-4.5, .5 , 4)
+            this.titleText.position.set(-4.5, 0 , 4)
             this.titleText.rotation.z = -.05
-            this.descriptionOneText.position.set(-3.5, -1 , 4)
-            this.descriptionOneText.rotation.z = -.05
-            this.descriptionTwoText.position.set(-3.5, -1.1 , 4)
-            this.descriptionTwoText.rotation.z = -.05
 
             this.material = new THREE.ShaderMaterial({
                 vertexShader: plateVertex,
@@ -134,7 +171,7 @@ export default class ArchiveScroll {
             this.mesh.name = index.name
 
             this.meshGroup = new THREE.Group()
-            this.meshGroup.add(this.titleText, this.descriptionOneText, this.descriptionTwoText, this.mesh)
+            this.meshGroup.add(this.titleText, this.mesh)
 
             this.meshGroup.position.y = i * this.meshGap
             this.thumbnailMeshes.push(this.meshGroup)
