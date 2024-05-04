@@ -131,7 +131,32 @@ export default class ArchiveScroll {
             time:'SPRING 2021',
         }
 
-        this.archivesTexture.push(this.image1, this.image2, this.image3, this.image4, this.image5, this.image6, this.image7, this.image8, this.image9, this.image10, this.image11, this.image12, this.image13)
+        this.image14 = {
+            texture: this.resources.items.vesal, 
+            title: '<VESAL  />', 
+            name: 'vesal',
+            type: 'UIUX DESIGN',
+            time:'FALL 2019',
+        }
+        
+        this.image15 = {
+            texture: this.resources.items.modz, 
+            title: '<MODZ  />', 
+            name: 'modz',
+            type: 'UIUX DESIGN',
+            time:'SPRING 2020',
+        }
+
+        
+        this.image16 = {
+            texture: this.resources.items.v, 
+            title: '<V  />', 
+            name: 'v',
+            type: 'MOTION DESIGN',
+            time:'SPRING 2020',
+        }
+
+        this.archivesTexture.push(this.image1, this.image2, this.image3, this.image4, this.image5, this.image6, this.image7, this.image8, this.image9, this.image10, this.image11, this.image12, this.image13, this.image14, this.image15, this.image16)
     }
 
     setModel(){

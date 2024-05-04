@@ -114,5 +114,19 @@ export default [
         type: 'texture',
         path: '/archives/cup.png'
     },
-
+    {
+        name: 'modz',
+        type: 'texture',
+        path: '/archives/modz.png'
+    },
+    {
+        name: 'v',
+        type: 'texture',
+        path: '/archives/v.png'
+    },
+    {
+        name: 'vesal',
+        type: 'texture',
+        path: '/archives/vesal.png'
+    },
 ]

@@ -52,7 +52,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/arcane/screen_showcase.png" alt="A hero shot of a collage of different screens from the developed website" class="project-image">
+            <img src="@/assets/arcane/screen_showcase.webp" alt="A hero shot of a collage of different screens from the developed website" class="project-image"/>
         </div>
 
         <div class="section-container flex justify-between">
@@ -81,7 +81,7 @@
 
         <div class="section-container content-hidden">
             <ImageContainer>
-                <img src="@/assets/arcane/model_collage.png" alt="A collage of models used for this website, which include the hero robot head, a cat, and a simplified keyboard" class="contained-image">
+                <img src="@/assets/arcane/model_collage.webp" alt="A collage of models used for this website, which include the hero robot head, a cat, and a simplified keyboard" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -175,7 +175,7 @@
 
         <div class="section-container content-hidden">
             <ImageContainer>
-                <img src="@/assets/arcane/visual_research.png" alt="A collage of all the referenced screenshots from other people's websites" class="contained-image">
+                <img src="@/assets/arcane/visual_research.webp" alt="A collage of all the referenced screenshots from other people's websites" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -205,7 +205,7 @@
 
         <div class="section-container content-hidden">
             <ImageContainer>
-                <img src="@/assets/arcane/vue_three.png" alt="A image showing the Vue.js and Three.js logo" class="contained-image">
+                <img src="@/assets/arcane/vue_three.webp" alt="A image showing the Vue.js and Three.js logo" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -224,13 +224,13 @@
         </div>
 
         <div class="section-container flex flex-column gap-36">
-            <img src="@/assets/arcane/blender.png" alt="A screenshot from Blender showing the modeling process of the robot head" class="project-image content-hidden">
+            <img src="@/assets/arcane/blender.webp" alt="A screenshot from Blender showing the modeling process of the robot head" class="project-image content-hidden">
             <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/arcane/import_model_code.png" alt="A code snippet showing the importing and loading of models" class="project-image">
+                    <img src="@/assets/arcane/import_model_code.jpg" alt="A code snippet showing the importing and loading of models" class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/arcane/animating_model_code.png" alt="A code snippet showing the code of updating the position of the models, which animate them using sin functions and time" class="project-image">
+                    <img src="@/assets/arcane/animating_model_code.jpg" alt="A code snippet showing the code of updating the position of the models, which animate them using sin functions and time" class="project-image">
                 </div>
             </div>
         </div>
@@ -269,10 +269,10 @@
 
         <div class="section-container project-columns flex gap-36 content-hidden">
             <div class="flex flex-column gap-36">
-                <img src="@/assets/arcane/setting_scene_code.png" alt="A code snippet showing the function that sets up the various scenes for the multi-render" class="project-image">
+                <img src="@/assets/arcane/setting_scene_code.jpg" alt="A code snippet showing the function that sets up the various scenes for the multi-render" class="project-image">
             </div>
             <div class="flex flex-column gap-36">
-                <img src="@/assets/arcane/render_section_code.png" alt="A code snippet showing the slicing code to tell the canvas to check for render target and render the corrisponding scene" class="project-image">
+                <img src="@/assets/arcane/render_section_code.jpg" alt="A code snippet showing the slicing code to tell the canvas to check for render target and render the corrisponding scene" class="project-image">
             </div>
         </div>
 
@@ -296,10 +296,10 @@
 
             <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/arcane/transition_code.png" alt="A code snippet showing the GSAP animation code for page transitions" class="project-image">
+                    <img src="@/assets/arcane/transition_code.jpg" alt="A code snippet showing the GSAP animation code for page transitions" class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/arcane/scroll_code.png" alt="A code snippet showing the GSAP animation code for scroll triggers" class="project-image">
+                    <img src="@/assets/arcane/scroll_code.jpg" alt="A code snippet showing the GSAP animation code for scroll triggers" class="project-image">
                 </div>
             </div>
         </div>
