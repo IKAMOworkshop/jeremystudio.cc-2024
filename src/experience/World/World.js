@@ -2,7 +2,6 @@ import Experience from "../Experience.js"
 import HomeThumbnail from "./home/HomeThumbnail.js"
 import AboutScroll from './about/AboutScroll.js'
 import ArchivesScroll from './archives/ArchivesScroll.js'
-import Stray from './projects/Stray.js'
 
 export default class World{
     constructor(){
@@ -15,7 +14,6 @@ export default class World{
             this.homeThumbnails = new HomeThumbnail()
             this.aboutScroll = new AboutScroll()
             this.archivesScroll = new ArchivesScroll()
-            this.stray = new Stray()
         })
     }
 
@@ -30,14 +28,14 @@ export default class World{
         this.nebulaCheck = document.getElementById('nebula-experience')
         this.angineCheck = document.getElementById('angine-experience')
         
-        if(this.homeCheck){
+        if(this.homeCheck && this.homeThumbnails){
             this.homeThumbnails.update()
         }
-        if(this.aboutCheck){
+        if(this.aboutCheck && this.aboutScroll){
             this.aboutScroll.update()
             this.homeThumbnails.currentIntersect = null
         }
-        if(this.archivesCheck){
+        if(this.archivesCheck && this.archivesScroll){
             this.archivesScroll.update()
             this.homeThumbnails.currentIntersect = null
         }
