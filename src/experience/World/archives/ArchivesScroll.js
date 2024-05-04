@@ -152,10 +152,31 @@ export default class ArchiveScroll {
                 depth: 0,
                 curveSegments: 12,
             })
+            this.typeTextGeometry = new TextGeometry(index.type, {
+                font: this.interReg,
+                size: .05,
+                depth: 0,
+                curveSegments: 12,
+            })
+
+            this.timeTextGeometry = new TextGeometry(index.time, {
+                font: this.interBlack,
+                size: .05,
+                depth: 0,
+                curveSegments: 12,
+            })
 
             this.titleText = new THREE.Mesh(this.titleTextGeometry, this.textMaterial)
-            this.titleText.position.set(-4.5, 0 , 4)
+            this.titleText.position.set(-4.5, .2 , 4)
             this.titleText.rotation.z = -.05
+
+            this.typeText = new THREE.Mesh(this.typeTextGeometry, this.textMaterial)
+            this.typeText.position.set(-4.5, .05 , 4)
+            this.typeText.rotation.z = -.05
+
+            this.timeText = new THREE.Mesh(this.timeTextGeometry, this.textMaterial)
+            this.timeText.position.set(3, -.3 , 4)
+            this.timeText.rotation.z = -.05
 
             this.material = new THREE.ShaderMaterial({
                 vertexShader: plateVertex,
@@ -171,7 +192,7 @@ export default class ArchiveScroll {
             this.mesh.name = index.name
 
             this.meshGroup = new THREE.Group()
-            this.meshGroup.add(this.titleText, this.mesh)
+            this.meshGroup.add(this.titleText, this.typeText, this.timeText, this.mesh)
 
             this.meshGroup.position.y = i * this.meshGap
             this.thumbnailMeshes.push(this.meshGroup)
