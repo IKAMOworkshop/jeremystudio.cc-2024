@@ -1,7 +1,7 @@
 <template>
     <Navigation />
     <canvas id="webgl"></canvas>
-    <!-- <Cursor /> -->
+    <Cursor />
 
     <!-- TEMP LINK -->
     <div class="temp-link flex flex-column">
