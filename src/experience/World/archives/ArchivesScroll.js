@@ -1,6 +1,3 @@
-import router from '../../../plugins/router.js'
-import { onBeforeRouteLeave } from 'vue-router'
-
 import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
@@ -10,12 +7,11 @@ import plateVertex from '../../shaders/thumbnail/vertex.glsl'
 import plateFragment from '../../shaders/thumbnail/fragment.glsl'
 
 
-export default class HomeThumbnail {
+export default class ArchiveScroll {
     constructor(){
         this.experience = new Experience()
-        this.raycaster = new THREE.Raycaster()
-        this.scene = this.experience.homeScene
-        this.camera = this.experience.camera.homeInstance
+        this.scene = this.experience.archivesScene
+        this.camera = this.experience.camera.archivesInstance
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
@@ -24,16 +20,9 @@ export default class HomeThumbnail {
         this.wheel = this.experience.wheel
         this.index = this.experience.thumbnailIndex
 
-        this.mouse = new THREE.Vector2()
-        this.objectToTest = []
-        this.currentIntersect = null
-
-        this.customCursor = document.getElementById('cursor')
-
 
         this.setData()
         this.setModel()
-        this.mouseClick()
         this.update()
     }
 
@@ -143,7 +132,6 @@ export default class HomeThumbnail {
             })
             this.mesh = new THREE.Mesh(this.geometry, this.material)
             this.mesh.name = index.name
-            this.objectToTest.push(this.mesh)
 
             this.meshGroup = new THREE.Group()
             this.meshGroup.add(this.titleText, this.descriptionOneText, this.descriptionTwoText, this.mesh)
@@ -161,34 +149,6 @@ export default class HomeThumbnail {
         this.scene.add(this.moveHorGroup)
     }
 
-    mouseClick(){
-        window.addEventListener('click', () => {
-            if(this.currentIntersect){
-                switch(this.currentIntersect.object.name){
-                    case'stray':
-                        router.push('stray')
-                        
-                        break
-                    case 'hyper':
-                        router.push('hyper')
-                        break
-                    case 'transit':
-                        router.push('transit')
-                        break
-                    case 'arcane':
-                        router.push('arcane')
-                        break
-                    case 'nebula':
-                        router.push('nebula')
-                        break
-                    case 'angine':
-                        router.push('angine')
-                        break
-                }
-            }
-        })
-    }
-
     calcPos(scr, pos){
         let temp = ((scr + pos + (this.thumbnailMeshes.length * this.meshGap)) % (this.thumbnailMeshes.length * this.meshGap))
 
@@ -196,16 +156,6 @@ export default class HomeThumbnail {
     }
 
     update(){
-        if(!this.customCursor){
-            this.customCursor = document.getElementById('cursor')
-        }
-        // Raycaster
-        this.mouse.x = (this.cursor.cursorX / this.sizes.width) * 2 - 1
-        this.mouse.y = -(this.cursor.cursorY / this.sizes.height) * 2 + 1
-
-        this.raycaster.setFromCamera(this.mouse, this.camera)
-        this.intersects = this.raycaster.intersectObjects(this.objectToTest)
-
         // Home Experience
         this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .01)) * .1
 
@@ -230,27 +180,5 @@ export default class HomeThumbnail {
         this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
 
         this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
-        
-        if(this.intersects.length){
-            if(!this.currentIntersect){
-                
-            }
-            if(this.customCursor){
-                this.customCursor.style.transform = 'scale(.2)'
-                document.body.style.cursor = 'pointer'
-            }
-
-            this.currentIntersect = this.intersects[0]
-
-        }else{
-            if(this.currentIntersect){
-                if(this.customCursor){
-                    this.customCursor.style.transform = 'scale(1)'
-                    document.body.style.cursor = 'default'
-                }
-            }
-            this.currentIntersect = null
-        }
     }
-
 }

@@ -78,7 +78,7 @@ import AboutContact from '@/components/about/AboutContact.vue'
 import TextBlock from '@/components/projects/TextBlock.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
 
