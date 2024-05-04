@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
-import Experience from "../../Experience";
+import Experience from "../../Experience"
 
 import plateVertex from '../../shaders/thumbnail/vertex.glsl'
 import plateFragment from '../../shaders/thumbnail/fragment.glsl'
@@ -10,7 +10,9 @@ import plateFragment from '../../shaders/thumbnail/fragment.glsl'
 export default class ImagePlate {
     constructor(){
         this.experience = new Experience()
+        this.raycaster = new THREE.Raycaster()
         this.scene = this.experience.homeScene
+        this.camera = this.experience.camera.homeInstance
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
@@ -18,6 +20,9 @@ export default class ImagePlate {
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
         this.index = this.experience.thumbnailIndex
+
+        this.mouse = new THREE.Vector2()
+        this.objectToTest = []
 
         this.setData()
         this.setModel()
@@ -123,6 +128,7 @@ export default class ImagePlate {
                 transparent: true,
             })
             this.mesh = new THREE.Mesh(this.geometry, this.material)
+            this.objectToTest.push(this.mesh)
 
             this.meshGroup = new THREE.Group()
             this.meshGroup.add(this.titleText, this.descriptionOneText, this.descriptionTwoText, this.mesh)
@@ -147,11 +153,11 @@ export default class ImagePlate {
     }
 
     update(){
+        // Home Experience
         this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .01)) * .1
 
         this.thumbnailMeshes.forEach((mesh) => {
             mesh.position.y = this.calcPos(-this.wheel.scroll, mesh.position.y)
-        
 
             this.rounded = 0
 
@@ -167,10 +173,24 @@ export default class ImagePlate {
 
             mesh.position.y += (this.diff * .015) * 1.5
         })
+
         this.wheel.wheelDelta = 0
 
         this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
 
         this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
+
+        // Raycaster
+        this.mouse.x = (this.cursor.cursorX / this.sizes.width) * 2 - 1
+        this.mouse.y = -(this.cursor.cursorY / this.sizes.height) * 2 + 1
+
+        this.raycaster.setFromCamera(this.mouse, this.camera)
+
+
+        this.intersects = this.raycaster.intersectObjects(this.objectToTest)
+
+        for(const object of this.intersects){
+            console.log(object)
+        }
     }
 }
