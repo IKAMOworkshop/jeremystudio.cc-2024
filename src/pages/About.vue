@@ -94,14 +94,19 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+    lenis.raf(time)
+    requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf);
+requestAnimationFrame(raf)
+
+onMounted(() => {
+    window.scrollTo(0, 0)
+})
 
 onUnmounted(() => {
     function destroy(){

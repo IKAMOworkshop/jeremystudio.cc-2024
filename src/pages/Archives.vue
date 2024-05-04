@@ -3,12 +3,9 @@
         <div id="archives-experience" class="archives-experience"></div>
         <div class="flex flex-column gap-280">
             
-            <ArchivedTitle />
-            <ArchivedDate />
-            <ArchivedProject />
             <InfiniteScrollProgress />
-
-            <div class="archives-line fill-light-gray"></div>
+<!-- 
+            <div class="archives-line fill-light-gray"></div> -->
         </div>
     </div>
 </template>
