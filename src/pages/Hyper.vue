@@ -42,7 +42,7 @@
         </div>
 
         <div class="section-container content-hidden">
-            <img src="@/assets/hyper/header_render.png" alt="A hero render of the final design for the environment, avatar, and other assets for the scene" class="project-image" loading="lazy"/>
+            <img src="@/assets/hyper/header_render.webp" alt="A hero render of the final design for the environment, avatar, and other assets for the scene" class="project-image"/>
         </div>
 
         <div class="section-container flex justify-between content-hidden">
@@ -103,16 +103,16 @@
 
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/gravity_option_1.png" alt="The first iteration of my 3D sketch showing a mountain range with tree" class="project-image content-hidden" loading="lazy">
-                    <img src="@/assets/hyper/gravity_option_2.png" alt="A collage of all the inital sketches and reference image in 3D" class="project-image content-hidden" loading="lazy">
+                    <img src="@/assets/hyper/gravity_option_1.webp" alt="The first iteration of my 3D sketch showing a mountain range with tree" class="project-image content-hidden">
+                    <img src="@/assets/hyper/gravity_option_2.webp" alt="A collage of all the inital sketches and reference image in 3D" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/gravity_option_3.png" alt="A sketch idea showing exploring how we can create bridges connecting different biome" class="project-image content-hidden" loading="lazy">
-                    <img src="@/assets/hyper/gravity_option_4.png" alt="A detailed shots showing importing models and reusing assets in gravity sketch" class="project-image content-hidden" loading="lazy">
+                    <img src="@/assets/hyper/gravity_option_3.webp" alt="A sketch idea showing exploring how we can create bridges connecting different biome" class="project-image content-hidden">
+                    <img src="@/assets/hyper/gravity_option_4.webp" alt="A detailed shots showing importing models and reusing assets in gravity sketch" class="project-image content-hidden">
                 </div>
             </div>
 
-            <img src="@/assets/hyper/final_sketch.png" alt="The finalized idea sketch utilizing the grid system in gravity sketch" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/hyper/final_sketch.webp" alt="The finalized idea sketch utilizing the grid system in gravity sketch" class="project-image content-hidden">
         </div>
 
         <div class="section-container flex justify-between content-hidden">
@@ -160,16 +160,16 @@
         <div class="section-container flex flex-column gap-36">
             <div class="project-columns flex gap-36">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/substance_option_1.png" alt="The first iteration of the finalized mesh, material, and colors extracted from Discord" class="project-image content-hidden" loading="lazy">
-                    <img src="@/assets/hyper/substance_option_2.png" alt="The thired iterative render testing a more saturated color and brighter lighting" class="project-image content-hidden" loading="lazy">
+                    <img src="@/assets/hyper/substance_option_1.webp" alt="The first iteration of the finalized mesh, material, and colors extracted from Discord" class="project-image content-hidden">
+                    <img src="@/assets/hyper/substance_option_2.webp" alt="The thired iterative render testing a more saturated color and brighter lighting" class="project-image content-hidden">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/substance_option_3.png" alt="The second iteration render exploring different forms for the mesh and new models" class="project-image content-hidden" loading="lazy">
-                    <img src="@/assets/hyper/substance_option_4.png" alt="The fourth iteration of render unifying colors and merging the look and feel from Apple" class="project-image content-hidden" loading="lazy">
+                    <img src="@/assets/hyper/substance_option_3.webp" alt="The second iteration render exploring different forms for the mesh and new models" class="project-image content-hidden">
+                    <img src="@/assets/hyper/substance_option_4.webp" alt="The fourth iteration of render unifying colors and merging the look and feel from Apple" class="project-image content-hidden">
                 </div>
             </div>
 
-            <img src="@/assets/hyper/substance_final.png" alt="The finalized mesh, color, and material rendered as a hero shot" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/hyper/substance_final.webp" alt="The finalized mesh, color, and material rendered as a hero shot" class="project-image content-hidden">
         </div>
 
         <div class="section-container flex justify-between content-hidden">
@@ -199,7 +199,7 @@
 
         <div class="section-container content-hidden">
             <ImageContainer>
-                <img src="@/assets/hyper/ai_frameworks.png" alt="A image showing the Generative AI platform that I've used, which include DALL-E, Stable Diffusion, and Midjourney" class="contained-image" loading="lazy">
+                <img src="@/assets/hyper/ai_frameworks.webp" alt="A image showing the Generative AI platform that I've used, which include DALL-E, Stable Diffusion, and Midjourney" class="contained-image">
             </ImageContainer>
         </div>
 
@@ -219,9 +219,9 @@
 
         <div class="section-container content-hidden">
             <ImageContainer>
-                <img src="@/assets/hyper/ai_scene_model.png" alt="A side-by-side comparison of the generated images and how it inspired some the of form and design of the scene and model" class="contained-image" loading="lazy">
+                <img src="@/assets/hyper/ai_scene_model.webp" alt="A side-by-side comparison of the generated images and how it inspired some the of form and design of the scene and model" class="contained-image">
                 <div class="divider fill-gray"></div>
-                <img src="@/assets/hyper/ai_mood.png" alt="A side-by-side comparison of the generated images and how it influenced the overall lighting and mood of the scene" class="contained-image" loading="lazy">
+                <img src="@/assets/hyper/ai_mood.webp" alt="A side-by-side comparison of the generated images and how it influenced the overall lighting and mood of the scene" class="contained-image">
             </ImageContainer>
         </div>
         
@@ -252,14 +252,14 @@
 
         <div class="section-container flex flex-column gap-36">
 
-            <img src="@/assets/hyper/unreal_main.png" alt="The Unreal Engine project interface for setting up the entire scene" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/hyper/unreal_main.webp" alt="The Unreal Engine project interface for setting up the entire scene" class="project-image content-hidden">
 
             <div class="project-columns flex gap-36 content-hidden">
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/unreal_material.png" alt="The Unreal Engine material node editor to add additional textures due to compatibility issues" class="project-image" loading="lazy">
+                    <img src="@/assets/hyper/unreal_material.webp" alt="The Unreal Engine material node editor to add additional textures due to compatibility issues" class="project-image">
                 </div>
                 <div class="flex flex-column gap-36">
-                    <img src="@/assets/hyper/unreal_environment.png" alt="Setting the scene lighting using the Unreal Engine's material editor again to create the sky dome" class="project-image" loading="lazy">
+                    <img src="@/assets/hyper/unreal_environment.webp" alt="Setting the scene lighting using the Unreal Engine's material editor again to create the sky dome" class="project-image">
                 </div>
             </div>
         </div>
@@ -280,8 +280,8 @@
 
         <div class="section-container flex flex-column gap-36">
             <ProjectVideo class="content-hidden" video-source="/project-video/hyper/unreal.mp4" />
-            <img src="@/assets/hyper/unreal_1.png" alt="A screenshot from the experience showing two avatars watching a screensharing concept for the overall experience" class="project-image content-hidden" loading="lazy">
-            <img src="@/assets/hyper/unreal_2.png" alt="A screenshot showing an avatar in front of a room, which is a concept for private voice channel" class="project-image content-hidden" loading="lazy">
+            <img src="@/assets/hyper/unreal_1.webp" alt="A screenshot from the experience showing two avatars watching a screensharing concept for the overall experience" class="project-image content-hidden">
+            <img src="@/assets/hyper/unreal_2.webp" alt="A screenshot showing an avatar in front of a room, which is a concept for private voice channel" class="project-image content-hidden">
         </div>
 
         <!-- Next Project -->
