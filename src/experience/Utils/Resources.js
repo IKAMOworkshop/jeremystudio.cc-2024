@@ -33,7 +33,7 @@ export default class Resource extends EventEmitter{
                 this.loaders.gltfLoader.load(
                     source.path,
                     (file) => {
-                        this.sourceLoaded(source, file);
+                        this.sourceLoaded(source, file)
                     }
                 )
             }
@@ -41,7 +41,7 @@ export default class Resource extends EventEmitter{
                 this.loaders.textureLoader.load(
                     source.path,
                     (file) => {
-                        this.sourceLoaded(source, file);
+                        this.sourceLoaded(source, file)
                     }
                 )
             }
@@ -49,7 +49,7 @@ export default class Resource extends EventEmitter{
                 this.loaders.fontLoader.load(
                     source.path,
                     (file) => {
-                        this.sourceLoaded(source, file);
+                        this.sourceLoaded(source, file)
                     }
                 )
             }

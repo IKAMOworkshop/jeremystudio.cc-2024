@@ -4,7 +4,7 @@
         <div id="nebula-experience" class="nebula-experience"></div>
 
         <TopTitle project-title="<NEBULA"/>
-        <HeroVideo video-source="/project-video/nebula/header_video.mp4" />
+        <HeroVideo video-name="nebula" video-source="/project-video/nebula/header_video.mp4" />
 
         <ProjectData 
             title-color="#7593FF"
@@ -343,6 +343,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -353,6 +354,8 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

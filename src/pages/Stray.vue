@@ -4,7 +4,7 @@
         <div id="stray-experience" class="stray-experience"></div>
 
         <TopTitle project-title="<STRAY"/>
-        <HeroVideo video-source="/project-video/stray/header.mp4" />
+        <HeroVideo video-name="stray" video-source="/project-video/stray/header.mp4" />
 
         <ProjectData 
             title-color="#FF6581"
@@ -454,6 +454,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -464,6 +465,8 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

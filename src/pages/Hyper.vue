@@ -5,7 +5,7 @@
 
         <TopTitle project-title="<HYPER" />
 
-        <HeroVideo video-source="/project-video/hyper/hyper.mp4" />
+        <HeroVideo video-name="hyper" video-source="/project-video/hyper/hyper.mp4" />
 
         <ProjectData
             title-color="#A8EFFF"
@@ -332,6 +332,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -342,6 +343,8 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

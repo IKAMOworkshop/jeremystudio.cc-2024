@@ -78,7 +78,7 @@ import AboutContact from '@/components/about/AboutContact.vue'
 import TextBlock from '@/components/projects/TextBlock.vue'
 import ProjectFooter from '@/components/ProjectFooter.vue'
 
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import {useHead} from '@vueuse/head'
 import Lenis from '@studio-freight/lenis'
 
@@ -94,14 +94,19 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+    lenis.raf(time)
+    requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf);
+requestAnimationFrame(raf)
+
+onMounted(() => {
+    window.scrollTo(0, 0)
+})
 
 onUnmounted(() => {
     function destroy(){

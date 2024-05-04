@@ -5,7 +5,7 @@
 
 
         <TopTitle project-title="<TRANSIT"/>
-        <HeroVideo video-source="/project-video/transit/header_video.mp4" />
+        <HeroVideo video-name="trasit" video-source="/project-video/transit/header_video.mp4" />
         
         <ProjectData 
             title-color="#FFCC49"
@@ -271,6 +271,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -281,6 +282,8 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

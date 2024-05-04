@@ -1,37 +1,31 @@
 export default [
     {
         name: 'stray',
-        title: 'STRAY',
         type: 'texture',
         path: '/project-thumbnail/stray.png'
     },
     {
         name: 'hyper',
-        title: 'HYPER',
         type: 'texture',
         path: '/project-thumbnail/hyper.png'
     },
     {
         name: 'transit',
-        title: 'TRANSIT',
         type: 'texture',
         path: '/project-thumbnail/transit.png'
     },
     {
         name: 'arcane',
-        title: 'ARCANE',
         type: 'texture',
         path: '/project-thumbnail/arcane.png'
     },
     {
         name: 'nebula',
-        title: 'NEBULA',
         type: 'texture',
         path: '/project-thumbnail/nebula.png'
     },
     {
         name: 'angine',
-        title: 'ANGINE',
         type: 'texture',
         path: '/project-thumbnail/angine.png'
     },
@@ -55,4 +49,70 @@ export default [
         type: 'texture',
         path: '/model/baked.jpg'
     },
+    {
+        name: 'fracture',
+        type: 'texture',
+        path: '/archives/fracture.png'
+    },
+    {
+        name: 'icons',
+        type: 'texture',
+        path: '/archives/icons.png'
+    },
+    {
+        name: 'c103Aida',
+        type: 'texture',
+        path: '/archives/c103_aida.png'
+    },
+    {
+        name: 'c103Kyaroru',
+        type: 'texture',
+        path: '/archives/c103_kyaroru.png'
+    },
+    {
+        name: 'ff42Lift',
+        type: 'texture',
+        path: '/archives/ff42_lift.png'
+    },
+    {
+        name: 'c102Aida',
+        type: 'texture',
+        path: '/archives/c102_aida.png'
+    },
+    {
+        name: 'c102Kyaroru',
+        type: 'texture',
+        path: '/archives/c102_kyaroru.png'
+    },
+    {
+        name: 'ff41Lift',
+        type: 'texture',
+        path: '/archives/ff41_lift.png'
+    },
+    {
+        name: 'ff40Kyaroru',
+        type: 'texture',
+        path: '/archives/ff40_kyaroru.png'
+    },
+    {
+        name: 'prisma',
+        type: 'texture',
+        path: '/archives/prisma.png'
+    },
+    {
+        name: 'polygon',
+        type: 'texture',
+        path: '/archives/polygon.png'
+    },
+    {
+        name: 'twitch',
+        type: 'texture',
+        path: '/archives/twitch.png'
+    },
+    {
+        name: 'cup',
+        type: 'texture',
+        path: '/archives/cup.png'
+    },
+
 ]

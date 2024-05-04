@@ -4,7 +4,7 @@
         <div id="angine-experience" class="angine-experience"></div>
 
         <TopTitle project-title="<NEBULA"/>
-        <HeroVideo video-source="/project-video/angine/header-video.mp4" />
+        <HeroVideo video-name="angine" video-source="/project-video/angine/header-video.mp4" />
 
         <ProjectData 
             title-color="#78FF75"
@@ -452,6 +452,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -462,6 +463,8 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

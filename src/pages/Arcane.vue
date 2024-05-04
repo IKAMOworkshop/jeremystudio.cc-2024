@@ -5,7 +5,7 @@
 
 
         <TopTitle project-title="<ARCANE"/>
-        <HeroVideo video-source="/project-video/arcane/header.mp4" />
+        <HeroVideo video-name="arcane" video-source="/project-video/arcane/header.mp4" />
 
         <ProjectData 
             title-color="#7DF7FF"
@@ -371,6 +371,7 @@ useHead({
 
 const lenis = new Lenis({
     smooth: true,
+    lerp: .12
 });
 
 function raf(time) {
@@ -381,6 +382,8 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 onMounted(() => {
+    window.scrollTo(0, 0)
+
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

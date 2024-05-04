@@ -13,7 +13,6 @@ void main(){
 
     // Bend the plane
     modelPosition.z -= sin(PI*uv.x)*1.5;
-    modelPosition.y += sin(PI*uv.x)*(uOffsetY * 50.0);
 
 
     vec4 viewPosition = viewMatrix * modelPosition;
@@ -21,8 +20,8 @@ void main(){
     gl_Position = projectionPosition;
 
     // Parallax on the thumbnails
-    newUV *= vec2(.5, .5);
-    newUV += vec2(0.05, .3);
+    newUV *= vec2(.5, .9);
+    newUV += vec2(0.2, 0.0);
     newUV.x += modelPosition.x * .09;
     newUV.y += modelPosition.y * .09;
 
