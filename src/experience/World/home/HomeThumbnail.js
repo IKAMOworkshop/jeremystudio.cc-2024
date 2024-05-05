@@ -137,7 +137,9 @@ export default class HomeThumbnail {
                 uniforms: {
                     uTime: new THREE.Uniform(0),
                     uTexture: new THREE.Uniform(index.texture),
-                    uOffsetY: new THREE.Uniform(0)
+                    uTextureSize: new THREE.Uniform(new THREE.Vector2(1920, 1080)),
+                    uPlaneSize: new THREE.Uniform(new THREE.Vector2(9.5, 5))
+                    
                 },
                 transparent: true,
             })

@@ -1,18 +1,31 @@
 uniform float uTime;
 uniform sampler2D uTexture;
+uniform vec2 uTextureSize;
+uniform vec2 uPlaneSize;
 
 varying vec2 vUv;
 varying float vOffsetY;
 
-vec3 rgbShift(sampler2D textureImage, vec2 uv, float offset) {
-    float r = texture2D(textureImage, uv + vec2(offset)).r;
-    vec2 gb = texture2D(textureImage, uv).gb;\
-    
-    return vec3(r,gb);
+vec2 getUv(vec2 uv, vec2 textureSize, vec2 planeSize){
+    vec2 tempUv = uv - vec2(.5);
+
+    float planeAspect = uPlaneSize.x / uPlaneSize.y;
+    float textureAspect = uTextureSize.x / uTextureSize.y;
+    if(planeAspect < textureAspect){
+        tempUv = tempUv * vec2(planeAspect / textureAspect, 1.) * .5;
+    }else{
+        tempUv = tempUv * vec2(1, textureAspect / planeAspect) * .5;
+    }
+
+    tempUv += .5;
+
+    return tempUv;
 }
 
 void main() {
-    vec3 color = rgbShift(uTexture, vUv, vOffsetY);
-    // vec4 color = texture2D(uTexture, vUv);
-    gl_FragColor = vec4(color, .5);
+    vec2 newUv = getUv(vUv, uTextureSize, uPlaneSize);
+
+    vec4 color = texture2D(uTexture, newUv);
+
+    gl_FragColor = color;
 }
