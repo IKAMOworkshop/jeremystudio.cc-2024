@@ -19,17 +19,4 @@ useHead({
         }
     ]
 })
-
-</script>
-
-<script>
-import projectData from '@/components/archives/archivedProject.json'
-
-export default {
-    data() {
-        return {
-        projects: projectData,
-        };
-    },
-};
 </script>
