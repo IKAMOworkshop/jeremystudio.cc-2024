@@ -1,15 +1,16 @@
 import * as THREE from 'three'
 
 import studio from '@theatre/studio'
-import { getProject, types } from '@theatre/core'
+import { getProject, types, val } from '@theatre/core'
 studio.initialize()
 
 import Experience from "../../Experience";
+import roomScroll from '../../animations/roomScroll.json'
 
 export default class AboutScroll{
     constructor(){
         // Theatre JS
-        this.project = getProject('About Scroll')
+        this.project = getProject('About Scroll', {state: roomScroll})
         this.sheet = this.project.sheet('Room Animation')
 
         this.experience = new Experience()
@@ -20,7 +21,6 @@ export default class AboutScroll{
         this.sizes = this.experience.sizes
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
-
 
         // Setup
         this.roomModelRef = this.resources.items.roomModel
@@ -69,6 +69,9 @@ export default class AboutScroll{
             this.group.rotation.set(this.rotation.x * Math.PI, this.rotation.y * Math.PI, this.rotation.z * Math.PI)
             this.group.position.set(this.position.x, this.position.y, this.position.z)
         })
+
+        this.sequenceLength = val(this.sheet.sequence.pointer.length)
+        console.log(this.sequenceLength)
     }
 
     update(){
