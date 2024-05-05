@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="data-container flex justify-between align-center">
+        <div id="data-container" class="data-container flex justify-between align-center">
 
             <div class="project-descriptions flex flex-column gap-24">
                 <h3 :style="{color: titleColor}" class="caption-wide">{{ projectType }}</h3>
@@ -52,6 +52,34 @@
 </template>
 
 <script setup>
+
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const dataContainer = document.getElementById('data-container')
+    const cursor = {}
+    cursor.x = 0
+    cursor.y = 0
+    cursor.mouseX = 0
+    cursor.mouseY = 0
+
+    window.addEventListener('mousemove', (e) => {
+        cursor.x = e.clientX / window.innerWidth - .5
+        cursor.y = e.clientY / window.innerHeight - .5
+    })
+
+    const moveFunction = () => {
+        cursor.mouseX = (1 - .05) * cursor.mouseX + .05 * cursor.x
+        cursor.mouseY = (1 - .05) * cursor.mouseY + .05 * cursor.y
+
+        dataContainer.style.transform = `translate(${cursor.mouseX * 5}%, ${cursor.mouseY * 5}%)`
+
+        requestAnimationFrame(moveFunction)
+    }
+
+    moveFunction()
+
+})
 
 defineProps({
     titleColor: {
