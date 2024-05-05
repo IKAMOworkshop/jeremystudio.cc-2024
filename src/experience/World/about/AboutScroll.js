@@ -1,9 +1,17 @@
 import * as THREE from 'three'
 
+import studio from '@theatre/studio'
+import { getProject, types } from '@theatre/core'
+studio.initialize()
+
 import Experience from "../../Experience";
 
 export default class AboutScroll{
     constructor(){
+        // Theatre JS
+        this.project = getProject('About Scroll')
+        this.sheet = this.project.sheet('Room Animation')
+
         this.experience = new Experience()
         this.scene = this.experience.aboutScene
         this.resources = this.experience.resources
@@ -12,6 +20,7 @@ export default class AboutScroll{
         this.sizes = this.experience.sizes
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
+
 
         // Setup
         this.roomModelRef = this.resources.items.roomModel
@@ -38,10 +47,34 @@ export default class AboutScroll{
 
         this.roomModel.children[0].material = this.roomBaked
 
-        this.scene.add(this.roomModel)
+        this.group = new THREE.Group()
+        this.group.add(this.roomModel)
+
+        this.scene.add(this.group)
+
+        this.roomObject = this.sheet.object('Room', {
+            rotation: types.compound({
+                x: types.number(this.group.rotation.x, { range: [-2, 2] }),
+                y: types.number(this.group.rotation.y, { range: [-2, 2] }),
+                z: types.number(this.group.rotation.z, { range: [-2, 2] }), 
+            }),
+            position: types.compound({
+                x: types.number(this.group.position.x, { range: [-2, 2] }),
+                y: types.number(this.group.position.y, { range: [-2, 2] }),
+                z: types.number(this.group.position.z, { range: [-2, 2] }),
+            })
+        }, {reconfigure: true})
+
+        this.roomObject.onValuesChange((values) => {
+            this.rotation = values.rotation
+            this.position = values.position
+
+            this.group.rotation.set(this.rotation.x * Math.PI, this.rotation.y * Math.PI, this.rotation.z * Math.PI)
+            this.group.position.set(this.position.x, this.position.y, this.position.z)
+        })
     }
 
     update(){
-        this.roomModel.position.y = Math.sin(this.time.elapsed * .001) * .15 - 1.7
+        this.roomModel.position.y = Math.sin(this.time.elapsed * .001) * .15 - 1.75
     }
 }

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
+    "@theatre/core": "^0.7.1",
+    "@theatre/studio": "^0.7.1",
     "@vueuse/head": "^2.0.0",
     "gsap": "^3.12.5",
     "three": "^0.164.0",
