@@ -41,9 +41,6 @@ export default class AboutScroll{
         this.modelScale = .32
 
         this.roomModel.scale.set(this.modelScale, this.modelScale, this.modelScale)
-        this.roomModel.position.y = -1.7
-        this.roomModel.rotation.y = -Math.PI * .25
-        this.roomModel.rotation.x = Math.PI * .1
 
         this.roomModel.children[0].material = this.roomBaked
 
@@ -59,9 +56,9 @@ export default class AboutScroll{
                 z: types.number(this.group.rotation.z, { range: [-2, 2] }), 
             }),
             position: types.compound({
-                x: types.number(this.group.position.x, { range: [-2, 2] }),
-                y: types.number(this.group.position.y, { range: [-2, 2] }),
-                z: types.number(this.group.position.z, { range: [-2, 2] }),
+                x: types.number(this.group.position.x, { range: [-10, 10] }),
+                y: types.number(this.group.position.y, { range: [-10, 10] }),
+                z: types.number(this.group.position.z, { range: [-10, 10] }),
             })
         }, {reconfigure: true})
 
