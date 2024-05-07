@@ -10,7 +10,7 @@ import roomScroll from '../../animations/roomScroll.json'
 export default class AboutScroll{
     constructor(){
         // Theatre JS
-        this.project = getProject('About Scroll', {state: roomScroll})
+        this.project = getProject('About Scroll')
         this.sheet = this.project.sheet('Room Animation')
 
         this.experience = new Experience()
@@ -70,8 +70,8 @@ export default class AboutScroll{
             this.group.position.set(this.position.x, this.position.y, this.position.z)
         })
 
-        this.sequenceLength = val(this.sheet.sequence.pointer.length)
-        console.log(this.sequenceLength)
+        // this.sequenceLength = val(this.sheet.sequence.pointer.length)
+        // console.log(this.sequenceLength)
     }
 
     update(){
