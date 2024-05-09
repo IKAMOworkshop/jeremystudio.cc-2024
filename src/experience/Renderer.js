@@ -16,6 +16,7 @@ export default class Renderer{
         this.arcaneScene = this.experience.arcaneScene
         this.nebulaScene = this.experience.nebulaScene
         this.angineScene = this.experience.angineScene
+        this.notFoundScene = this.experience.notFoundScene
 
         this.camera = this.experience.camera
 
@@ -322,6 +323,37 @@ export default class Renderer{
         }
     }
 
+    renderNotFoundScene(){
+        this.notFoundElement = document.getElementById('missing-experience')
+
+        if(this.notFoundElement){
+            const { left, right, top, bottom, width, height } = this.notFoundElement.getBoundingClientRect()
+    
+            const isOffscreen =
+            bottom < 0 ||
+            top > this.instance.domElement.clientHeight ||
+            right < 0 ||
+            left > this.instance.domElement.clientWidth
+    
+            if ( isOffscreen ) {
+    
+                return
+    
+            }
+    
+            this.camera.notFoundInstance.aspect = width / height;
+            this.camera.notFoundInstance.updateProjectionMatrix()
+    
+            const positiveYUpBottom = this.instance.domElement.clientHeight - bottom
+            this.instance.setScissor( left, positiveYUpBottom, width, height )
+            this.instance.setViewport( left, positiveYUpBottom, width, height )
+    
+            this.instance.render( this.notFoundScene, this.camera.notFoundInstance )
+        }else{
+            this.notFoundElement = document.getElementById('missing-experience')
+        }
+    }
+
     update(){
         this.homeCheck = document.getElementById('home-experience')
         this.aboutCheck = document.getElementById('about-experience')
@@ -332,6 +364,7 @@ export default class Renderer{
         this.arcaneCheck = document.getElementById('arcane-experience')
         this.nebulaCheck = document.getElementById('nebula-experience')
         this.angineCheck = document.getElementById('angine-experience')
+        this.notFoundCheck = document.getElementById('missing-experience')
 
 
         if(this.homeCheck){
@@ -361,6 +394,9 @@ export default class Renderer{
         }
         if(this.angineCheck){
             this.renderAngineScene()
+        }
+        if(this.notFoundCheck){
+            this.renderNotFoundScene()
         }
     }
 }

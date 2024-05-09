@@ -44,6 +44,7 @@ export default class Experience{
         this.arcaneScene = new THREE.Scene()
         this.nebulaScene = new THREE.Scene()
         this.angineScene = new THREE.Scene()
+        this.notFoundScene = new THREE.Scene()
 
         this.camera = new Camera()
         this.renderer = new Renderer()
