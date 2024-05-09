@@ -1,5 +1,4 @@
 import router from '../../../plugins/router.js'
-import { onBeforeRouteLeave } from 'vue-router'
 
 import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'

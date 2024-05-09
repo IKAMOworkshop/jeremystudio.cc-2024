@@ -2,6 +2,7 @@ import Experience from "../Experience.js"
 import HomeThumbnail from "./home/HomeThumbnail.js"
 import AboutScroll from './about/AboutScroll.js'
 import ArchivesScroll from './archives/ArchivesScroll.js'
+import MissingExperience from './missing/Missing.js'
 
 export default class World{
     constructor(){
@@ -14,6 +15,7 @@ export default class World{
             this.homeThumbnails = new HomeThumbnail()
             this.aboutScroll = new AboutScroll()
             this.archivesScroll = new ArchivesScroll()
+            this.missingExperience = new MissingExperience()
         })
     }
 
@@ -27,6 +29,7 @@ export default class World{
         this.arcaneCheck = document.getElementById('arcane-experience')
         this.nebulaCheck = document.getElementById('nebula-experience')
         this.angineCheck = document.getElementById('angine-experience')
+        this.notFoundCheck = document.getElementById('missing-experience')
         
         if(this.homeCheck && this.homeThumbnails){
             this.homeThumbnails.update()
@@ -56,6 +59,10 @@ export default class World{
         }
         if(this.angineCheck){
             this.homeThumbnails.currentIntersect = null
+        }
+        if(this.notFoundCheck && this.missingExperience){
+            this.homeThumbnails.currentIntersect = null
+            this.missingExperience.update()
         }
     }
 }

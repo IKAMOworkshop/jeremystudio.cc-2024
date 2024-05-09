@@ -129,4 +129,9 @@ export default [
         type: 'texture',
         path: '/archives/vesal.png'
     },
+    {
+        name: 'missing',
+        type: 'texture',
+        path: '/ohNo.png'
+    },
 ]

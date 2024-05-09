@@ -17,6 +17,7 @@ export default class Camera {
         this.arcaneScene = this.experience.arcaneScene
         this.nebulaScene = this.experience.nebulaScene
         this.angineScene = this.experience.angineScene
+        this.notFoundScene = this.experience.notFoundScene
         
         this.canvas = this.experience.canvas
 
@@ -60,6 +61,10 @@ export default class Camera {
         this.angineInstance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 100)
         this.angineInstance.position.set(0, 0, 12)
         this.angineScene.add(this.angineInstance)
+
+        this.notFoundInstance = new THREE.PerspectiveCamera(35, this.sizes.width / this.sizes.height, 0.1, 100)
+        this.notFoundInstance.position.set(0, 0, 12)
+        this.notFoundScene.add(this.notFoundInstance)
     };
 
     // setControls(){
@@ -77,6 +82,7 @@ export default class Camera {
         this.arcaneInstance.aspect = this.sizes.width / this.sizes.height
         this.nebulaInstance.aspect = this.sizes.width / this.sizes.height
         this.angineInstance.aspect = this.sizes.width / this.sizes.height
+        this.notFoundInstance.aspect = this.sizes.width / this.sizes.height
 
         this.homeInstance.updateProjectionMatrix()
         this.aboutInstance.updateProjectionMatrix()
@@ -87,6 +93,7 @@ export default class Camera {
         this.arcaneInstance.updateProjectionMatrix()
         this.nebulaInstance.updateProjectionMatrix()
         this.angineInstance.updateProjectionMatrix()
+        this.notFoundInstance.updateProjectionMatrix()
     };
 
     update(){

@@ -50,6 +50,11 @@ const routes = [
         path: '/angine',
         name: 'angine',
         component: () => import('@/pages/Angine.vue')
+    },
+    {
+        path: '/:pathName(.*)',
+        name: 'notFound',
+        component: () => import('@/pages/NotFound.vue')
     }
 ]
 
