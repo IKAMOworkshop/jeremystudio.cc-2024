@@ -9,6 +9,7 @@ export default class World{
         this.experience = new Experience();
         this.resources = this.experience.resources;
 
+        this.customCursor = document.getElementById('cursor')
 
         this.resources.on('ready', () => {
             // Setup
@@ -33,36 +34,76 @@ export default class World{
         
         if(this.homeCheck && this.homeThumbnails){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
             this.homeThumbnails.update()
         }
         if(this.aboutCheck && this.aboutScroll){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
             this.aboutScroll.update()
         }
         if(this.archivesCheck && this.archivesScroll){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
             this.archivesScroll.update()
         }
         if(this.strayCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.hyperCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.transitCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.arcaneCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.nebulaCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.angineCheck){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
         }
         if(this.notFoundCheck && this.missingExperience){
             this.homeThumbnails.currentIntersect = null
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
+            }
             this.missingExperience.update()
         }
     }

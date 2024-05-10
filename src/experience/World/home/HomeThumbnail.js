@@ -168,26 +168,50 @@ export default class HomeThumbnail {
                 switch(this.currentIntersect.object.name){
                     case'stray':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/stray')
                         break
                     case 'hyper':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/hyper')
                         break
                     case 'transit':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/transit')
                         break
                     case 'arcane':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/arcane')
                         break
                     case 'nebula':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/nebula')
                         break
                     case 'angine':
                         this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
                         router.push('/angine')
                         break
                 }
@@ -239,21 +263,20 @@ export default class HomeThumbnail {
         
         if(this.intersects.length){
             if(!this.currentIntersect){
-                
+                if(this.customCursor){
+                    this.customCursor.style.transform = 'scale(.2)'
+                    document.body.style.cursor = 'pointer'
+                }
             }
-            if(this.customCursor){
-                this.customCursor.style.transform = 'scale(.2)'
-                document.body.style.cursor = 'pointer'
-            }
-
             this.currentIntersect = this.intersects[0]
 
         }else{
             if(this.currentIntersect){
-                if(this.customCursor){
-                    this.customCursor.style.transform = 'scale(1)'
-                    document.body.style.cursor = 'default'
-                }
+                
+            }
+            if(this.customCursor){
+                this.customCursor.style.transform = 'scale(1)'
+                document.body.style.cursor = 'default'
             }
             this.currentIntersect = null
         }
