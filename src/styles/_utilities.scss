@@ -107,8 +107,12 @@
 }
 
 // Margin
-.m-600{
-    margin-bottom: 600px;
+.m-800{
+    margin-bottom: 800px;
+}
+
+.m-400{
+    margin-bottom: 400px;
 }
 
 .m-200{
@@ -268,7 +272,7 @@
 .blob{
     width: 800px;
     height: 800px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .8);
     position: absolute;
     top: 50%;
     left: 50%;

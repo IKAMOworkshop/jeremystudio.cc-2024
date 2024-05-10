@@ -161,8 +161,12 @@ footer {
   gap: 4px;
 }
 
-.m-600 {
-  margin-bottom: 600px;
+.m-800 {
+  margin-bottom: 800px;
+}
+
+.m-400 {
+  margin-bottom: 400px;
 }
 
 .m-200 {
@@ -318,7 +322,7 @@ footer {
 .blob {
   width: 800px;
   height: 800px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -487,7 +491,7 @@ footer {
 }
 
 .about-photo {
-  height: 500dvh;
+  height: 300dvh;
 }
 
 .about-photo-title {
@@ -816,7 +820,7 @@ html {
 
 body {
   background-color: rgb(11, 13, 16);
-  background: url(/background.png) no-repeat center center fixed;
+  background: url(/background-v2.png) no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
