@@ -134,4 +134,54 @@ export default [
         type: 'texture',
         path: '/ohNo.png'
     },
+    {
+        name: 'horiAbout1',
+        type: 'texture',
+        path: '/about/about-hor-1.jpg'
+    },
+    {
+        name: 'horiAbout2',
+        type: 'texture',
+        path: '/about/about-hor-2.jpg'
+    },
+    {
+        name: 'horiAbout3',
+        type: 'texture',
+        path: '/about/about-hor-3.jpg'
+    },
+    {
+        name: 'horiAbout4',
+        type: 'texture',
+        path: '/about/about-hor-4.jpg'
+    },
+    {
+        name: 'horiAbout5',
+        type: 'texture',
+        path: '/about/about-hor-5.jpg'
+    },
+    {
+        name: 'vertAbout1',
+        type: 'texture',
+        path: '/about/about-vert-1.jpg'
+    },
+    {
+        name: 'vertAbout2',
+        type: 'texture',
+        path: '/about/about-vert-2.jpg'
+    },
+    {
+        name: 'vertAbout3',
+        type: 'texture',
+        path: '/about/about-vert-3.jpg'
+    },
+    {
+        name: 'vertAbout4',
+        type: 'texture',
+        path: '/about/about-vert-4.jpg'
+    },
+    {
+        name: 'vertAbout5',
+        type: 'texture',
+        path: '/about/about-vert-5.jpg'
+    },
 ]

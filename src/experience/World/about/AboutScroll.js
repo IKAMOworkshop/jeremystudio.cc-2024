@@ -5,7 +5,9 @@ import { getProject, types, val } from '@theatre/core'
 studio.initialize()
 
 import Experience from "../../Experience";
-import roomScroll from '../../animations/roomScroll.json'
+
+import plateVertex from '../../shaders/imagePlate/vertex.glsl'
+import plateFragment from '../../shaders/imagePlate/fragment.glsl'
 
 export default class AboutScroll{
     constructor(){
@@ -28,8 +30,26 @@ export default class AboutScroll{
         this.roomBakedTexture.flipY = false
         this.roomBakedTexture.colorSpace = THREE.SRGBColorSpace
 
+        this.setData()
         this.setModel()
+        this.setImagePlate()
         this.update()
+    }
+    
+    setData(){
+        // Horizontal Images
+        this.horiTexture1 = this.resources.items.horiAbout1
+        this.horiTexture2 = this.resources.items.horiAbout2
+        this.horiTexture3 = this.resources.items.horiAbout3
+        this.horiTexture4 = this.resources.items.horiAbout4
+        this.horiTexture5 = this.resources.items.horiAbout5
+
+        // Vertical Images
+        this.vertTexture1 = this.resources.items.vertAbout1
+        this.vertTexture2 = this.resources.items.vertAbout2
+        this.vertTexture3 = this.resources.items.vertAbout3
+        this.vertTexture4 = this.resources.items.vertAbout4
+        this.vertTexture5 = this.resources.items.vertAbout5
     }
 
     setModel(){
@@ -72,6 +92,131 @@ export default class AboutScroll{
 
         // this.sequenceLength = val(this.sheet.sequence.pointer.length)
         // console.log(this.sequenceLength)
+    }
+
+    setImagePlate(){
+        // Horizontal Plate
+        this.horizontalGeometry = new THREE.PlaneGeometry(3.5, 2)
+        this.horiMaterial1 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.horiTexture1),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1200, 640)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3.5, 2))
+            },
+            transparent: true
+        })
+        this.horiMaterial2 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.horiTexture2),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1200, 640)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3.5, 2))
+            },
+            transparent: true
+        })
+        this.horiMaterial3 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.horiTexture3),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1200, 640)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3.5, 2))
+            },
+            transparent: true
+        })
+        this.horiMaterial4 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.horiTexture4),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1200, 640)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3.5, 2))
+            },
+            transparent: true
+        })
+        this.horiMaterial5 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.horiTexture5),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1200, 640)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3.5, 2))
+            },
+            transparent: true
+        })
+
+        this.horiPlate1 = new THREE.Mesh(this.horizontalGeometry, this.horiMaterial1)
+        this.horiPlate2 = new THREE.Mesh(this.horizontalGeometry, this.horiMaterial2)
+        this.horiPlate3 = new THREE.Mesh(this.horizontalGeometry, this.horiMaterial3)
+        this.horiPlate4 = new THREE.Mesh(this.horizontalGeometry, this.horiMaterial4)
+        this.horiPlate5 = new THREE.Mesh(this.horizontalGeometry, this.horiMaterial5)
+
+        this.scene.add(this.horiPlate1, this.horiPlate2, this.horiPlate3, this.horiPlate4, this.horiPlate5)
+
+        // Vertical Plate
+        this.verticalGeometry = new THREE.PlaneGeometry(3, 4)
+        this.vertMaterial1 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.vertTexture1),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(800, 1000)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3, 4))
+            },
+            transparent: true
+        })
+        this.vertMaterial2 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.vertTexture2),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(800, 1000)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3, 4))
+            },
+            transparent: true
+        })
+        this.vertMaterial3 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.vertTexture3),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(800, 1000)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3, 4))
+            },
+            transparent: true
+        })
+        this.vertMaterial4 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.vertTexture4),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(800, 1000)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3, 4))
+            },
+            transparent: true
+        })
+        this.vertMaterial5 = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.vertTexture5),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(800, 1000)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(3, 4))
+            },
+            transparent: true
+        })
+
+        this.vertPlate1 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial1)
+        this.vertPlate2 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial2)
+        this.vertPlate3 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial3)
+        this.vertPlate4 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial4)
+        this.vertPlate5 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial5)
+
+        this.scene.add(this.vertPlate1, this.vertPlate2, this.vertPlate3, this.vertPlate4, this.vertPlate5)
+
     }
 
     update(){

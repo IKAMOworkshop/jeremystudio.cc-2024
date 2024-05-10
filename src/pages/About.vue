@@ -8,7 +8,7 @@
             <AboutHero />
         </div>
 
-        <div class="section-container flex justify-end m-600">
+        <div class="section-container flex justify-end m-800">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -25,7 +25,7 @@
             />
         </div>
 
-        <div class="section-container flex m-600">
+        <div class="section-container flex m-800">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -42,7 +42,7 @@
             />
         </div>
 
-        <div class="section-container flex flex-column align-end gap-60 m-600">
+        <div class="section-container flex flex-column align-end gap-60 m-800">
             <TextBlock
                 :open-tag-show="true"
                 :title-show="true"
@@ -64,7 +64,7 @@
             <AboutContact />
         </div>
 
-    <ProjectFooter />
+    <ProjectFooter class="footer-hidden"/>
     </div>
 </template>
 
@@ -106,6 +106,23 @@ requestAnimationFrame(raf)
 
 onMounted(() => {
     window.scrollTo(0, 0)
+
+    const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer-reveal')
+        }
+        else {
+			entry.target.classList.remove('footer-reveal');
+		}
+        })
+    },
+    {
+        threshold: .1,
+    })
+
+    const hiddenFooter = document.querySelectorAll(".footer-hidden")
+    hiddenFooter.forEach((el) => footerObserver.observe(el))
 })
 
 onUnmounted(() => {
