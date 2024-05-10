@@ -391,6 +391,16 @@ export default class AboutScroll{
 
         this.sequenceLength = val(this.sheet.sequence.pointer.length)
         console.log(this.sequenceLength)
+
+        document.addEventListener('scroll', () => {
+            this.totalHeight = document.body.scrollHeight
+            this.currentDistance = document.documentElement.scrollTop
+            this.windowHeight = document.documentElement.clientHeight
+    
+            this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
+    
+            this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
+        })
     }
 
     update(){
