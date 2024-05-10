@@ -200,6 +200,7 @@ export default class AboutScroll{
         this.project = getProject('About Scroll')
         this.sheet = this.project.sheet('Room Animation')
 
+        // Room Animation
         this.roomObject = this.sheet.object('Room', {
             rotation: types.compound({
                 x: types.number(this.group.rotation.x, { range: [-2, 2] }),
@@ -214,11 +215,179 @@ export default class AboutScroll{
         }, {reconfigure: true})
 
         this.roomObject.onValuesChange((values) => {
-            this.rotation = values.rotation
-            this.position = values.position
+            this.group.rotation.set(values.rotation.x * Math.PI, values.rotation.y * Math.PI, values.rotation.z * Math.PI)
+            this.group.position.set(values.position.x, values.position.y, values.position.z)
+        })
 
-            this.group.rotation.set(this.rotation.x * Math.PI, this.rotation.y * Math.PI, this.rotation.z * Math.PI)
-            this.group.position.set(this.position.x, this.position.y, this.position.z)
+        // Plate Animations
+        this.horiPlateObject1 = this.sheet.object('Hori Plate 1', {
+            position: types.compound({
+                x: types.number(this.horiPlate1.position.x, { range: [-10, 10] }),
+                y: types.number(this.horiPlate1.position.y, { range: [-10, 10] }),
+                z: types.number(this.horiPlate1.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.horiPlate1.scale.x, { range: [0, 1] }),
+                y: types.number(this.horiPlate1.scale.y, { range: [0, 1] }),
+                z: types.number(this.horiPlate1.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.horiPlateObject1.onValuesChange((values) => {
+            this.horiPlate1.position.set(values.position.x, values.position.y, values.position.z)
+            this.horiPlate1.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.horiPlateObject2 = this.sheet.object('Hori Plate 2', {
+            position: types.compound({
+                x: types.number(this.horiPlate2.position.x, { range: [-10, 10] }),
+                y: types.number(this.horiPlate2.position.y, { range: [-10, 10] }),
+                z: types.number(this.horiPlate2.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.horiPlate2.scale.x, { range: [0, 1] }),
+                y: types.number(this.horiPlate2.scale.y, { range: [0, 1] }),
+                z: types.number(this.horiPlate2.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.horiPlateObject2.onValuesChange((values) => {
+            this.horiPlate2.position.set(values.position.x, values.position.y, values.position.z)
+            this.horiPlate2.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.horiPlateObject3 = this.sheet.object('Hori Plate 3', {
+            position: types.compound({
+                x: types.number(this.horiPlate3.position.x, { range: [-10, 10] }),
+                y: types.number(this.horiPlate3.position.y, { range: [-10, 10] }),
+                z: types.number(this.horiPlate3.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.horiPlate3.scale.x, { range: [0, 1] }),
+                y: types.number(this.horiPlate3.scale.y, { range: [0, 1] }),
+                z: types.number(this.horiPlate3.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.horiPlateObject3.onValuesChange((values) => {
+            this.horiPlate3.position.set(values.position.x, values.position.y, values.position.z)
+            this.horiPlate3.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.horiPlateObject4 = this.sheet.object('Hori Plate 4', {
+            position: types.compound({
+                x: types.number(this.horiPlate4.position.x, { range: [-10, 10] }),
+                y: types.number(this.horiPlate4.position.y, { range: [-10, 10] }),
+                z: types.number(this.horiPlate4.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.horiPlate4.scale.x, { range: [0, 1] }),
+                y: types.number(this.horiPlate4.scale.y, { range: [0, 1] }),
+                z: types.number(this.horiPlate4.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.horiPlateObject4.onValuesChange((values) => {
+            this.horiPlate4.position.set(values.position.x, values.position.y, values.position.z)
+            this.horiPlate4.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.horiPlateObject5 = this.sheet.object('Hori Plate 5', {
+            position: types.compound({
+                x: types.number(this.horiPlate5.position.x, { range: [-10, 10] }),
+                y: types.number(this.horiPlate5.position.y, { range: [-10, 10] }),
+                z: types.number(this.horiPlate5.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.horiPlate5.scale.x, { range: [0, 1] }),
+                y: types.number(this.horiPlate5.scale.y, { range: [0, 1] }),
+                z: types.number(this.horiPlate5.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.horiPlateObject5.onValuesChange((values) => {
+            this.horiPlate5.position.set(values.position.x, values.position.y, values.position.z)
+            this.horiPlate5.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.vertPlateObject1 = this.sheet.object('Vert Plate 1', {
+            position: types.compound({
+                x: types.number(this.vertPlate1.position.x, { range: [-10, 10] }),
+                y: types.number(this.vertPlate1.position.y, { range: [-10, 10] }),
+                z: types.number(this.vertPlate1.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.vertPlate1.scale.x, { range: [0, 1] }),
+                y: types.number(this.vertPlate1.scale.y, { range: [0, 1] }),
+                z: types.number(this.vertPlate1.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.vertPlateObject1.onValuesChange((values) => {
+            this.vertPlate1.position.set(values.position.x, values.position.y, values.position.z)
+            this.vertPlate1.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.vertPlateObject2 = this.sheet.object('Vert Plate 2', {
+            position: types.compound({
+                x: types.number(this.vertPlate2.position.x, { range: [-10, 10] }),
+                y: types.number(this.vertPlate2.position.y, { range: [-10, 10] }),
+                z: types.number(this.vertPlate2.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.vertPlate2.scale.x, { range: [0, 1] }),
+                y: types.number(this.vertPlate2.scale.y, { range: [0, 1] }),
+                z: types.number(this.vertPlate2.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.vertPlateObject2.onValuesChange((values) => {
+            this.vertPlate2.position.set(values.position.x, values.position.y, values.position.z)
+            this.vertPlate2.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.vertPlateObject3 = this.sheet.object('Vert Plate 3', {
+            position: types.compound({
+                x: types.number(this.vertPlate3.position.x, { range: [-10, 10] }),
+                y: types.number(this.vertPlate3.position.y, { range: [-10, 10] }),
+                z: types.number(this.vertPlate3.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.vertPlate3.scale.x, { range: [0, 1] }),
+                y: types.number(this.vertPlate3.scale.y, { range: [0, 1] }),
+                z: types.number(this.vertPlate3.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.vertPlateObject3.onValuesChange((values) => {
+            this.vertPlate3.position.set(values.position.x, values.position.y, values.position.z)
+            this.vertPlate3.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.vertPlateObject4 = this.sheet.object('Vert Plate 4', {
+            position: types.compound({
+                x: types.number(this.vertPlate4.position.x, { range: [-10, 10] }),
+                y: types.number(this.vertPlate4.position.y, { range: [-10, 10] }),
+                z: types.number(this.vertPlate4.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.vertPlate4.scale.x, { range: [0, 1] }),
+                y: types.number(this.vertPlate4.scale.y, { range: [0, 1] }),
+                z: types.number(this.vertPlate4.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.vertPlateObject4.onValuesChange((values) => {
+            this.vertPlate4.position.set(values.position.x, values.position.y, values.position.z)
+            this.vertPlate4.scale.set(values.scale.x, values.scale.y, values.scale.z)
+        })
+
+        this.vertPlateObject5 = this.sheet.object('Vert Plate 5', {
+            position: types.compound({
+                x: types.number(this.vertPlate5.position.x, { range: [-10, 10] }),
+                y: types.number(this.vertPlate5.position.y, { range: [-10, 10] }),
+                z: types.number(this.vertPlate5.position.z, { range: [-10, 10] }),
+            }),
+            scale: types.compound({
+                x: types.number(this.vertPlate5.scale.x, { range: [0, 1] }),
+                y: types.number(this.vertPlate5.scale.y, { range: [0, 1] }),
+                z: types.number(this.vertPlate5.scale.z, { range: [0, 1] }),
+            })
+        }, {reconfigure: true})
+        this.vertPlateObject5.onValuesChange((values) => {
+            this.vertPlate5.position.set(values.position.x, values.position.y, values.position.z)
+            this.vertPlate5.scale.set(values.scale.x, values.scale.y, values.scale.z)
         })
     }
 

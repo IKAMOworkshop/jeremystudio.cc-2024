@@ -32,15 +32,16 @@ export default class World{
         this.notFoundCheck = document.getElementById('missing-experience')
         
         if(this.homeCheck && this.homeThumbnails){
+            this.homeThumbnails.currentIntersect = null
             this.homeThumbnails.update()
         }
         if(this.aboutCheck && this.aboutScroll){
-            this.aboutScroll.update()
             this.homeThumbnails.currentIntersect = null
+            this.aboutScroll.update()
         }
         if(this.archivesCheck && this.archivesScroll){
-            this.archivesScroll.update()
             this.homeThumbnails.currentIntersect = null
+            this.archivesScroll.update()
         }
         if(this.strayCheck){
             this.homeThumbnails.currentIntersect = null
