@@ -105,7 +105,7 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 onMounted(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 1)
 
     const footerObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

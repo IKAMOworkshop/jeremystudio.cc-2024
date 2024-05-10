@@ -31,7 +31,9 @@ export default class AboutScroll{
         // Theatre JS
         this.project = getProject('About Scroll')
         this.sheet = this.project.sheet('Room Animation')
-        this.sheet.sequence.position = 0        
+
+        this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
+        this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
 
         this.setData()
         this.setModel()
@@ -393,19 +395,22 @@ export default class AboutScroll{
         this.sequenceLength = val(this.sheet.sequence.pointer.length)
         console.log(this.sequenceLength)
 
+        this.sheet.sequence.position = 0
+        this.totalHeight = document.body.scrollHeight
+        this.currentDistance = document.documentElement.scrollTop
+        this.windowHeight = document.documentElement.clientHeight
+
         document.addEventListener('scroll', () => {
-            this.sheet.sequence.position = 0
             this.totalHeight = document.body.scrollHeight
             this.currentDistance = document.documentElement.scrollTop
             this.windowHeight = document.documentElement.clientHeight
-    
-            this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
 
+            this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
             this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
         })
     }
 
     update(){
-        this.roomModel.position.y = Math.sin(this.time.elapsed * .001) * .15 - 1.75
+        this.roomModel.position.y = Math.sin(this.time.elapsed * .0015) * .15 - 1.75
     }
 }
