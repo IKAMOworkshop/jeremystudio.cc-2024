@@ -2,9 +2,11 @@ import * as THREE from 'three'
 
 import studio from '@theatre/studio'
 import { getProject, types, val } from '@theatre/core'
-studio.initialize()
+// studio.initialize()
 
 import Experience from "../../Experience";
+
+import aboutThree from '../../animations/aboutThree.json'
 
 import plateVertex from '../../shaders/imagePlate/vertex.glsl'
 import plateFragment from '../../shaders/imagePlate/fragment.glsl'
@@ -65,9 +67,6 @@ export default class AboutScroll{
         this.group.add(this.roomModel)
 
         this.scene.add(this.group)
-
-        // this.sequenceLength = val(this.sheet.sequence.pointer.length)
-        // console.log(this.sequenceLength)
     }
 
     setImagePlate(){
@@ -197,7 +196,7 @@ export default class AboutScroll{
 
     setAnimation(){
         // Theatre JS
-        this.project = getProject('About Scroll')
+        this.project = getProject('About Scroll', {state: aboutThree})
         this.sheet = this.project.sheet('Room Animation')
 
         // Room Animation
@@ -389,6 +388,9 @@ export default class AboutScroll{
             this.vertPlate5.position.set(values.position.x, values.position.y, values.position.z)
             this.vertPlate5.scale.set(values.scale.x, values.scale.y, values.scale.z)
         })
+
+        this.sequenceLength = val(this.sheet.sequence.pointer.length)
+        console.log(this.sequenceLength)
     }
 
     update(){
