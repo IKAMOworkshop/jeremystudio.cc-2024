@@ -35,40 +35,41 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getProject, types, val } from '@theatre/core'
 
-// gsap.registerPlugin(ScrollTrigger);
+import aboutTwo from '@/assets/animations/aboutTwo.json'
 
 const openTag = ref('<')
 
-const ctx = gsap.context(() => {})
-
 onMounted(() => {
-    // ctx.add(() => {
-    //     const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.trigger-1',
-    //         start: 'top center',
-    //         end: 'bottom center',
-    //         markers: true,
-    //         scrub: 1
-    //     }
-    // })
+    // Theatre JS
+    const project = getProject('About Scroll HTML', {state: aboutTwo})
+    const sheet = project.sheet('Interest Heading')
+    const obj = sheet.object('Heading Container', {
+        y: 0
+    })
 
-    // tl  .to('#move-track', {
-    //         y: -80,
-    //     })
-    //     .to('#move-track', {
-    //         y: -160,
-    //         delay: 1
-    //     })
-    // })
+    const headingContainer = document.getElementById('move-track')
+
+    obj.onValuesChange((values) => {
+        headingContainer.style.transform = `translateY(${values.y}px)`
+    })
+
+    const sequenceLength = val(sheet.sequence.pointer.length)
+
+    document.addEventListener('scroll', () => {
+        let totalHeight = document.body.scrollHeight
+        let currentDistance = document.documentElement.scrollTop
+        let windowHeight = document.documentElement.clientHeight
+
+        let scrollPercentage = (currentDistance / (totalHeight - windowHeight))
+        sheet.sequence.position = scrollPercentage * sequenceLength
+    })
 
 })
 
 onUnmounted(() => {
-    ctx.revert()
+
 })
 
 </script>

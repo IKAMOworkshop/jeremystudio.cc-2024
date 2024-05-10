@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 import studio from '@theatre/studio'
 import { getProject, types, val } from '@theatre/core'
-studio.initialize()
+// studio.initialize()
 
 import Experience from "../../Experience";
 
@@ -37,7 +37,7 @@ export default class AboutScroll{
         this.roomBakedTexture.colorSpace = THREE.SRGBColorSpace
 
         // Theatre JS
-        this.project = getProject('About Scroll')
+        this.project = getProject('About Scroll' , {state: aboutThree})
         this.sheet = this.project.sheet('Room Animation')
 
         this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
@@ -440,11 +440,6 @@ export default class AboutScroll{
         })
 
         this.sequenceLength = val(this.sheet.sequence.pointer.length)
-
-        this.sheet.sequence.position = 0
-        this.totalHeight = document.body.scrollHeight
-        this.currentDistance = document.documentElement.scrollTop
-        this.windowHeight = document.documentElement.clientHeight
 
         document.addEventListener('scroll', () => {
             this.totalHeight = document.body.scrollHeight

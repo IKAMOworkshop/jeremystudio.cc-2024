@@ -1,0 +1,89 @@
+{
+  "sheetsById": {
+    "Interest Heading": {
+      "staticOverrides": {
+        "byObject": {
+          "Heading Container": {
+            "y": 0
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Heading Container": {
+            "trackData": {
+              "oiZRc1bjnn": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Heading Container:[\"y\"]",
+                "keyframes": [
+                  {
+                    "id": "v5CEqWXt5q",
+                    "position": 5.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "uDN3_gbuZS",
+                    "position": 6.467,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -80
+                  },
+                  {
+                    "id": "9oZdVbcHB_",
+                    "position": 7.433,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -80
+                  },
+                  {
+                    "id": "MZSUgBXC3i",
+                    "position": 7.9,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -160
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"y\"]": "oiZRc1bjnn"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "_qD2yjNBh_nSc5nf"
+  ]
+}
