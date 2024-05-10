@@ -14,13 +14,21 @@ import plateFragment from '../../shaders/imagePlate/fragment.glsl'
 export default class AboutScroll{
     constructor(){
         this.experience = new Experience()
+        this.raycaster = new THREE.Raycaster()
+
         this.scene = this.experience.aboutScene
+        this.camera = this.experience.camera.aboutInstance
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
         this.sizes = this.experience.sizes
         this.cursor = this.experience.cursor
         this.wheel = this.experience.wheel
+
+        // Raycaster
+        this.mouse = new THREE.Vector2()
+        this.objectToTest = []
+        this.currentIntersect = null
 
         // Setup
         this.roomModelRef = this.resources.items.roomModel
@@ -56,6 +64,10 @@ export default class AboutScroll{
         this.vertTexture3 = this.resources.items.vertAbout3
         this.vertTexture4 = this.resources.items.vertAbout4
         this.vertTexture5 = this.resources.items.vertAbout5
+
+        // Contact Cat
+        this.catTexture1 = this.resources.items.catPop1
+        this.catTexture2 = this.resources.items.catPop2
     }
 
     setModel(){
@@ -197,7 +209,25 @@ export default class AboutScroll{
         this.vertPlate4 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial4)
         this.vertPlate5 = new THREE.Mesh(this.verticalGeometry, this.vertMaterial5)
 
-        this.scene.add(this.vertPlate1, this.vertPlate2, this.vertPlate3, this.vertPlate4, this.vertPlate5)
+        // Contact Cat
+        this.catGeometry = new THREE.PlaneGeometry(4, 5)
+        this.catMaterial = new THREE.ShaderMaterial({
+            vertexShader: plateVertex,
+            fragmentShader: plateFragment,
+            uniforms: {
+                uTexture: new THREE.Uniform(this.catTexture1),
+                uTextureSize: new THREE.Uniform(new THREE.Vector2(1000, 1120)),
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(4, 5))
+            },
+            transparent: true
+        })
+        this.catMesh = new THREE.Mesh(this.catGeometry, this.catMaterial)
+        this.contactGroup = new THREE.Group()
+        this.objectToTest.push(this.catMesh)
+        this.contactGroup.add(this.catMesh)
+
+        this.scene.add(this.vertPlate1, this.vertPlate2, this.vertPlate3, this.vertPlate4, this.vertPlate5, this.contactGroup)
+        
 
     }
 
@@ -392,8 +422,24 @@ export default class AboutScroll{
             this.vertPlate5.scale.set(values.scale.x, values.scale.y, values.scale.z)
         })
 
+        this.catPlate = this.sheet.object('Cat Plate', {
+            position: types.compound({
+                x: types.number(this.contactGroup.position.x, { range: [-10, 10] }),
+                y: types.number(this.contactGroup.position.y, { range: [-10, 10] }),
+                z: types.number(this.contactGroup.position.z, { range: [-10, 10] }),
+            }),
+            rotation: types.compound({
+                x: types.number(this.contactGroup.rotation.x, { range: [-2, 2] }),
+                y: types.number(this.contactGroup.rotation.y, { range: [-2, 2] }),
+                z: types.number(this.contactGroup.rotation.z, { range: [-2, 2] }), 
+            }),
+        }, {reconfigure: true})
+        this.catPlate.onValuesChange((values) => {
+            this.contactGroup.position.set(values.position.x, values.position.y, values.position.z)
+            this.contactGroup.rotation.set(values.rotation.x * Math.PI, values.rotation.y * Math.PI, values.rotation.z * Math.PI)
+        })
+
         this.sequenceLength = val(this.sheet.sequence.pointer.length)
-        console.log(this.sequenceLength)
 
         this.sheet.sequence.position = 0
         this.totalHeight = document.body.scrollHeight
@@ -411,6 +457,28 @@ export default class AboutScroll{
     }
 
     update(){
+        // Raycaster
+        this.mouse.x = (this.cursor.cursorX / this.sizes.width) * 2 - 1
+        this.mouse.y = -(this.cursor.cursorY / this.sizes.height) * 2 + 1
+
+        this.raycaster.setFromCamera(this.mouse, this.camera)
+        this.intersects = this.raycaster.intersectObjects(this.objectToTest)
+
+        if(this.intersects.length){
+            if(!this.currentIntersect){
+                this.catMaterial.uniforms.uTexture.value = this.catTexture2
+            }
+            this.catMaterial.uniforms.uTexture.value = this.catTexture2
+            this.currentIntersect = this.intersects[0]
+
+        }else{
+            if(this.currentIntersect){
+                this.catMaterial.uniforms.uTexture.value = this.catTexture1
+            }
+            this.currentIntersect = null
+        }
+
+        // Model Animations
         this.roomModel.position.y = Math.sin(this.time.elapsed * .0015) * .15 - 1.75
     }
 }

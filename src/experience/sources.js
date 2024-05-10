@@ -184,4 +184,14 @@ export default [
         type: 'texture',
         path: '/about/about-vert-5.jpg'
     },
+    {
+        name: 'catPop1',
+        type: 'texture',
+        path: '/about/catpop-1.jpg'
+    },
+    {
+        name: 'catPop2',
+        type: 'texture',
+        path: '/about/catpop-2.jpg'
+    },
 ]
