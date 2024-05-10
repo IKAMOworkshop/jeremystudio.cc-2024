@@ -1,7 +1,11 @@
 <template>
-    <Navigation />
-    <canvas id="webgl"></canvas>
+    <Loader />
     <!-- <Cursor /> -->
+    <Navigation />
+
+    <canvas id="webgl"></canvas>
+
+    <router-view></router-view>
 
     <!-- TEMP LINK -->
     <!-- <div class="temp-link flex flex-column">
@@ -13,7 +17,7 @@
         <router-link class="text-light-gray caption-light" to="/angine">ANGINE</router-link>
     </div> -->
     
-    <router-view></router-view>
+
 </template>
 
 <script setup>
@@ -21,6 +25,7 @@ import { onMounted } from 'vue';
 
 import Navigation from './components/Navigation.vue';
 import Cursor from '@/components/Cursor.vue';
+import Loader from './components/Loader.vue';
 
 import Experience from '@/experience/Experience.js'
 

@@ -1,3 +1,5 @@
+import gsap from "gsap"
+
 import EventEmitter from "./EventEmitter"
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -13,6 +15,7 @@ export default class Resource extends EventEmitter{
         this.items = {}
         this.toLoad = this.sources.length;
         this.loaded = 0;
+        this.loadProgress = document.getElementById('progress')
 
         // Loaders
         this.setLoader();
@@ -60,8 +63,28 @@ export default class Resource extends EventEmitter{
         this.items[source.name] = file;
 
         this.loaded++
+        this.progress = this.loaded / this.toLoad
+
+        this.loadProgress.style.transform = `scaleX(${this.progress * 100}%)`
 
         if(this.loaded === this.toLoad){
+            setTimeout(() => {
+                this.tl = gsap.timeline()
+
+                this.tl.to('#loader-block', {
+                    duration: .8,
+                    opacity: 0,
+                    delay: .2,
+                    ease: 'power2.inOut'
+                })
+                .to('.loader-logo', {
+                    duration: .8,
+                    scale: 20,
+                    rotate: -20,
+                    ease: 'power2.inOut',
+                }, '-=.8')
+            }, 500)
+
             this.trigger('ready')
         }
 
