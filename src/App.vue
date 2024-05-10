@@ -1,5 +1,5 @@
 <template>
-    <Loader />
+    <!-- <Loader /> -->
     <!-- <Cursor /> -->
     <Navigation />
 
