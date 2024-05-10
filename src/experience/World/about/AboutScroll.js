@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import studio from '@theatre/studio'
+// import studio from '@theatre/studio'
 import { getProject, types, val } from '@theatre/core'
 // studio.initialize()
 

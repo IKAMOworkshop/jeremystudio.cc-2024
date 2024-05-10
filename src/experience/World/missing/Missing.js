@@ -73,8 +73,8 @@ export default class NotFound {
                 uTime: new THREE.Uniform(0),
                 uTexture: new THREE.Uniform(this.missingImage.texture),
                 uTextureSize: new THREE.Uniform(new THREE.Vector2(1000, 640)),
-                uPlaneSize: new THREE.Uniform(new THREE.Vector2(7, 4.5))
-                
+                uPlaneSize: new THREE.Uniform(new THREE.Vector2(7, 4.5)),
+                uOpacity: new THREE.Uniform(.5)
             },
             transparent: true,
         })

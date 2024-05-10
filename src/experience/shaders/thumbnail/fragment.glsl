@@ -2,6 +2,7 @@ uniform float uTime;
 uniform sampler2D uTexture;
 uniform vec2 uTextureSize;
 uniform vec2 uPlaneSize;
+uniform float uOpacity;
 
 varying vec2 vUv;
 varying float vOffsetY;
@@ -26,7 +27,7 @@ void main() {
     vec2 newUv = getUv(vUv, uTextureSize, uPlaneSize);
 
     vec4 color = texture2D(uTexture, newUv);
-    color.a = 0.5;
+    color.a = uOpacity;
 
     gl_FragColor = color;
 }
