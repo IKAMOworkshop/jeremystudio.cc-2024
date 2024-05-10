@@ -36,6 +36,20 @@ nav {
   transform-origin: left center;
 }
 
+.router-link-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.router-link-active {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  line-height: 150%;
+  font-weight: 600;
+}
+
 .construction-strike {
   text-decoration: line-through;
   opacity: 0.5;

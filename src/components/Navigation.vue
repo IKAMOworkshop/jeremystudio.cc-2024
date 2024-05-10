@@ -17,7 +17,7 @@
             <div class="flex gap-164">
                 <ul class="flex gap-16">
 
-                    <li><router-link class="text-light-gray caption-light" to="/about">
+                    <li><router-link class="router-link-text" to="/about">
                         <div class="caption-container">
                             <div class="caption-move">
                                 <p>ABOUT</p>
@@ -26,7 +26,7 @@
                         </div>
                     </router-link></li>
 
-                    <li><router-link class="text-light-gray caption-light" to="/archives">
+                    <li><router-link class="router-link-text" to="/archives">
                         <div class="caption-container">
                             <div class="caption-move">
                                 <p>ARCHIVES</p>
@@ -36,7 +36,7 @@
                     </router-link></li>
 
                     <!-- Insight Link -->
-                    <li><div class="text-light-gray caption-light construction-strike" to="/insights">
+                    <li><div class="router-link-text construction-strike" to="/insights">
                         <div class="caption-container">
                             <div class="caption-stop">
                                 <p>INSIGHTS</p>
@@ -47,7 +47,7 @@
                 </ul>
                 
                 <!-- JP Link -->
-                <div class="text-light-gray caption-light construction-strike">
+                <div class="router-link-text construction-strike">
                     <div class="caption-container">
                             <div class="caption-stop flex align-end flex-column">
                                 <p>JP</p>

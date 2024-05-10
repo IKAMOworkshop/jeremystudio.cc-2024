@@ -15,7 +15,6 @@ export default class Resource extends EventEmitter{
         this.items = {}
         this.toLoad = this.sources.length;
         this.loaded = 0;
-        this.loadProgress = document.getElementById('progress')
 
         // Loaders
         this.setLoader();
@@ -61,11 +60,14 @@ export default class Resource extends EventEmitter{
 
     sourceLoaded(source, file){
         this.items[source.name] = file;
+        this.loadProgress = document.getElementById('progress')
 
         this.loaded++
         this.progress = this.loaded / this.toLoad
 
-        this.loadProgress.style.transform = `scaleX(${this.progress * 100}%)`
+        if(this.loadProgress){
+            this.loadProgress.style.transform = `scaleX(${this.progress * 100}%)`
+        }
 
         if(this.loaded === this.toLoad){
             setTimeout(() => {

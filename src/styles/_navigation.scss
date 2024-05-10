@@ -36,10 +36,19 @@ nav{
     // transition: all .1s ease;
 }
 
-// .router-link-active{
-//     color: rgba(11,13,16,1);
-//     background-color: rgba(255,255,255,1);
-// }
+.router-link-text{
+    color: rgba(255,255,255,0.5);
+    font-size: .8rem;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.router-link-active{
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    line-height: 150%;
+    font-weight: 600;
+}
 
 .construction-strike{
     text-decoration: line-through;
