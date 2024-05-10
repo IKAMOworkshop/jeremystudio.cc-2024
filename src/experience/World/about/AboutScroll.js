@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import studio from '@theatre/studio'
+// import studio from '@theatre/studio'
 import { getProject, types, val } from '@theatre/core'
 // studio.initialize()
 
@@ -79,7 +79,6 @@ export default class AboutScroll{
         this.modelScale = .32
 
         this.roomModel.scale.set(this.modelScale, this.modelScale, this.modelScale)
-
         this.roomModel.children[0].material = this.roomBaked
 
         this.group = new THREE.Group()

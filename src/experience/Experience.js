@@ -33,6 +33,7 @@ export default class Experience{
         this.wheel = new Wheel()
         this.time = new Time()
         this.resources = new Resources(sources)
+        console.log(this.resources.loaded)
 
         // Scene Setup
         this.homeScene = new THREE.Scene()

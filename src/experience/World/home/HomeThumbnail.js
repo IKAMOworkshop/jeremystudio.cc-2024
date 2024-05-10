@@ -3,6 +3,8 @@ import router from '../../../plugins/router.js'
 import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
+import gsap from 'gsap'
+
 import Experience from "../../Experience"
 
 import plateVertex from '../../shaders/thumbnail/vertex.glsl'
@@ -28,7 +30,6 @@ export default class HomeThumbnail {
         this.currentIntersect = null
 
         this.customCursor = document.getElementById('cursor')
-
 
         this.setData()
         this.setModel()
@@ -137,7 +138,8 @@ export default class HomeThumbnail {
                     uTime: new THREE.Uniform(0),
                     uTexture: new THREE.Uniform(index.texture),
                     uTextureSize: new THREE.Uniform(new THREE.Vector2(1920, 1080)),
-                    uPlaneSize: new THREE.Uniform(new THREE.Vector2(9.5, 5))
+                    uPlaneSize: new THREE.Uniform(new THREE.Vector2(9.5, 5)),
+                    uOpacity: new THREE.Uniform(.5)
                     
                 },
                 transparent: true,
@@ -174,6 +176,7 @@ export default class HomeThumbnail {
                         }
                         router.push('/stray')
                         break
+
                     case 'hyper':
                         this.currentIntersect = null
                         if(this.customCursor){
@@ -182,6 +185,7 @@ export default class HomeThumbnail {
                         }
                         router.push('/hyper')
                         break
+
                     case 'transit':
                         this.currentIntersect = null
                         if(this.customCursor){
@@ -190,6 +194,7 @@ export default class HomeThumbnail {
                         }
                         router.push('/transit')
                         break
+
                     case 'arcane':
                         this.currentIntersect = null
                         if(this.customCursor){
@@ -198,6 +203,7 @@ export default class HomeThumbnail {
                         }
                         router.push('/arcane')
                         break
+
                     case 'nebula':
                         this.currentIntersect = null
                         if(this.customCursor){
@@ -206,6 +212,7 @@ export default class HomeThumbnail {
                         }
                         router.push('/nebula')
                         break
+
                     case 'angine':
                         this.currentIntersect = null
                         if(this.customCursor){
