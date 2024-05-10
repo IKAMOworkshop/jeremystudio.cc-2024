@@ -1,5 +1,5 @@
 <template>
-    <div class="about-photo m-600">
+    <div class="about-photo m-400">
 
         <div class="about-photo-title flex flex-column">
             <div class="flex justify-between">
