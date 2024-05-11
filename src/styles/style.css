@@ -474,9 +474,6 @@ footer {
   .gap-60 {
     gap: 48px;
   }
-  .blob, .cursor {
-    display: none;
-  }
 }
 @media screen and (max-width: 768px) {
   .section-container {

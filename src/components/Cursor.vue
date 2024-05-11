@@ -13,11 +13,24 @@
 import { onMounted } from 'vue';
 
 onMounted(() => {
+    const ua = navigator.userAgent
     const customCursor = document.querySelector('#cursor')
     const blob = document.getElementById('blob')
 
     const anchorTags = document.getElementsByTagName('a')
     const buttonTags = document.getElementsByTagName('button')
+
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        customCursor.style.display = 'none'
+        blob.style.display = 'none'
+    }
+
+    if (
+        /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        customCursor.style.display = 'none'
+        blob.style.display = 'none'
+    }
+
 
     const mousePos = {
         x: 0,
