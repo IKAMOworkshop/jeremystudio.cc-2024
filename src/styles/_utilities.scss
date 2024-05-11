@@ -272,7 +272,7 @@
 .blob{
     width: 800px;
     height: 800px;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .3);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -326,6 +326,9 @@
     }
     .gap-60{
         gap: 48px;
+    }
+    .blob, .cursor{
+        display: none;
     }
 }
 @media screen and (max-width: 768px){
