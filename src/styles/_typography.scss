@@ -93,6 +93,19 @@
     transform: translateY(-1.2rem);
 }
 
+.menu-container{
+    max-height: 4rem;
+    overflow: hidden;
+}
+
+.menu-move{
+    transition: all .5s ease;
+}
+
+.menu-container:hover > .menu-move{
+    transform: translateY(-4rem);
+}
+
 // Responsive
 @media screen and (max-width: 1280px){
     .call-to-action{
