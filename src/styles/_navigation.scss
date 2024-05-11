@@ -55,6 +55,14 @@ nav{
     font-weight: 900;
 }
 
+.menu-button{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
 .construction-strike{
     text-decoration: line-through;
     opacity: .5;
@@ -100,12 +108,6 @@ footer{
 @media screen and (max-width: 1280px){
     .menu-list{
         gap: 24px;
-    }
-    .menu-button{
-        display: none;
-    }
-    .menu{
-        display: none;
     }
 }
 @media screen and (max-width: 1024px){

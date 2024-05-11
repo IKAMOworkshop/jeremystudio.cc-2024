@@ -218,6 +218,42 @@ export default class ArchiveScroll {
             this.mesh = new THREE.Mesh(this.geometry, this.material)
             this.mesh.name = index.name
 
+            if(window.innerWidth > 1280){
+                this.mesh.scale.set(1, 1, 1)
+                this.meshGap = 5
+                this.group.position.x = 1
+                this.titleText.position.set(-4.5, .2 , 4)
+                this.typeText.position.set(-4.5, .05 , 4)
+                this.timeText.position.set(3, -.3 , 4)
+            }
+
+            if(window.innerWidth <= 1280){
+                this.mesh.scale.set(1, 1, 1)
+                this.meshGap = 5
+                this.group.position.x = 0.5
+                this.titleText.position.set(-2.5, .2 , 4)
+                this.typeText.position.set(-2.5, .05 , 4)
+                this.timeText.position.set(2, -.3 , 4)
+            }
+
+            if(window.innerWidth <= 1024){
+                this.mesh.scale.set(.6, .6, .6)
+                this.meshGap = 3
+                this.group.position.x = 0.5
+                this.titleText.position.set(-1.8, .2 , 4)
+                this.typeText.position.set(-1.8, .05 , 4)
+                this.timeText.position.set(1.3, -.3 , 4)
+            }
+
+            if(window.innerWidth <= 768){
+                this.mesh.scale.set(.4, .4, .4)
+                this.meshGap = 2
+                this.group.position.x = 0.5
+                this.titleText.position.set(-.3, .2 , 1)
+                this.typeText.position.set(-10, .05 , 1)
+                this.timeText.position.set(10, -.3 , 1)
+            }
+
             this.meshGroup = new THREE.Group()
             this.meshGroup.add(this.titleText, this.typeText, this.timeText, this.mesh)
 
@@ -228,8 +264,7 @@ export default class ArchiveScroll {
         })
 
         this.group.rotation.z = Math.PI * .02
-        this.group.position.x = 1
-        this.group.position.y = -this.meshGap * 2
+        this.group.position.y = -this.meshGap - 5
         this.moveHorGroup.add(this.group)
         this.scene.add(this.moveHorGroup)
     }
@@ -238,6 +273,56 @@ export default class ArchiveScroll {
         let temp = ((scr + pos + (this.thumbnailMeshes.length * this.meshGap)) % (this.thumbnailMeshes.length * this.meshGap))
 
         return temp
+    }
+
+    resize(){
+        if(window.innerWidth > 1280){
+            this.group.position.x = 1
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(1, 1, 1)
+                this.meshGap = 5
+                mesh.children[0].position.set(-4.5, .2 , 4)
+                mesh.children[1].position.set(-4.5, .05 , 4)
+                mesh.children[2].position.set(3, -.3 , 4)
+            })
+        }
+
+        if(window.innerWidth <= 1280){
+            this.group.position.x = .5
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(1, 1, 1)
+                this.meshGap = 5
+                mesh.children[0].position.set(-2.5, .2 , 4)
+                mesh.children[1].position.set(-2.5, .05 , 4)
+                mesh.children[2].position.set(2, -.3 , 4)
+            })
+        }
+
+        if(window.innerWidth <= 1024){
+            this.group.position.x = .5
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(.6, .6, .6)
+                this.meshGap = 3
+                mesh.children[0].position.set(-1.8, .2 , 4)
+                mesh.children[1].position.set(-1.8, .05 , 4)
+                mesh.children[2].position.set(1.3, -.3 , 4)
+            })
+        }
+
+        if(window.innerWidth <= 768){
+            this.group.position.x = .5
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(.4, .4, .4)
+                this.meshGap = 2
+                mesh.children[0].position.set(-.3, .2 , 4)
+                mesh.children[1].position.set(-10, .05 , 4)
+                mesh.children[2].position.set(10, -.3 , 4)
+            })
+        }
     }
 
     update(){

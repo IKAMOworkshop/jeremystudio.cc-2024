@@ -20,6 +20,10 @@ export default class World{
         })
     }
 
+    resize(){
+        this.archivesScroll.resize()
+    }
+
     update(){
         this.homeCheck = document.getElementById('home-experience')
         this.aboutCheck = document.getElementById('about-experience')
