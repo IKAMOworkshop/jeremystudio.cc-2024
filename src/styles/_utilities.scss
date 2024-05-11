@@ -143,6 +143,7 @@
 // Button
 .button-wrapper{
     border-radius: 100px;
+    display: flex;
     overflow: hidden;
     border: solid 1px;
     border-color: rgba(255, 255, 255, 1);
@@ -179,7 +180,6 @@
 .project-button:hover > svg > .button-icon{
     fill: rgba(255,255,255,1);
 }
-
 
 .button-hover{
     display: block;

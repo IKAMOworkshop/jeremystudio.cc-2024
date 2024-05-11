@@ -517,5 +517,8 @@ export default class AboutScroll{
 
         // Model Animations
         this.roomModel.position.y = Math.sin(this.time.elapsed * .0015) * .15 - 1.75
+        this.catMesh.position.x = (this.catMesh.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.catMesh.position.x) * .02)
+
+        this.catMesh.position.y = (this.catMesh.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.catMesh.position.y) * .02)
     }
 }

@@ -24,6 +24,7 @@ export default class World{
         this.homeThumbnails.resize()
         this.aboutScroll.resize()
         this.archivesScroll.resize()
+        this.missingExperience.resize()
     }
 
     update(){
