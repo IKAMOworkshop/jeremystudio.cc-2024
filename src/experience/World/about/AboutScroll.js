@@ -221,6 +221,27 @@ export default class AboutScroll{
             transparent: true
         })
         this.catMesh = new THREE.Mesh(this.catGeometry, this.catMaterial)
+
+        if(window.innerWidth > 1280){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.32, .32, .32)
+        }
+
+        if(window.innerWidth <= 1280){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.32, .32, .32)
+        }
+
+        if(window.innerWidth <= 1024){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.24, .24, .24)
+        }
+
+        if(window.innerWidth <= 768){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.24, .24, .24)
+        }
+
         this.contactGroup = new THREE.Group()
         this.objectToTest.push(this.catMesh)
         this.contactGroup.add(this.catMesh)
@@ -448,6 +469,28 @@ export default class AboutScroll{
             this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
             this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
         })
+    }
+
+    resize(){
+        if(window.innerWidth > 1280){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.32, .32, .32)
+        }
+
+        if(window.innerWidth <= 1280){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.32, .32, .32)
+        }
+
+        if(window.innerWidth <= 1024){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.24, .24, .24)
+        }
+
+        if(window.innerWidth <= 768){
+            this.catMesh.scale.set(1, 1, 1)
+            this.roomModel.scale.set(.24, .24, .24)
+        }
     }
 
     update(){

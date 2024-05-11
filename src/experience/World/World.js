@@ -22,6 +22,7 @@ export default class World{
 
     resize(){
         this.homeThumbnails.resize()
+        this.aboutScroll.resize()
         this.archivesScroll.resize()
     }
 

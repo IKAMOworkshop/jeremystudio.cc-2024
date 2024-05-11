@@ -157,7 +157,7 @@ export default class HomeThumbnail {
             if(window.innerWidth <= 1280){
                 this.mesh.scale.set(.8, .8, .8)
                 this.meshGap = 5
-                this.group.position.x = 1
+                this.group.position.x = .5
                 this.titleText.scale.set(.8, .8 , .8)
                 this.titleText.position.set(-3.5, .5 , 4)
                 this.descriptionOneText.position.set(-2.5, -1 , 4)
@@ -167,18 +167,18 @@ export default class HomeThumbnail {
             if(window.innerWidth <= 1024){
                 this.mesh.scale.set(.5, .5, .5)
                 this.meshGap = 3
-                this.group.position.x = 1
+                this.group.position.x = .5
                 this.titleText.scale.set(.5, .5 , .5)
                 this.titleText.position.set(-2.2, .5 , 2)
-                this.descriptionOneText.position.set(-2.3, -.6 , 2)
-                this.descriptionTwoText.position.set(-2.3, -.7 , 2)
+                this.descriptionOneText.position.set(-1.8, -.6 , 2)
+                this.descriptionTwoText.position.set(-1.8, -.7 , 2)
             }
 
             
             if(window.innerWidth <= 768){
                 this.mesh.scale.set(.4, .4, .4)
                 this.meshGap = 2.5
-                this.group.position.x = 1
+                this.group.position.x = .5
                 this.titleText.scale.set(.2, .2 , .2)
                 this.titleText.position.set(-1, 0 , 2)
                 this.descriptionOneText.position.set(-10, -.6 , 2)
