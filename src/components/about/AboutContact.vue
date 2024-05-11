@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-column">
+                <div class="flex flex-column about-hidden">
                     <p class="caption-light text-light-gray">SAW SOMETHING COOL?</p>
                     <p class="caption-light text-light-gray">OR JUST LOOKING FOR A</p>
                     <p class="caption-light text-light-gray">SQUAD TO GAME WITH?</p>

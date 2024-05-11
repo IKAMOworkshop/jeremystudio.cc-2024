@@ -33,8 +33,7 @@ export default class Experience{
         this.wheel = new Wheel()
         this.time = new Time()
         this.resources = new Resources(sources)
-        console.log(this.resources.loaded)
-
+        
         // Scene Setup
         this.homeScene = new THREE.Scene()
         this.aboutScene = new THREE.Scene()
@@ -66,6 +65,7 @@ export default class Experience{
     resize(){
         this.camera.resize()
         this.renderer.resize()
+        this.world.resize()
     }
 
     update(){

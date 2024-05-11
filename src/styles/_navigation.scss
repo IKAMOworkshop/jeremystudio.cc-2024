@@ -3,7 +3,12 @@ nav{
     position: fixed;
     top: 0%;
     z-index: 9998;
-    width: 100%;
+    width: 100vw;
+}
+
+.menu-list{
+    display: flex;
+    gap: 164px;
 }
 
 .bottom-nav{
@@ -26,6 +31,7 @@ nav{
     position: fixed;
     right: 60px;
     bottom: 44px;
+    z-index: 9999;
 }
 
 .progress{
@@ -43,11 +49,18 @@ nav{
     font-weight: 300;
 }
 
-.router-link-active{
-    color: rgb(255, 255, 255);
-    font-size: .8rem;
-    line-height: 150%;
-    font-weight: 600;
+.menu-text{
+    color: rgba(255,255,255,0.5);
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.menu-button{
+    display: none;
+}
+
+.menu{
+    display: none;
 }
 
 .construction-strike{
@@ -59,7 +72,24 @@ nav{
 // Footer
 footer{
     padding: 48px 60px 48px 60px;
-    width: 100%;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.footer-right{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer-links{
+    display: flex;
+    gap: 200px;
 }
 
 .footer-hidden{
@@ -72,4 +102,60 @@ footer{
     transform: translateY(0px);
     opacity: 1;
     transition: all .4s ease;
+}
+
+// Responsive
+@media screen and (max-width: 1280px){
+    .menu-list{
+        gap: 24px;
+    }
+}
+@media screen and (max-width: 1024px){
+    footer{
+        padding: 48px 24px;
+    }
+    .footer-links{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer-right{
+        gap: 24px;
+    }
+    .menu-list{
+        display: none;
+    }
+    .menu-button{
+        display: flex;
+    }
+    .menu{
+        position: fixed;
+        z-index: 9997;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 240px 60px;
+        width: 100vw;
+        height: 100dvh;
+        background-color: rgba(11,13,16,.8);
+        backdrop-filter: blur(5vmax);
+        transition: all .8s ease;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        padding: 40px 24px 40px 24px;
+    }
+    .menu{
+        padding: 240px 24px;
+    }
+    .bottom-nav{
+        padding: 40px 24px 40px 24px;
+    }
+    .progress-bar{
+        right: 24px;
+    }
 }

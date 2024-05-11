@@ -1,6 +1,6 @@
 <template>
     <!-- <Loader /> -->
-    <!-- <Cursor /> -->
+    <Cursor />
     <Navigation />
 
     <canvas id="webgl"></canvas>

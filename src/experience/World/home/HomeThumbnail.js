@@ -124,11 +124,8 @@ export default class HomeThumbnail {
             this.titleText = new THREE.Mesh(this.titleTextGeometry, this.textMaterial)
             this.descriptionOneText = new THREE.Mesh(this.descriptionOneTextGeometry, this.textMaterial)
             this.descriptionTwoText = new THREE.Mesh(this.descriptionTwoTextGeometry, this.textMaterial)
-            this.titleText.position.set(-4.5, .5 , 4)
             this.titleText.rotation.z = -.05
-            this.descriptionOneText.position.set(-3.5, -1 , 4)
             this.descriptionOneText.rotation.z = -.05
-            this.descriptionTwoText.position.set(-3.5, -1.1 , 4)
             this.descriptionTwoText.rotation.z = -.05
 
             this.material = new THREE.ShaderMaterial({
@@ -148,6 +145,46 @@ export default class HomeThumbnail {
             this.mesh.name = index.name
             this.objectToTest.push(this.mesh)
 
+            if(window.innerWidth > 1280){
+                this.mesh.scale.set(1, 1, 1)
+                this.meshGap = 6
+                this.group.position.x = 1
+                this.titleText.position.set(-4.5, .5 , 4)
+                this.descriptionOneText.position.set(-3.5, -1 , 4)
+                this.descriptionTwoText.position.set(-3.5, -1.1 , 4)
+            }
+
+            if(window.innerWidth <= 1280){
+                this.mesh.scale.set(.8, .8, .8)
+                this.meshGap = 5
+                this.group.position.x = .5
+                this.titleText.scale.set(.8, .8 , .8)
+                this.titleText.position.set(-3.5, .5 , 4)
+                this.descriptionOneText.position.set(-2.5, -1 , 4)
+                this.descriptionTwoText.position.set(-2.5, -1.1 , 4)
+            }
+
+            if(window.innerWidth <= 1024){
+                this.mesh.scale.set(.5, .5, .5)
+                this.meshGap = 3
+                this.group.position.x = .5
+                this.titleText.scale.set(.5, .5 , .5)
+                this.titleText.position.set(-2.2, .5 , 2)
+                this.descriptionOneText.position.set(-1.8, -.6 , 2)
+                this.descriptionTwoText.position.set(-1.8, -.7 , 2)
+            }
+
+            
+            if(window.innerWidth <= 768){
+                this.mesh.scale.set(.4, .4, .4)
+                this.meshGap = 2.5
+                this.group.position.x = .5
+                this.titleText.scale.set(.2, .2 , .2)
+                this.titleText.position.set(-1, 0 , 2)
+                this.descriptionOneText.position.set(-10, -.6 , 2)
+                this.descriptionTwoText.position.set(-10, -.7 , 2)
+            }
+
             this.meshGroup = new THREE.Group()
             this.meshGroup.add(this.titleText, this.descriptionOneText, this.descriptionTwoText, this.mesh)
 
@@ -158,8 +195,7 @@ export default class HomeThumbnail {
         })
 
         this.group.rotation.z = Math.PI * .02
-        this.group.position.x = 1
-        this.group.position.y = -this.meshGap * 2
+        this.group.position.y = -this.meshGap - 6
         this.moveHorGroup.add(this.group)
         this.scene.add(this.moveHorGroup)
     }
@@ -224,6 +260,56 @@ export default class HomeThumbnail {
                 }
             }
         })
+    }
+
+    resize() {
+        if(window.innerWidth > 1280){
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(1, 1, 1)
+                this.meshGap = 6
+                mesh.children[0].scale.set(1, 1 , 1)
+                mesh.children[0].position.set(-4.5, .5 , 4)
+                mesh.children[1].position.set(-3.5, -1 , 4)
+                mesh.children[2].position.set(-3.5, -1.1 , 4)
+            })
+        }
+
+        if(window.innerWidth <= 1280){
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(.8, .8, .8)
+                this.meshGap = 5
+                mesh.children[0].scale.set(.8, .8 , .8)
+                mesh.children[0].position.set(-3.5, .5 , 4)
+                mesh.children[1].position.set(-2.5, -1 , 4)
+                mesh.children[2].position.set(-2.5, -1.1 , 4)
+            })
+        }
+
+        if(window.innerWidth <= 1024){
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(.5, .5, .5)
+                this.meshGap = 3
+                mesh.children[0].scale.set(.5, .5 , .5)
+                mesh.children[0].position.set(-2.2, .5 , 2)
+                mesh.children[1].position.set(-2.3, -.6 , 2)
+                mesh.children[2].position.set(-2.3, -.7 , 2)
+            })
+        }
+
+        if(window.innerWidth <= 768){
+
+            this.thumbnailMeshes.forEach((mesh) => {
+                mesh.children[3].scale.set(.4, .4, .4)
+                this.meshGap = 2.5
+                mesh.children[0].scale.set(.2, .2 , .2)
+                mesh.children[0].position.set(-1, 0 , 2)
+                mesh.children[1].position.set(-10, -.6 , 2)
+                mesh.children[2].position.set(-10, -.7 , 2)
+            })
+        }
     }
 
     calcPos(scr, pos){

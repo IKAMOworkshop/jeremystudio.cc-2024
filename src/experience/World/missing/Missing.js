@@ -62,10 +62,6 @@ export default class NotFound {
         this.lineTwo = new THREE.Mesh(this.lineTwoGeo, this.textMaterial)
         this.lineThree = new THREE.Mesh(this.lineThreeGeo, this.textMaterial)
 
-        this.lineOne.position.set(-4, .5 , 4)
-        this.lineTwo.position.set(-4, -.1 , 4)
-        this.lineThree.position.set(.8, -.8 , 4)
-
         this.material = new THREE.ShaderMaterial({
             vertexShader: plateVertex,
             fragmentShader: plateFragment,
@@ -81,10 +77,108 @@ export default class NotFound {
         this.mesh = new THREE.Mesh(this.geometry, this.material)
         this.mesh.rotation.z = Math.PI * .02
 
+        if(window.innerWidth > 1280){
+            this.mesh.scale.set(1, 1, 1)
+
+            this.lineOne.scale.set(1, 1, 1)
+            this.lineTwo.scale.set(1, 1, 1)
+            this.lineThree.scale.set(1, 1, 1)
+
+            this.lineOne.position.set(-4, .5 , 4)
+            this.lineTwo.position.set(-4, -.1 , 4)
+            this.lineThree.position.set(.8, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 1280){
+            this.mesh.scale.set(.8, .8, .8)
+
+            this.lineOne.scale.set(.8, .8, .8)
+            this.lineTwo.scale.set(.8, .8, .8)
+            this.lineThree.scale.set(.8, .8, .8)
+
+            this.lineOne.position.set(-2.5, .5 , 4)
+            this.lineTwo.position.set(-2.5, -.05 , 4)
+            this.lineThree.position.set(.4, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 1024){
+            this.mesh.scale.set(.8, .8, .8)
+
+            this.lineOne.scale.set(.6, .6, .6)
+            this.lineTwo.scale.set(.6, .6, .6)
+            this.lineThree.scale.set(.6, .6, .6)
+
+            this.lineOne.position.set(-1.8, .3, 4)
+            this.lineTwo.position.set(-1.8, 0 , 4)
+            this.lineThree.position.set(0, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 768){
+            this.mesh.scale.set(.6, .6, .6)
+
+            this.lineOne.scale.set(.4, .4, .4)
+            this.lineTwo.scale.set(.4, .4, .4)
+            this.lineThree.scale.set(.4, .4, .4)
+
+            this.lineOne.position.set(-.8, .25, 4)
+            this.lineTwo.position.set(-.8, 0 , 4)
+            this.lineThree.position.set(0, -.6 , 4)
+        }
+
         this.group = new THREE.Group()
 
         this.group.add(this.mesh, this.lineOne, this.lineTwo, this.lineThree)
         this.scene.add(this.group)
+    }
+
+    resize(){
+        if(window.innerWidth > 1280){
+            this.mesh.scale.set(1, 1, 1)
+
+            this.lineOne.scale.set(1, 1, 1)
+            this.lineTwo.scale.set(1, 1, 1)
+            this.lineThree.scale.set(1, 1, 1)
+
+            this.lineOne.position.set(-4, .5 , 4)
+            this.lineTwo.position.set(-4, -.1 , 4)
+            this.lineThree.position.set(.8, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 1280){
+            this.mesh.scale.set(.8, .8, .8)
+
+            this.lineOne.scale.set(.8, .8, .8)
+            this.lineTwo.scale.set(.8, .8, .8)
+            this.lineThree.scale.set(.8, .8, .8)
+
+            this.lineOne.position.set(-2.5, .5 , 4)
+            this.lineTwo.position.set(-2.5, -.05 , 4)
+            this.lineThree.position.set(.4, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 1024){
+            this.mesh.scale.set(.8, .8, .8)
+
+            this.lineOne.scale.set(.6, .6, .6)
+            this.lineTwo.scale.set(.6, .6, .6)
+            this.lineThree.scale.set(.6, .6, .6)
+
+            this.lineOne.position.set(-1.8, .3, 4)
+            this.lineTwo.position.set(-1.8, 0 , 4)
+            this.lineThree.position.set(0, -.8 , 4)
+        }
+
+        if(window.innerWidth <= 768){
+            this.mesh.scale.set(.6, .6, .6)
+
+            this.lineOne.scale.set(.4, .4, .4)
+            this.lineTwo.scale.set(.4, .4, .4)
+            this.lineThree.scale.set(.4, .4, .4)
+
+            this.lineOne.position.set(-.8, .25, 4)
+            this.lineTwo.position.set(-.8, 0 , 4)
+            this.lineThree.position.set(0, -.6 , 4)
+        }
     }
 
     update(){

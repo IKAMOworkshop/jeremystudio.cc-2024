@@ -92,3 +92,52 @@
 .caption-container:hover > .caption-move{
     transform: translateY(-1.2rem);
 }
+
+.menu-container{
+    max-height: 4rem;
+    overflow: hidden;
+}
+
+.menu-move{
+    transition: all .5s ease;
+}
+
+.menu-container:hover > .menu-move{
+    transform: translateY(-4rem);
+}
+
+// Responsive
+@media screen and (max-width: 1280px){
+    .call-to-action{
+        font-size: 3rem;
+        line-height: 100%;
+    }
+    .body-bold{
+        font-size: .8rem;
+        line-height: 120%;
+    }
+    .caption-container{
+        max-height: 1rem;
+    }
+    .large-text{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .large-text{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .call-to-action{
+        font-size: 1.5rem;
+    }
+    .large-text{
+        font-size: 3rem;
+    }
+    .about-hidden{
+        display: none;
+    }
+}

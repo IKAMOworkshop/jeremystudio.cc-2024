@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex flex-column">
+        <div class="table-content flex flex-column">
             <p v-if="activeContent === 1" :style="{color: activeText}" class="caption-small-light">{{ contentOne }}</p>
             <p v-else :style="{color: inactiveText}" class="caption-small-light">{{ contentOne }}</p>
 

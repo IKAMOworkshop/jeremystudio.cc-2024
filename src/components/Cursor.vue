@@ -13,11 +13,24 @@
 import { onMounted } from 'vue';
 
 onMounted(() => {
-    const cursor = document.getElementById('cursor')
+    const ua = navigator.userAgent
+    const customCursor = document.querySelector('#cursor')
     const blob = document.getElementById('blob')
 
     const anchorTags = document.getElementsByTagName('a')
     const buttonTags = document.getElementsByTagName('button')
+
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        customCursor.style.display = 'none'
+        blob.style.display = 'none'
+    }
+
+    if (
+        /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        customCursor.style.display = 'none'
+        blob.style.display = 'none'
+    }
+
 
     const mousePos = {
         x: 0,
@@ -28,9 +41,9 @@ onMounted(() => {
         mousePos.x = e.clientX
         mousePos.y = e.clientY
 
-        cursor.style.opacity = 1
+        customCursor.style.opacity = 1
         
-        cursor.animate({
+        customCursor.animate({
             left: `${mousePos.x}px`,
             top: `${mousePos.y}px`
         }, {duration: 800, fill: 'forwards'})
@@ -45,10 +58,10 @@ onMounted(() => {
         if(anchorTags){
             for (let i = 0; i < anchorTags.length; i++) {
                 anchorTags[i].addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(.2)'
+                    customCursor.style.transform = 'scale(.2)'
                 })
                 anchorTags[i].addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)'
+                    customCursor.style.transform = 'scale(1)'
                 })
             }
         }
@@ -56,10 +69,10 @@ onMounted(() => {
         if(buttonTags){
             for (let i = 0; i < buttonTags.length; i++) {
                 buttonTags[i].addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(.2)'
+                    customCursor.style.transform = 'scale(.2)'
                 })
                 buttonTags[i].addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)'
+                    customCursor.style.transform = 'scale(1)'
                 })
             }
         }

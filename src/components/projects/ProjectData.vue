@@ -1,20 +1,20 @@
 <template>
     <div>
-        <div id="data-container" class="data-container flex justify-between align-center">
+        <div id="data-container" class="data-container">
 
             <div class="project-descriptions flex flex-column gap-24">
                 <h3 :style="{color: titleColor}" class="caption-wide">{{ projectType }}</h3>
                 <p class="text-light body-light">{{ projectDescription }}</p>
             </div>
 
-            <div class="project-datas flex flex-column gap-48">
+            <div class="project-datas">
                 
-                <div class="flex flex-column align-end gap-4">
+                <div class="data">
                     <h2 class="text-light-gray caption-small-bold">TIMELINE</h2>
                     <p class="text-light caption-small-light data-props">{{ projectTiming }}</p>
                 </div>
 
-                <div class="flex flex-column align-end gap-4">
+                <div class="data">
                     <h2 class="text-light-gray caption-small-bold">MEMBERS</h2>
                     <p class="text-light caption-small-light data-props">
                         {{ memberOne }}
@@ -22,7 +22,7 @@
                     </p>
                 </div>
 
-                <div class="flex flex-column align-end gap-4">
+                <div class="data">
                     <h2 class="text-light-gray caption-small-bold">TECHNOLOGIES</h2>
                     <div class="flex flex-column">
                         <p class="text-light caption-small-light data-props">{{ techOne }}</p>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-column align-end gap-4">
+                <div class="data">
                     <h2 class="text-light-gray caption-small-bold">SKILLS</h2>
                     <div class="flex flex-column">
                         <p class="text-light caption-small-light data-props">{{ skillOne }}</p>

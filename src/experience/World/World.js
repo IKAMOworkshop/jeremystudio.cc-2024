@@ -20,6 +20,13 @@ export default class World{
         })
     }
 
+    resize(){
+        this.homeThumbnails.resize()
+        this.aboutScroll.resize()
+        this.archivesScroll.resize()
+        this.missingExperience.resize()
+    }
+
     update(){
         this.homeCheck = document.getElementById('home-experience')
         this.aboutCheck = document.getElementById('about-experience')

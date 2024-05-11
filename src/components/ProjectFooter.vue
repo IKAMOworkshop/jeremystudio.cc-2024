@@ -2,9 +2,9 @@
     <div>
         <footer class="fill-light flex justify-between">
 
-            <div class="flex flex-column justify-between">
+            <div class="footer-left">
             
-                <div class="flex gap-200">
+                <div class="footer-links">
                     <ul class="flex flex-column gap-4">
 
                         <li><router-link class="text-dark body-bold" to="/about">
@@ -71,7 +71,7 @@
 
             </div>
 
-            <div class="flex gap-60">
+            <div class="footer-right">
                 <h2 class="text-dark call-to-action">{{ openTag }}</h2>
                 <div class="flex gap-100 align-end">
                     <h2 class="text-dark call-to-action">

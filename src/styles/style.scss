@@ -24,7 +24,6 @@ html{
 }
 
 body{
-    background-color: rgba(22,27,32,1);
     background: url(/background-v2.png) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
@@ -34,6 +33,11 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     height: 100vh;
+}
+
+.body{
+    background-color:  rgba(22,27,32,1);
+    box-sizing: border-box;
 }
 
 button{

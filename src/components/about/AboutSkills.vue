@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-column gap-24">
+    <div class="about-skills-container flex flex-column gap-24">
     <div v-for="skill in skills" class="about-skills">
             <div class="flex flex-column gap-4">
                 <h2 class="title-light text-light">{{ skill.skill }}</h2>
