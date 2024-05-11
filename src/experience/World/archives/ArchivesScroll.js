@@ -219,6 +219,7 @@ export default class ArchiveScroll {
             this.mesh.name = index.name
 
             if(window.innerWidth > 1280){
+                this.group.position.x = 1
                 this.mesh.scale.set(1, 1, 1)
                 this.meshGap = 5
                 this.group.position.x = 1
@@ -228,6 +229,7 @@ export default class ArchiveScroll {
             }
 
             if(window.innerWidth <= 1280){
+                this.group.position.x = 1
                 this.mesh.scale.set(1, 1, 1)
                 this.meshGap = 5
                 this.group.position.x = 0.5
@@ -237,6 +239,7 @@ export default class ArchiveScroll {
             }
 
             if(window.innerWidth <= 1024){
+                this.group.position.x = .5
                 this.mesh.scale.set(.6, .6, .6)
                 this.meshGap = 3
                 this.group.position.x = 0.5
@@ -246,6 +249,7 @@ export default class ArchiveScroll {
             }
 
             if(window.innerWidth <= 768){
+                this.group.position.x = .5
                 this.mesh.scale.set(.4, .4, .4)
                 this.meshGap = 2
                 this.group.position.x = 0.5
