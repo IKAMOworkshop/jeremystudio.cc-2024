@@ -642,34 +642,11 @@ footer {
   left: 240px;
 }
 
-.home-title {
-  width: 100%;
-  padding: 0px 24px;
-  position: fixed;
-  top: 28%;
+@media screen and (max-width: 768px) {
+  .home-intro {
+    display: none;
+  }
 }
-
-.project-titles {
-  position: relative;
-  height: 12rem;
-  overflow: hidden;
-}
-
-.close-tag-offset {
-  margin-right: -24px;
-}
-
-.home-description {
-  width: 100%;
-  padding: 0px 240px;
-  position: fixed;
-  top: 66%;
-}
-
-.home-description-container {
-  width: 360px;
-}
-
 .about-experience {
   position: fixed;
   width: 100%;
