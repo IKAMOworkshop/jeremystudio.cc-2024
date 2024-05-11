@@ -26,6 +26,8 @@ nav{
     position: fixed;
     right: 60px;
     bottom: 44px;
+    z-index: 9999;
+
 }
 
 .progress{
@@ -59,7 +61,24 @@ nav{
 // Footer
 footer{
     padding: 48px 60px 48px 60px;
-    width: 100%;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.footer-right{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer-links{
+    display: flex;
+    gap: 200px;
 }
 
 .footer-hidden{
@@ -72,4 +91,18 @@ footer{
     transform: translateY(0px);
     opacity: 1;
     transition: all .4s ease;
+}
+
+// Responsive
+@media screen and (max-width: 1024px){
+    footer{
+        padding: 48px 24px;
+    }
+    .footer-links{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer-right{
+        gap: 24px;
+    }
 }
