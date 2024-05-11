@@ -37,10 +37,10 @@
     overflow: hidden;
 }
 
-.trigger-1{
-    margin-top: 50%;
-    height: 240dvh;
-    width: 60px;
+.about-photo-interest{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .about-contact{
@@ -62,4 +62,86 @@
 
 .about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move{
     transform: translateY(-9rem);
+}
+
+// Responsive
+@media screen and (max-width: 1280px) {
+    .about-hero{
+        padding: 0px 60px;
+    }
+    .about-photo-interest{
+        max-height: 3rem;
+    }
+    .about-photo-interest-move{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 32px;
+    }
+    .about-contact-email{
+        max-height: 6rem;
+        overflow: hidden;
+    }
+    .about-contact:hover > .layer-1 > .layer-2 > .layer-3 > .layer-4 > .about-contact-email > .about-contact-move{
+        transform: translateY(-7rem);
+    }
+    
+    .about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move{
+        transform: translateY(-7rem);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-skills{
+        width: 100%;
+        padding: 0px 0px 24px 0px;
+    }
+    .about-skills-container{
+        width: 100%;
+    }
+    .about-photo-title{
+        padding: 0px 60px;
+        width: 80%;
+    }
+    .about-photo-interest{
+        max-height: 1.5rem;
+    }
+    .about-photo-interest-move{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 56px;
+    }
+    .about-contact-email{
+        max-height: 5rem;
+    }
+    .about-contact:hover > .layer-1 > .layer-2 > .layer-3 > .layer-4 > .about-contact-email > .about-contact-move{
+        transform: translateY(-6rem);
+    }
+    
+    .about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move{
+        transform: translateY(-6rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-hero{
+        padding: 0px 24px;
+    }
+    .about-photo-title{
+        padding: 0px 24px;
+        width: 100%;
+    }
+
+    .about-contact-email{
+        max-height: 3rem;
+        overflow: hidden;
+    }
+    .about-contact:hover > .layer-1 > .layer-2 > .layer-3 > .layer-4 > .about-contact-email > .about-contact-move{
+        transform: translateY(-4rem);
+    }
+    
+    .about-contact:hover > .layer-1 > .layer-2 > .about-contact-email > .about-contact-move{
+        transform: translateY(-4rem);
+    }
 }

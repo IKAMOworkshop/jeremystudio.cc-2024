@@ -309,11 +309,23 @@
     .gap-36{
         gap: 24px;
     }
+    .m-800{
+        margin-bottom: 600px;
+    }
 }
 @media screen and (max-width: 1024px){
     .section-container{
         margin-bottom: 120px;
         flex-direction: column;
+    }
+    .m-800{
+        margin-bottom: 500px;
+    }
+    .gap-100{
+        gap: 60px;
+    }
+    .gap-60{
+        gap: 48px;
     }
 }
 @media screen and (max-width: 768px){
@@ -324,6 +336,9 @@
     }
     .project-columns{
         flex-direction: column;
+    }
+    .m-800{
+        margin-bottom: 360px;
     }
     .gap-100{
         gap: 48px;

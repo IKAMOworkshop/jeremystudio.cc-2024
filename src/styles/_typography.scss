@@ -119,9 +119,25 @@
     .caption-container{
         max-height: 1rem;
     }
+    .large-text{
+        font-size: 6rem;
+    }
 }
+
+@media screen and (max-width: 1024px){
+    .large-text{
+        font-size: 5rem;
+    }
+}
+
 @media screen and (max-width: 768px){
     .call-to-action{
         font-size: 1.5rem;
+    }
+    .large-text{
+        font-size: 3rem;
+    }
+    .about-hidden{
+        display: none;
     }
 }

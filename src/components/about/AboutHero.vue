@@ -13,7 +13,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-column">
+                <div class="flex flex-column about-hidden">
                     <p class="caption-bold text-light">I AM A CREATIVE DEVELOPER,</p>
                     <p class="caption-bold text-light">A GAMER, AND AN ASPIRING</p>
                     <p class="caption-bold text-light">ILLUSTARTOR.</p>

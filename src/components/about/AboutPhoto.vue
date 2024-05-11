@@ -12,14 +12,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-column">
+                <div class="flex flex-column about-hidden">
                     <p class="caption-light text-light-gray">OTHER THAN DESIGN,</p>
                 </div>
             </div>
             <div class="flex flex-column align-end">
                 <div class="flex align-end gap-60">
-                    <div class="about-photo-interest flex flex-column align-end">
-                        <div id="move-track" class="about-photo-interest-move flex flex-column align-end">
+                    <div class="about-photo-interest">
+                        <div id="move-track" class="about-photo-interest-move">
                             <h1 class="call-to-action text-light interest">GAMES</h1>
                             <h1 class="call-to-action text-light interest">CATS</h1>
                             <h1 class="call-to-action text-light interest">DRAWING</h1>
