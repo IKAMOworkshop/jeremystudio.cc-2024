@@ -249,11 +249,11 @@ export default class ArchiveScroll {
             }
 
             if(window.innerWidth <= 768){
-                this.group.position.x = 1
+                this.group.position.x = .5
                 this.mesh.scale.set(.4, .4, .4)
                 this.meshGap = 2
                 this.group.position.x = 0.5
-                this.titleText.position.set(-.3, .2 , 1)
+                this.titleText.position.set(-10, .2 , 1)
                 this.typeText.position.set(-10, .05 , 1)
                 this.timeText.position.set(10, -.3 , 1)
             }
@@ -293,7 +293,7 @@ export default class ArchiveScroll {
         }
 
         if(window.innerWidth <= 1280){
-            this.group.position.x = .5
+            this.group.position.x = 1
 
             this.thumbnailMeshes.forEach((mesh) => {
                 mesh.children[3].scale.set(1, 1, 1)
@@ -305,7 +305,7 @@ export default class ArchiveScroll {
         }
 
         if(window.innerWidth <= 1024){
-            this.group.position.x = .5
+            this.group.position.x = 1
 
             this.thumbnailMeshes.forEach((mesh) => {
                 mesh.children[3].scale.set(.6, .6, .6)
@@ -322,7 +322,7 @@ export default class ArchiveScroll {
             this.thumbnailMeshes.forEach((mesh) => {
                 mesh.children[3].scale.set(.4, .4, .4)
                 this.meshGap = 2
-                mesh.children[0].position.set(-.3, .2 , 4)
+                mesh.children[0].position.set(-10, .2 , 4)
                 mesh.children[1].position.set(-10, .05 , 4)
                 mesh.children[2].position.set(10, -.3 , 4)
             })
@@ -351,8 +351,21 @@ export default class ArchiveScroll {
 
         this.wheel.wheelDelta = 0
 
-        this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
+        this.ua = navigator.userAgent
 
-        this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(this.ua)) {
+            return
+        }else{
+            this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
+
+            this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
+        }
+    
+        if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(this.ua)) {
+            return
+        }else{
+            this.moveHorGroup.position.x = (this.moveHorGroup.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.moveHorGroup.position.x) * .02)
+            this.moveHorGroup.position.y = (this.moveHorGroup.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.moveHorGroup.position.y) * .02)
+        }
     }
 }
