@@ -1,7 +1,7 @@
 import Experience from "../Experience.js"
 import HomeThumbnail from "./home/HomeThumbnail.js"
 import AboutScroll from './about/AboutScroll.js'
-import ArchivesScroll from './archives/ArchivesScroll.js'
+import ArchiveScroll from './archives/ArchivesScroll.js'
 import MissingExperience from './missing/Missing.js'
 
 export default class World{
@@ -15,7 +15,7 @@ export default class World{
             // Setup
             this.homeThumbnails = new HomeThumbnail()
             this.aboutScroll = new AboutScroll()
-            this.archivesScroll = new ArchivesScroll()
+            this.archivesScroll = new ArchiveScroll()
             this.missingExperience = new MissingExperience()
         })
     }
