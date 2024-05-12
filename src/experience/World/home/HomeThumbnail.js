@@ -260,6 +260,66 @@ export default class HomeThumbnail {
                 }
             }
         })
+
+        window.addEventListener('touchstart', (e) => {
+            if(this.currentIntersect){
+                switch(this.currentIntersect.object.name){
+                    case'stray':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/stray')
+                        break
+
+                    case 'hyper':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/hyper')
+                        break
+
+                    case 'transit':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/transit')
+                        break
+
+                    case 'arcane':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/arcane')
+                        break
+
+                    case 'nebula':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/nebula')
+                        break
+
+                    case 'angine':
+                        this.currentIntersect = null
+                        if(this.customCursor){
+                            this.customCursor.style.transform = 'scale(1)'
+                            document.body.style.cursor = 'default'
+                        }
+                        router.push('/angine')
+                        break
+                }
+            }
+        })
     }
 
     resize() {
@@ -319,6 +379,8 @@ export default class HomeThumbnail {
     }
 
     update(){
+        this.ua = navigator.userAgent
+
         if(!this.customCursor){
             this.customCursor = document.getElementById('cursor')
         }
@@ -327,7 +389,7 @@ export default class HomeThumbnail {
         this.mouse.y = -(this.cursor.cursorY / this.sizes.height) * 2 + 1
 
         this.raycaster.setFromCamera(this.mouse, this.camera)
-        this.intersects = this.raycaster.intersectObjects(this.objectToTest)
+        this.intersects = this.raycaster.intersectObjects(this.objectToTest)        
 
         // Home Experience
         this.wheel.scroll -= (this.wheel.scroll - (this.wheel.wheelDelta * .01)) * .1
@@ -349,8 +411,6 @@ export default class HomeThumbnail {
         })
 
         this.wheel.wheelDelta = 0
-
-        this.ua = navigator.userAgent
 
         if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(this.ua)) {
             return
