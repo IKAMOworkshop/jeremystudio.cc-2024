@@ -12,8 +12,8 @@ export default class Wheel extends EventEmitter{
         // Wheel Movement
         window.addEventListener('mousewheel', (e) => {
             this.wheelDelta = e.wheelDelta
+            console.log(this.wheelDelta)
         })
-
         
         window.addEventListener('touchmove', (e) => {        
             this.wheelDelta = e.changedTouches[0].screenY * -.1
@@ -21,7 +21,6 @@ export default class Wheel extends EventEmitter{
     }
     update(){
         window.addEventListener('mousewheel', (e) => {
-            console.log
             this.wheelDelta = e.wheelDelta
         })
     }

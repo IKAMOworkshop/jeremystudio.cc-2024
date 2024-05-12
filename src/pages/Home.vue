@@ -6,7 +6,7 @@
             </svg>
         </div>
 
-        <div v-show="!isMobile" id="home-experience" class="home-experience"></div>
+        <div id="home-experience" class="home-experience"></div>
         <p class="home-intro text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
 
         <div v-show="isMobile" class="home-phone-experience">
@@ -75,20 +75,19 @@ if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
 
 if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
         isMobile = true
-
 }
 
-const lenis = new Lenis({
-    smooth: true,
-    lerp: .12
-});
+// const lenis = new Lenis({
+//     smooth: true,
+//     lerp: .12
+// });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
+// function raf(time) {
+//     lenis.raf(time);
+//     requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 useHead({
     title: 'Jeremy Chang',
@@ -101,6 +100,19 @@ useHead({
 })
 
     onMounted(() => {
+        const threeExperience = document.getElementById('home-experience')
+
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            isMobile = true
+            threeExperience.style.display = 'none'
+        }
+
+        if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+                isMobile = true
+                threeExperience.style.display = 'none'
+
+        }
+
         const tl = gsap.timeline()
         tl.to('#transition-block', {
             duration: .8,
