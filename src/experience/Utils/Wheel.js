@@ -16,7 +16,7 @@ export default class Wheel extends EventEmitter{
 
         
         window.addEventListener('touchmove', (e) => {        
-            this.wheelDelta = e.changedTouches[0].screenY * .1
+            this.wheelDelta = e.changedTouches[0].screenY * -.1
         })
     }
     update(){
