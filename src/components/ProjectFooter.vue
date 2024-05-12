@@ -16,15 +16,6 @@
                             </div>
                         </router-link></li>
 
-                        <li><router-link class="text-dark body-bold" to="/insights">
-                            <div class="caption-container">
-                                <div class="caption-move">
-                                    <p>INSIGHTS</p>
-                                    <p>INSIGHTS</p>
-                                </div>
-                            </div>
-                        </router-link></li>
-
                         <li><router-link class="text-dark body-bold" to="/archives">
                             <div class="caption-container">
                                 <div class="caption-move">
@@ -33,6 +24,15 @@
                                 </div>
                             </div>
                         </router-link></li>
+
+                        <li><div class="text-dark body-bold construction-strike" to="/insights">
+                            <div class="caption-container">
+                                <div class="caption-move">
+                                    <p>INSIGHTS</p>
+                                    <p>INSIGHTS</p>
+                                </div>
+                            </div>
+                        </div></li>
                     </ul>
 
 
