@@ -60,7 +60,23 @@ nav {
 }
 
 .menu {
+  position: fixed;
+  z-index: 9997;
+  top: 0;
+  left: 0;
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 240px 60px;
+  width: 100vw;
+  height: 100dvh;
+  background-color: rgba(11, 13, 16, 0.8);
+  transition: all 0.8s ease;
+  display: none;
+  -webkit-backdrop-filter: blur(12vmax);
+          backdrop-filter: blur(12vmax);
+  opacity: 0;
 }
 
 .construction-strike {
@@ -124,23 +140,6 @@ footer {
   }
   .menu-button {
     display: flex;
-  }
-  .menu {
-    position: fixed;
-    z-index: 9997;
-    top: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding: 240px 60px;
-    width: 100vw;
-    height: 100dvh;
-    background-color: rgba(11, 13, 16, 0.8);
-    -webkit-backdrop-filter: blur(5vmax);
-            backdrop-filter: blur(5vmax);
-    transition: all 0.8s ease;
   }
 }
 @media screen and (max-width: 768px) {
@@ -670,6 +669,13 @@ footer {
   position: absolute;
   top: 40px;
   left: 240px;
+}
+
+.home-phone-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 100px 24px 100px 24px;
 }
 
 @media screen and (max-width: 768px) {

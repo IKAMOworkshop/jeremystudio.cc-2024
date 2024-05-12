@@ -60,7 +60,22 @@ nav{
 }
 
 .menu{
+    position: fixed;
+    z-index: 9997;
+    top: 0;
+    left: 0;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 240px 60px;
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(11,13,16,.8);
+    transition: all .8s ease;
+    display: none;
+    backdrop-filter: blur(12vmax);
+    opacity: 0;
 }
 
 .construction-strike{
@@ -126,22 +141,6 @@ footer{
     }
     .menu-button{
         display: flex;
-    }
-    .menu{
-        position: fixed;
-        z-index: 9997;
-        top: 0;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: start;
-        padding: 240px 60px;
-        width: 100vw;
-        height: 100dvh;
-        background-color: rgba(11,13,16,.8);
-        backdrop-filter: blur(5vmax);
-        transition: all .8s ease;
     }
 }
 

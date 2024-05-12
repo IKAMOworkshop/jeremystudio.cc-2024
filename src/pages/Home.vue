@@ -6,22 +6,89 @@
             </svg>
         </div>
 
-        <div id="home-experience" class="home-experience"></div>
+        <div v-show="!isMobile" id="home-experience" class="home-experience"></div>
         <p class="home-intro text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
 
-        <InfiniteScrollProgress />
+        <div v-show="isMobile" class="home-phone-experience">
+            <HomeProjectPhone 
+                link="/stray"
+                title="STRAY"
+                tag-text="WEBGL"
+                thumbnail="/project-thumbnail/stray.png"
+            />
+            <HomeProjectPhone 
+                link="/hyper"
+                title="HYPER"
+                tag-text="TECH-CENTER RESEARCH"
+                thumbnail="/project-thumbnail/hyper.png"
+            />
+            <HomeProjectPhone 
+                link="/transit"
+                title="TRANSIT"
+                tag-text="MIXED REALITY"
+                thumbnail="/project-thumbnail/transit.png"
+            />
+            <HomeProjectPhone 
+                link="/arcane"
+                title="ARCANE"
+                tag-text="WEB DESIGN"
+                thumbnail="/project-thumbnail/arcane.png"
+            />
+            <HomeProjectPhone 
+                link="/nebula"
+                title="NEBULA"
+                tag-text="ECOSYSTEM DESIGN"
+                thumbnail="/project-thumbnail/nebula.png"
+            />
+            <HomeProjectPhone 
+                link="/angine"
+                title="ANGINE"
+                tag-text="DESIGN SYSTEM"
+                thumbnail="/project-thumbnail/angine.png"
+            />
+        </div>
+
+        <InfiniteScrollProgress v-show="!isMobile"/>
+
     </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
 
 import { useHead } from '@vueuse/head'
 
-import InfiniteScrollProgress from '../components/InfiniteScrollProgress.vue'
+import InfiniteScrollProgress from '@/components/InfiniteScrollProgress.vue'
+import HomeProjectPhone from '@/components/home/HomeProjectPhone.vue'
 
 import gsap from 'gsap'
+import Lenis from '@studio-freight/lenis'
+
+let isMobile = false
+
+const ua = navigator.userAgent
+
+if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    isMobile = true
+}
+
+if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        isMobile = true
+
+}
+
+const lenis = new Lenis({
+    smooth: true,
+    lerp: .12
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 useHead({
     title: 'Jeremy Chang',
