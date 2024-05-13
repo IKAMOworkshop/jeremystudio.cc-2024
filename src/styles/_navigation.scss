@@ -12,10 +12,10 @@ nav{
 }
 
 .bottom-nav{
+    display: flex;
     padding: 40px 60px 40px 60px;
     position: fixed;
     bottom: 0%;
-    z-index: 9999;
     width: 100%;
 }
 
@@ -24,6 +24,7 @@ nav{
 }
 
 .progress-bar{
+    display: block;
     width: 80px;
     height: 1px;
     background-color: rgba(255,255,255,.2);
@@ -31,7 +32,6 @@ nav{
     position: fixed;
     right: 60px;
     bottom: 44px;
-    z-index: 9999;
 }
 
 .progress{
@@ -141,6 +141,12 @@ footer{
     }
     .menu-button{
         display: flex;
+    }
+    .progress-bar{
+        display: none;
+    }
+    .bottom-nav{
+        display: none;
     }
 }
 
