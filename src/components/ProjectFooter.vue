@@ -25,14 +25,14 @@
                             </div>
                         </router-link></li>
 
-                        <li><div class="text-dark body-bold construction-strike" to="/insights">
+                        <!-- <li><div class="text-dark body-bold construction-strike" to="/insights">
                             <div class="caption-container">
                                 <div class="caption-move">
                                     <p>INSIGHTS</p>
                                     <p>INSIGHTS</p>
                                 </div>
                             </div>
-                        </div></li>
+                        </div></li> -->
                     </ul>
 
 
