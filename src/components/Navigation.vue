@@ -36,25 +36,25 @@
                     </router-link></li>
 
                     <!-- Insight Link -->
-                    <li><div class="router-link-text construction-strike" to="/insights">
+                    <!-- <li><div class="router-link-text construction-strike" to="/insights">
                         <div class="caption-container">
                             <div class="caption-stop">
                                 <p>INSIGHTS</p>
                                 <p>INSIGHTS</p>
                             </div>
                         </div>
-                    </div></li>
+                    </div></li> -->
                 </ul>
                 
                 <!-- JP Link -->
-                <div class="router-link-text construction-strike">
+                <!-- <div class="router-link-text construction-strike">
                     <div class="caption-container">
                             <div class="caption-stop flex align-end flex-column">
                                 <p>JP</p>
                                 <p>SWITCH</p>
                             </div>
                         </div>
-                </div>
+                </div> -->
             </div>
 
             <button id="menu" class="menu-button">
