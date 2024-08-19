@@ -20,9 +20,9 @@ export default class Wheel extends EventEmitter{
         //     this.wheelDelta = e.wheelDelta
         // })
         
-        window.addEventListener('touchmove', (e) => {        
-            this.wheelDelta = e.changedTouches[0].screenY * -.1
-        })
+        // window.addEventListener('touchmove', (e) => {        
+        //     this.wheelDelta = e.changedTouches[0].screenY * -.1
+        // })
     }
     update(){
         // window.addEventListener('mousewheel', (e) => {
