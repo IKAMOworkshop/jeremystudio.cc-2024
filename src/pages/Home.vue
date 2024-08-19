@@ -9,7 +9,7 @@
         <div id="home-experience" class="home-experience"></div>
         <p class="home-intro text-light-gray caption-light intro-copy">I’M A CREATIVE DEVELOPER WHO BUILD DIGITAL EXPERIENCES.</p>
 
-        <div v-show="isMobile" class="home-phone-experience">
+        <div v-show="isMobile" class="home-phone-experience" id="scroll">
             <HomeProjectPhone 
                 link="/stray"
                 title="STRAY"
@@ -64,6 +64,8 @@ import HomeProjectPhone from '@/components/home/HomeProjectPhone.vue'
 
 import gsap from 'gsap'
 import Lenis from '@studio-freight/lenis'
+import VirtualScroll from 'virtual-scroll'
+
 
 let isMobile = false
 
@@ -112,6 +114,48 @@ useHead({
                 threeExperience.style.display = 'none'
 
         }
+
+        const scroller = new VirtualScroll()
+
+    let scrollContainer = document.getElementById('scroll')
+
+    // Page Scroll
+    let scroll = 0
+    let scrollTarget = 0
+    let scrollPosition = 0
+    let containerSize = null
+
+    if(scrollContainer){
+        containerSize = scrollContainer.getBoundingClientRect().height
+    }
+
+    scroller.on(event => {
+        scrollTarget = - event.deltaY
+    })
+
+    const tick = () => {
+            if(!scrollContainer){
+                scrollPosition = 0
+            }
+            // Reset Scroll
+            scrollContainer = document.getElementById('scroll')
+            
+
+            scroll -= (scroll - scrollTarget) * .1
+            scrollPosition += scroll * 1.2
+            scrollTarget = 0
+
+            scrollPosition = Math.max(0, Math.min(scrollPosition, containerSize - window.innerHeight))
+
+            if(scrollContainer){
+                scrollContainer.style.transform = `translateY(${-scrollPosition}px)`
+                containerSize = scrollContainer.getBoundingClientRect().height
+            }
+
+            window.requestAnimationFrame(tick)
+        }
+
+        tick()
 
         const tl = gsap.timeline()
         tl.to('#transition-block', {
