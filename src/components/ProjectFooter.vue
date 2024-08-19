@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="fill-light flex justify-between">
+        <footer class="footer fill-light flex justify-between">
 
             <div class="footer-left">
             
