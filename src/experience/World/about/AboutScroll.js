@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import VirtualScroll from 'virtual-scroll'
 
 // import studio from '@theatre/studio'
 import { getProject, types, val } from '@theatre/core'
@@ -42,6 +43,9 @@ export default class AboutScroll{
 
         this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
         this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
+
+        this.scroller = new VirtualScroll()
+        this.scrollContainer = document.getElementById('scroll')
 
         this.setData()
         this.setModel()
@@ -461,14 +465,28 @@ export default class AboutScroll{
 
         this.sequenceLength = val(this.sheet.sequence.pointer.length)
 
-        document.addEventListener('scroll', () => {
-            this.totalHeight = document.body.scrollHeight
-            this.currentDistance = document.documentElement.scrollTop
-            this.windowHeight = document.documentElement.clientHeight
+    // Page Scroll
+    this.scroll = 0
+    this.scrollTarget = 0
+    this.scrollPosition = 0
+    this.containerSize = null
 
-            this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
-            this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
-        })
+    if(this.scrollContainer){
+        this.containerSize = this.scrollContainer.getBoundingClientRect().height
+    }
+
+    this.scroller.on(event => {
+        this.scrollTarget = - event.deltaY
+    })
+
+        // document.addEventListener('scroll', () => {
+        //     this.totalHeight = document.body.scrollHeight
+        //     this.currentDistance = document.documentElement.scrollTop
+        //     this.windowHeight = document.documentElement.clientHeight
+
+        //     this.scrollPercentage = (this.currentDistance / (this.totalHeight - this.windowHeight))
+        //     this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
+        // })
     }
 
     resize(){
@@ -520,5 +538,23 @@ export default class AboutScroll{
         this.catMesh.position.x = (this.catMesh.position.x + ((this.cursor.cursorX / this.sizes.width - .5) - this.catMesh.position.x) * .02)
 
         this.catMesh.position.y = (this.catMesh.position.y - ((this.cursor.cursorY / this.sizes.height - .5) + this.catMesh.position.y) * .02)
+
+        if(!this.scrollContainer){
+            this.scrollPosition = 0
+        }
+
+        // Reset Scroll
+        this.scrollContainer = document.getElementById('scroll')
+
+        this.scroll -= (this.scroll - this.scrollTarget) * .1
+        this.scrollPosition += this.scroll * 1.2
+        this.scrollTarget = 0
+
+        if(this.scrollContainer){
+            this.scrollPosition = Math.max(0, Math.min(this.scrollPosition, this.containerSize - window.innerHeight))
+            this.scrollPercentage = this.scrollPosition / (this.scrollContainer.getBoundingClientRect().height - window.innerHeight)
+            this.sheet.sequence.position = this.scrollPercentage * this.sequenceLength
+            this.containerSize = this.scrollContainer.getBoundingClientRect().height
+        }
     }
 }
